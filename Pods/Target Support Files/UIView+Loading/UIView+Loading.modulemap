@@ -1,0 +1,6 @@
+framework module UIView_Loading {
+  umbrella header "UIView+Loading-umbrella.h"
+
+  export *
+  module * { export * }
+}
