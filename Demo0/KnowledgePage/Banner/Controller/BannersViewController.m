@@ -7,7 +7,7 @@
 //
 
 #import "BannersViewController.h"
-#define DEFAULTNUMS (3)
+#define DEFAULTNUMS (5)
 
 @interface BannersViewController ()
 
@@ -18,7 +18,6 @@
 - (instancetype)init {
   return [self initWithBannerNums:DEFAULTNUMS];
 }
-
 
 - (instancetype)initWithBannerNums:(NSInteger)num {
   self = [super init];
@@ -33,13 +32,16 @@
   //TODO add view after found in either db(first) or server
   //find out if the banners in the db
   //yes no
-  self.view = [[RWUIScrollView alloc] init];
-
+  self.scrollView = [[RWUIScrollView alloc] init];
+  [self.view addSubview:self.scrollView];
 }
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [(RWUIScrollView *) self.view setStyle1];
+  //self.banners;//make sure banners info are ready
+
+    [self.scrollView setStyle1];
     self.banners;
+   // [(RWUIScrollView *)self.view LoadImagesFromBanners:self.banners];
   // Do any additional setup after loading the view.
 }
 
@@ -70,11 +72,12 @@
 
 // TODO add search in database gateway here
 // TODO add get in server gateway here
-- (NSMutableArray<RWBanner *> *)banners {
+- (NSArray<RWBanner *> *)banners {
   if (!_banners) {
+    /*
     _banners = [[NSMutableArray alloc] init];
     NSInteger foundBanners = _banners.count;
-
+    */
     /*
     foundBanners=[self.sqlManager serchBannersInDB];
     if(foundBanners <self.bannerNums)
@@ -88,21 +91,31 @@
 
     // test code
 
-    WRPersonModel *personModel = nil;
-    NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
+
+    //NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
 
     @weakify(self)
-    [self.sessionRequestManager getObjFromServerSuccess:
-            ^(id obj) {
-              @strongify(self)
-              [mutableArray addObject:obj];
-            }
-                                                failure:^(NSError **error) {
-                                                  // donothing here
-                                                }];
+    [self.sessionRequestManager getObjsFromServerSuccess:^(NSArray *objArray) {
+          @strongify(self)
+          _banners=[NSArray arrayWithArray:objArray];
+          [self refreshBanners];
+        }
+                                                 failure:^(NSError *error) {
+                                                   // show error here
+                                                   NSLog(@"get obj error: "
+                                                             "%@",error);
+                                                 }
+                                                    type:[RWBanner class]
+                                                     num:5];
   }
 
+    
   return _banners;
 }
+- (BOOL)refreshBanners {
+    [self.scrollView LoadImagesFromBanners:_banners];
+    return YES;
+}
+
 
 @end

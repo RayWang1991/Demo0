@@ -14,10 +14,13 @@
 #import "WRPersonModel.h"
 #import "Constants.h"
 @interface BannersViewController : UIViewController
+
 @property(assign, nonatomic) NSInteger bannerNums;
-@property(strong, nonatomic) NSMutableArray<RWBanner *> *banners;
-@property(weak, nonatomic) SessionRequestManager *sessionRequestManager;
-@property(weak, nonatomic) SQLManager *sqlManager;
+@property(strong, nonatomic) NSArray<RWBanner *> *banners;
+@property (strong, nonatomic) RWUIScrollView *scrollView;
+@property(weak, nonatomic, readonly) SessionRequestManager *sessionRequestManager;
+@property(weak, nonatomic, readonly) SQLManager *sqlManager;
 
 - (instancetype)initWithBannerNums:(NSInteger)num;
+- (BOOL)refreshBanners;
 @end

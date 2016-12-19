@@ -9,6 +9,7 @@
 
 #import "SessionRequestManager.h"
 #define kBMBASEURL @"https://api.bongmi.com/v1"
+
 #define kTESTURL(d) @"https://raw.githubusercontent.com/RayWang1991/TestData/master/person" # d ".json"
 
 @implementation SessionRequestManager {
@@ -25,13 +26,16 @@
   return manager;
 }
 
+- (void)getObjsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
+                         failure:(void (^)(NSError *error))failBlock
+                            type:(Class)classType
+                             num:(NSInteger)numbers {
 
-- (void)getObjFromServerSuccess:(void (^)(id obj))sucBlock
-                        failure:(void (^)(NSError **error))failBlock {
+  //NSString *str=kTESTURL(1);
+  NSString *str = [kBMBASEURL stringByAppendingFormat:@"/w/poster?num=%d&language=1",numbers];
 
-    NSString *str=kTESTURL(1);
-    NSLog(@"%@",str);
-  NSURL *url = [NSURL URLWithString:kTESTURL(0)];
+  NSLog(@"%@", str);
+  NSURL *url = [NSURL URLWithString:str];
   NSURLRequest *request = [NSURLRequest requestWithURL:url
                                            cachePolicy:0
                                        timeoutInterval:30];
@@ -50,27 +54,55 @@
                 if (dataError) {
                   // there may be data analysis error
                   NSLog(@"data analysis error : %@", dataError);
-                  failBlock(&dataError);
+                  failBlock(dataError);
                 } else {
-                  // assuming we receive a dictionary indicating the object
-                  // here we've nearly done the job
-                  NSDictionary *dict = (NSDictionary *) result;
-                  NSLog(@"the dict is %@", dict);
+                  // the give class must be a subclass of JSONModel
+                  NSCAssert([classType isSubclassOfClass:[JSONModel class]],
+                           @"not a jsonmodel");
 
-                  unsigned int uId = (unsigned int) [result[@"userId"] integerValue];
-                  NSString *userName = result[@"name"];
-                  NSString *userSex = [result[@"sex"] integerValue] ? @"male" : @"female";
-                  NSString *userPhone = result[@"phone"];
-                  NSString *userEmail = result[@"email"];
-                  NSString *userBirthday = result[@"birthday"];
-                  WRPersonModel *aModel =
-                      [[WRPersonModel alloc] initWithUserId:uId
-                                                       Name:userName
-                                                        Sex:userSex
-                                                   Birthday:userBirthday
-                                                      Phone:userPhone
-                                                      Email:userEmail];
-                  sucBlock(aModel);
+                  // now convert json dict to model
+                  // assuming we receive an array containing
+                  // dicionaries indicating the objects
+
+                  NSCAssert([result isKindOfClass:[NSArray class]],
+                            @"the result isn't an array");
+                  NSCAssert([result[0] isKindOfClass:[NSDictionary class]],
+                            @"the result[0] isn't a dictionary");
+                  NSCAssert([result count]>=numbers,@"the returned numbers "
+                      "does not match");
+                  NSMutableArray *resArray=[[NSMutableArray alloc]init];
+                  for(int i=0;i<numbers;i++) {
+
+                    NSDictionary *dict = (NSDictionary *) result[i];
+                    NSLog(@"the dict is %@", dict);
+
+                    JSONModelError *jsonModelError = nil;
+
+                    id aModel = [[classType alloc] initWithDictionary:dict
+                                                                error:&jsonModelError];
+
+                    if (jsonModelError != nil) {
+                      NSLog(@"Model convert fails, error: %@, json: %@",
+                            jsonModelError, dict);
+                    }
+                    /*
+                    unsigned int uId = (unsigned int) [result[@"userId"] integerValue];
+                    NSString *userName = result[@"name"];
+                    NSString *userSex = [result[@"sex"] integerValue] ? @"male" : @"female";
+                    NSString *userPhone = result[@"phone"];
+                    NSString *userEmail = result[@"email"];
+                    NSString *userBirthday = result[@"birthday"];
+                    WRPersonModel *aModel =
+                        [[WRPersonModel alloc] initWithUserId:uId
+                                                         Name:userName
+                                                          Sex:userSex
+                                                     Birthday:userBirthday
+                                                        Phone:userPhone
+                                                        Email:userEmail];
+                                                        */
+                    [resArray addObject:aModel];
+                  }
+                  sucBlock(resArray);
                 }
 
               } else {
@@ -85,56 +117,18 @@
                                              userInfo:@{@"error": @"no data"}];
                   NSLog(@"session fails without data");
                 }
-                failBlock(&resError);
+                failBlock(resError);
               }
             }] resume];
 }
 
 - (void)getBannerFromServer:(NSInteger)num
-                    success:(void (^)(NSMutableArray<RWBanner *> *array, RWBanner *banner))sucBlock
-                    failure:(void (^)(NSError **error))failBlock {
-  NSURL *url = [NSURL URLWithString:kTESTURL(0)];
-  NSURLRequest *request = [NSURLRequest requestWithURL:url
-                                           cachePolicy:0
-                                       timeoutInterval:30];
-  [[[NSURLSession sharedSession]
-      dataTaskWithRequest:request
-        completionHandler:
-            ^(NSData *_Nullable data, NSURLResponse *_Nullable response,
-              NSError *_Nullable sessionError) {
-              if (!sessionError && data) {
-                NSError *dataError = nil;
-                id result = [NSJSONSerialization JSONObjectWithData:data
-                                                            options:0
-                                                              error:&dataError];
-                NSLog(@"the dic is %@", data);
+                    success:(void (^)(NSArray *array))sucBlock
+                    failure:(void (^)(NSError *error))failBlock {
 
-                if (dataError) {
-                  // there may be data analysis error
-                  NSLog(@"data analysis error : %@", dataError);
-                  failBlock(&dataError);
-                } else {
-                  // assuming we receive a dictionary indicating the object
-                  // here we've nearly done the job
-                  NSDictionary *dict = (NSDictionary *) result;
-                  NSLog(@"the dict is %@", dict);
-
-                }
-
-              } else {
-                NSError *resError = nil;
-                // there may be session error or no data error
-                if (sessionError) {
-                  resError = sessionError;
-                  NSLog(@"session fails with error: %@", sessionError);
-                } else {
-                  resError = [NSError errorWithDomain:NSCocoaErrorDomain
-                                                 code:-1
-                                             userInfo:@{@"error": @"no data"}];
-                  NSLog(@"session fails without data");
-                }
-                failBlock(&resError);
-              }
-            }] resume];
-};
+  [self getObjsFromServerSuccess:sucBlock
+                         failure:failBlock
+                            type:[RWBanner class]
+                             num:num];
+}
 @end

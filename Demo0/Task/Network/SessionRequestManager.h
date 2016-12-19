@@ -14,11 +14,12 @@
 @interface SessionRequestManager : NSObject
 + (instancetype)sharedManager;
 
-- (void)getObjFromServerSuccess:(void (^)(id obj))sucBlock
-                        failure:(void (^)(NSError **error))failBlock;
+- (void)getObjsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
+                         failure:(void (^)(NSError *error))failBlock
+                            type:(Class)classType
+                             num:(NSInteger)numbers;
 
 - (void)getBannerFromServer:(NSInteger)num
-                    success:(void (^)(NSMutableArray<RWBanner *> *array, RWBanner *banner))sucBlock
-                    failure:(void (^)(NSError **error))
-                        failBlock;
+                    success:(void (^)(NSArray *array))sucBlock
+                    failure:(void (^)(NSError *error))failBlock;
 @end
