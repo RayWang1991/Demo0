@@ -128,7 +128,7 @@
 
   [self getObjsFromServerSuccess:sucBlock
                          failure:failBlock
-                            type:[BMTBanner class]
+                            type:[BMTEntityBanner class]
                              num:num];
 }
 @end

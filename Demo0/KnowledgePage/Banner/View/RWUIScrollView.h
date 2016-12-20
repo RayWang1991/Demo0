@@ -10,9 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "RWUIScrollView.h"
 #import "Masonry/Masonry.h"
-#import "BMTBanner.h"
+#import "BMTEntityBanner.h"
 @interface RWUIScrollView : UIScrollView
 
 - (void)setStyle1;
-- (void)LoadImagesFromBanners:(NSArray<BMTBanner *>  *)banners;
+- (void)LoadImagesFromBanners:(NSArray<BMTEntityBanner *>  *)banners;
 @end

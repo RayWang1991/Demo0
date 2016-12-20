@@ -8,7 +8,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "BMTBanner.h"
+#import "BMTEntityBanner.h"
 #import <UIKit/UIKit.h>
 #import "WRPersonModel.h"
 @interface SessionRequestManager : NSObject

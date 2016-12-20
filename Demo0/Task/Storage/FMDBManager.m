@@ -8,11 +8,20 @@
  */
 
 #import "FMDBManager.h"
+#import "NSError+BMTExtension.h"
+#import "FMDatabase+Extension.h"
+
+@interface FMDBManager ()
+
+@property (nonatomic) FMDatabaseQueue *db;
+@property (nonatomic) BMTBannerTable * bannerTable;
+
+@end
 
 @implementation FMDBManager {
 
 }
-+(instancetype)sharedManager{
++(instancetype)sharedInstance {
   static FMDBManager *manager=nil;
   static dispatch_once_t once;
   dispatch_once(&once,^{
@@ -23,23 +32,57 @@
   return manager;
 }
 
--(void)prepare{
-  //NSError * error=[]
+- (void)destroy {
+  [self.db close];
+  NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                       NSUserDomainMask,
+                                                       YES)[0];
+  path = [path stringByAppendingPathComponent:BMT_DB_NAME];
+  [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
--(NSError *)prepareInternal{
-  NSString *path=NSSearchPathForDirectoriesInDomains
-  (NSDocumentationDirectory,NSUserDomainMask,YES)[0];
-  path=[path stringByAppendingPathComponent:DBNAME];
-
-  self.db=[FMDatabase databaseWithPath:path];
-  if(self.db==nil){
-    NSLog(@"prepare failed path: %@",path);
-    return [NSError errorWithDomain:WRStorageDomain
-                               code:1
-                        userInfo:@{@"reason":@"storage error"}];
-  } else{
-      return nil;
+-(void)prepare{
+  NSError *error = [self prepareInternal];
+  if (error != nil) {
+    DDLogError(@"BMTStorageManager prepare failed, error: %@", error);
   }
 }
+
+- (NSError *)prepareInternal {
+  NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                       NSUserDomainMask,
+                                                       YES)[0];
+  path = [path stringByAppendingPathComponent:BMT_DB_NAME];
+
+  NSLog(@"the database path is : %@",path);
+
+  self.db = [FMDatabaseQueue databaseQueueWithPath:path];
+  if (self.db == nil) {
+    assert(NO);
+    return [NSError errorWithDomain:kStorageErrorDomain
+                               code:kShouldNotOccur
+                        description:@"BMTStorageManager prepare db file failed,"
+                                        " path is %@", path];
+  }
+
+  return [self.db inAutoRollbackSavePoint:^NSError *(FMDatabase *db) {
+    // create table
+        self.bannerTable=[[BMTBannerTable alloc] initWithDatabase:db];
+
+    NSArray* tables = @[self.bannerTable];
+    for (DBAbstractTable* table in tables) {
+      BOOL success = [table createTable];
+      if (!success) {
+        return [NSError errorWithDomain:kStorageErrorDomain
+                                   code:kShouldNotOccur
+                            description:@"%@.createTable failed",
+                                        NSStringFromClass([table class])];
+      }
+    }
+
+    return nil;
+  }];
+}
+
+
 @end

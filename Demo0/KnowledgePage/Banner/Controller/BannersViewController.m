@@ -71,7 +71,7 @@
 
 // TODO add search in database gateway here
 // TODO add get in server gateway here
-- (NSArray<BMTBanner *> *)banners {
+- (NSArray<BMTEntityBanner *> *)banners {
   if (!_banners) {
     /*
     _banners = [[NSMutableArray alloc] init];
@@ -105,7 +105,7 @@
                                                    NSLog(@"get obj error: "
                                                              "%@",error);
                                                  }
-                                                    type:[BMTBanner class]
+                                                    type:[BMTEntityBanner class]
                                                      num:DEFAULTNUMS];
   }
 

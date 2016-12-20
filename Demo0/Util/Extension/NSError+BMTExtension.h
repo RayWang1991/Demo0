@@ -8,6 +8,8 @@
 
 @interface NSError (BMTExtension)
 
-+ (instancetype)errorWithDomain:(NSString*)domain code:(NSInteger)code description:(NSString*)description, ...;
++ (instancetype)errorWithDomain:(NSString*)domain
+                           code:(NSInteger)code
+                    description:(NSString*)description, ...;
 
 @end

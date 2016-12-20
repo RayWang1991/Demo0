@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "UserInfoViewController.h"
 #import "KnowledgePageViewController.h"
+#import "FMDBManager.h"
 
 @interface AppDelegate : UIResponder<UIApplicationDelegate>
 

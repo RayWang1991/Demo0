@@ -18,11 +18,8 @@
 - (BOOL)          application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
-  // 1. set the url of the server
-  // 2. initiate a network request
-  // 3. create the network connection
-  // 4. start the nerwork connection
 
+  [[FMDBManager sharedInstance] prepare];
   KnowledgePageViewController *vc = [[KnowledgePageViewController alloc] init];
   self.window.rootViewController = vc;
   [self.window makeKeyAndVisible];

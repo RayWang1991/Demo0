@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BMTBanner.h"
+#import "BMTEntityBanner.h"
 #import "RWUIScrollView.h"
 #import "SQLManager.h"
 #import "SessionRequestManager.h"
@@ -17,7 +17,7 @@
 @interface BannersViewController : UIViewController
 
 @property(assign, nonatomic) NSInteger bannerNums;
-@property(strong, nonatomic) NSArray<BMTBanner *> *banners;
+@property(strong, nonatomic) NSArray<BMTEntityBanner *> *banners;
 @property (strong, nonatomic) RWUIScrollView *scrollView;
 @property(weak, nonatomic, readonly) SessionRequestManager *sessionRequestManager;
 @property(weak, nonatomic, readonly) SQLManager *sqlManager;

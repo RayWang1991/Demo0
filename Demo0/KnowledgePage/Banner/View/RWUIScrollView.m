@@ -25,7 +25,7 @@
   self.backgroundColor = [UIColor blueColor];
 }
 
-- (void)LoadImagesFromBanners:(NSArray<BMTBanner *> *)banners {
+- (void)LoadImagesFromBanners:(NSArray<BMTEntityBanner *> *)banners {
   NSUInteger n = [banners count];
   for (NSUInteger i = 0; i < n; i++) {
     UIImageView *imageView =
@@ -48,7 +48,7 @@
                         completed:^(UIImage *image, NSError *error, SDImageCacheType
                         cacheType, NSURL *imageURL) {
                           //save the image here
-                           banners[i].bannerImage=imageView.image;
+                           //banners[i].bannerImage=imageView.image;
                             
                           switch (cacheType) {
                             case SDImageCacheTypeNone:NSLog(@"直接下载");

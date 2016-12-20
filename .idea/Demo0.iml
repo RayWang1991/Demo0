@@ -570,11 +570,19 @@
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/SessionRequestManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/GetBannerRequest.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/GetBannerRequest.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/base/BMTJSONModel.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/base/BMTJSONModel.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/base/resource/BMTResourceBanner.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/base/resource/BMTResourceBanner.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Network/SessionRequestManager.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/NSFileManaer+WRFileManager.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/NSFileManaer+WRFileManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/FMDBTest.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/BMTBannerTable.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/FMDBManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/FMDBTest.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/WRStorageManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/BMTBannerTable.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/FMDBManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Task/Storage/WRStorageManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/data/image/3.jpg" isTestSource="false" />
@@ -589,10 +597,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/View/RWUIScrollView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/KnowledgeStoreManager.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTBannersTable.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/KnowledgeStoreManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTBannersTable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTBanner.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTBanner.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgePageViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/MicroClassViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/MicroClassViewController.m" isTestSource="false" />

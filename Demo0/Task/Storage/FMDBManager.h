@@ -9,14 +9,23 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDB/FMDB.h"
+#import "BMTBannerTable.h"
+#import "BMTStorageConstant.h"
+
 
 #define DBNAME @"raywang.db"
 
-NSString *WRStorageDomain=@"WRSORAGE";
+extern NSString *const kBMTStorageErrorDomain;
+      // NSString *WRStorageDomain=@"WRSORAGE";
 
 @interface FMDBManager : NSObject
-@property (strong, nonatomic)FMDatabaseQueue *db;
-//-(NSError *)prepare;
--(NSError *)prepareInternal;
-//-(NSError *)inDBForBanners:(NSError *(^)(FMDatabase *db,))
+
+
++ (instancetype)sharedInstance;
+
+- (void)prepare;
+
+- (void)destroy;
+
+
 @end
