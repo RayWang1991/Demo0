@@ -128,7 +128,7 @@
 
   [self getObjsFromServerSuccess:sucBlock
                          failure:failBlock
-                            type:[RWBanner class]
+                            type:[BMTBanner class]
                              num:num];
 }
 @end

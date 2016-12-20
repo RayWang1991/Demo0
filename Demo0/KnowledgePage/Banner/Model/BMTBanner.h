@@ -1,5 +1,5 @@
 //
-//  RWBanner.h
+//  BMTBanner.h
 //  HTTPRequestTest
 //
 //  Created by ray wang on 16/12/14.
@@ -27,7 +27,7 @@ typedef NS_ENUM (NSInteger ,PosterType)
   WEB_KNOWLEDGE,
   WAP_KNOWLEDGE
 };
-@interface RWBanner : JSONModel
+@interface BMTBanner : JSONModel
 
 @property(strong, nonatomic) NSString *altText;
 @property(assign, nonatomic) NSInteger height;
@@ -38,7 +38,7 @@ typedef NS_ENUM (NSInteger ,PosterType)
 
 @property (assign, nonatomic) StatusType status;
 @property (assign, nonatomic) PosterType type;
-//@property (strong, nonatomic) UIImage<Optional> *BannerImage;
+@property (weak, nonatomic) UIImage<Optional> *bannerImage;
 
 
 @end

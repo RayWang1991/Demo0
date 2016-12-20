@@ -60,26 +60,25 @@
 }
 */
 
-
-
 #pragma mark private
 - (SQLManager *)sqlManager {
   return [SQLManager shareManager];
 }
+
 - (SessionRequestManager *)sessionRequestManager {
   return [SessionRequestManager sharedManager];
 }
 
 // TODO add search in database gateway here
 // TODO add get in server gateway here
-- (NSArray<RWBanner *> *)banners {
+- (NSArray<BMTBanner *> *)banners {
   if (!_banners) {
     /*
     _banners = [[NSMutableArray alloc] init];
     NSInteger foundBanners = _banners.count;
     */
     /*
-    foundBanners=[self.sqlManager serchBannersInDB];
+    foundBanners=[self.sqlManager searchBannersInDB];
     if(foundBanners <self.bannerNums)
     {
         //get rest banner from server
@@ -95,9 +94,10 @@
     //NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
 
     @weakify(self)
-    [self.sessionRequestManager getObjsFromServerSuccess:^(NSArray *objArray) {
+    [self.sessionRequestManager getObjsFromServerSuccess:^(NSArray
+                                                           *resultArray) {
           @strongify(self)
-          _banners=[NSArray arrayWithArray:objArray];
+          _banners=[NSArray arrayWithArray:resultArray];
           [self refreshBanners];
         }
                                                  failure:^(NSError *error) {
@@ -105,8 +105,8 @@
                                                    NSLog(@"get obj error: "
                                                              "%@",error);
                                                  }
-                                                    type:[RWBanner class]
-                                                     num:5];
+                                                    type:[BMTBanner class]
+                                                     num:DEFAULTNUMS];
   }
 
     

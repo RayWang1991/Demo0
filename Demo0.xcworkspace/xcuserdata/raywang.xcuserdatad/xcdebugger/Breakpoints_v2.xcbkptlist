@@ -292,7 +292,7 @@
                   moduleName = "Demo0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raywang/projects/Demo0/Demo0/KnowledgePage/Banner/Controller/BannersViewController.m"
-                  timestampString = "503832104.643751"
+                  timestampString = "503833149.425602"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
@@ -303,26 +303,11 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "Demo0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raywang/projects/Demo0/Demo0/KnowledgePage/Banner/Controller/BannersViewController.m"
-                  timestampString = "503832104.645602"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "111">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
                   symbolName = "__destroy_helper_block_"
                   moduleName = "Demo0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raywang/projects/Demo0/Demo0/KnowledgePage/Banner/Controller/BannersViewController.m"
-                  timestampString = "503832104.648596"
+                  timestampString = "503833149.430331"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
@@ -734,7 +719,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Demo0/KnowledgePage/Banner/View/RWUIScrollView.m"
@@ -750,7 +735,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Demo0/KnowledgePage/Banner/View/RWUIScrollView.m"
@@ -818,11 +803,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Demo0/KnowledgePage/Banner/View/RWUIScrollView.m"
-            timestampString = "503832144.136834"
+            timestampString = "503899315.821447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-LoadImagesFromBanners:"
             landmarkType = "7">
          </BreakpointContent>
