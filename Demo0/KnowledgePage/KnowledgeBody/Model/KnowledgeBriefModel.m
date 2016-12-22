@@ -7,9 +7,9 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "KnowledgeModel.h"
+#import "KnowledgeBriefModel.h"
 
-@implementation KnowledgeModel {
+@implementation KnowledgeBriefModel {
 
 }
 @end

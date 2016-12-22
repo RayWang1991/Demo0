@@ -46,15 +46,15 @@
 
 - (void)setStyle {
 
-  self.contentView.frame = CGRectMake(50, 0, [UIScreen mainScreen].bounds.size
-      .width, 60);
+  self.contentView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size
+      .width, 100);
   self.backView.frame = self.contentView.bounds;
-  self.titleLabel.frame = CGRectMake(50, 0, [UIScreen mainScreen].bounds.size
+  self.titleLabel.frame = CGRectMake(80, 10, [UIScreen mainScreen].bounds.size
       .width, 20);
-  self.contentLabel.frame = CGRectMake(50, 20, [UIScreen mainScreen].bounds.size
-      .width, 30);
-  self.bottomView.frame = CGRectMake(50, 50, [UIScreen mainScreen].bounds.size
-      .width, 10);
+  self.contentLabel.frame = CGRectMake(80, 30, [UIScreen mainScreen].bounds.size
+      .width, 50);
+  self.bottomView.frame = CGRectMake(80, 80, [UIScreen mainScreen].bounds.size
+      .width, 20);
 }
 
 #pragma mark - getter
@@ -69,12 +69,34 @@
   return _backView;
 }
 - (UIView *)bottomView {
-  if (!_backView) {
-    _backView = [[UIView alloc] init];
-    _backView.backgroundColor = [UIColor whiteColor];
+  if (!_bottomView) {
+    _bottomView = [[BottomView alloc] init];
+    _bottomView.backgroundColor = [UIColor whiteColor];
     //_backView.cornerStyle = BMTRoundedViewStyleAllCorner;
     //_backView.cornerRadius = 4.0f;
+    //
+    _bottomView.eyeImageView =
+        [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    _bottomView.eyeImageView.image =
+        [UIImage imageNamed:@"preview-icon_eye.png"];
+    //
+    _bottomView.thumbImageView =
+        [[UIImageView alloc] initWithFrame:CGRectMake(100, 0, 20, 20)];
+    _bottomView.thumbImageView.image =
+        [UIImage imageNamed:@"preview-icon_small_like_it.png"];
+    //
+    _bottomView.eyeNumView =
+        [[UILabel alloc] initWithFrame:CGRectMake(40, 0, 40, 20)];
+    _bottomView.eyeNumView.text=@"0";
+    //
+    _bottomView.thumbNumView =
+        [[UILabel alloc] initWithFrame:CGRectMake(140, 0, 40, 20)];
+    _bottomView.thumbNumView.text=@"0";
 
+    [_bottomView addSubview:_bottomView.eyeImageView];
+    [_bottomView addSubview:_bottomView.thumbImageView];
+    [_bottomView addSubview:_bottomView.eyeNumView];
+    [_bottomView addSubview:_bottomView.thumbNumView];
   }
   return _bottomView;
 }

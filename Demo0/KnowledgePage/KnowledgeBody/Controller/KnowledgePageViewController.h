@@ -14,6 +14,7 @@
 #import "MicroClassViewController.h"
 #import "Constants.h"
 #import "KnowledgeHomePageCategoryTableViewCell.h"
+#import "KnowledgeDataSourceModel.h"
 @class KnowledgeTableView;
 @interface KnowledgePageViewController :
     UIViewController<UITableViewDataSource,UITableViewDelegate>
@@ -23,9 +24,10 @@
 
 // table view's body
 @property (strong, nonatomic) KnowledgeTableView * tableView;
+@property (strong, nonatomic) NSMutableArray <KnowledgeDataSourceModel *>*dataArray;
 // footer
 @property (strong, nonatomic) UIButton *loadMoreButton;
 
 // data source for table
-@property (strong, nonatomic) NSMutableArray * dataArray;
+//@property (strong, nonatomic) NSMutableArray * dataArray;
 @end

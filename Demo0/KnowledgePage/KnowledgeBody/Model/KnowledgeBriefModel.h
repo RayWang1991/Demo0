@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface KnowledgeModel : NSObject
+@interface KnowledgeBriefModel : NSObject
 @property (nonatomic, assign, readwrite) CGRect backViewFrame;
 @property (nonatomic, assign, readwrite) CGRect imageFrame;
 @property (nonatomic, assign, readwrite) CGRect titleFrame;

@@ -18,6 +18,19 @@
                          failure:(void (^)(NSError *error))failBlock
                             type:(Class)classType
                              num:(NSInteger)numbers;
+/*
+- (void)getObjsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
+                         failure:(void (^)(NSError *error))failBlock
+                            type:(Class)classType
+                             num:(NSInteger)numbers
+                            path:(NSString *)path
+                            args:(NSDictionary *)dict;
+
+*/
+
+- (void)getKnowledgeBriefsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
+                                    failure:(void (^)(NSError *error))failBlock
+                                 categoryId:(NSUInteger)categoryId;
 
 - (void)getBannerFromServer:(NSInteger)num
                     success:(void (^)(NSArray *array))sucBlock

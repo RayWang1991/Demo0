@@ -16,6 +16,7 @@
 -(void)laodView{
   self.view= [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
 }
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self setViewBasicStyle];
@@ -23,7 +24,7 @@
   self.bannersVC = [[BannersViewController alloc] init];
 
 
-  self.tableView= [[UITableView alloc] initWithFrame:self.view.bounds
+  self.tableView= [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
                                                style:UITableViewStylePlain];
   [self.view addSubview:self.tableView];
 
@@ -37,7 +38,7 @@
 
   _dataArray= [[NSMutableArray alloc] init];
   for(int i=0;i<20;i++){
-    [_dataArray addObject:@(i)];
+    [_dataArray addObject:[[KnowledgeDataSourceModel alloc] initWithRandom]];
   }
 
 
@@ -74,18 +75,23 @@
 
 -(CGFloat)    tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  return 80;
+  return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   NSString *cellStr=[KnowledgeHomePageCategoryTableViewCell bmt_reuseId];//used for reuse
-  UITableViewCell *cell=[self.tableView
+  KnowledgeHomePageCategoryTableViewCell *cell=[self.tableView
       dequeueReusableCellWithIdentifier:cellStr forIndexPath:indexPath];
 
-  NSString * textInCell=[NSString stringWithFormat:@"Row %@",self
-      .dataArray[indexPath.row]];
-  cell.textLabel.text=textInCell;
+  NSString * titleText=[NSString stringWithFormat:@"Row %@",self.dataArray[indexPath.row].title];
+  NSString * detailText=[NSString stringWithFormat:@"Row %@",self
+      .dataArray[indexPath.row].detail];
+  //NSString * Text=[NSString stringWithFormat:@"Row %@",self
+  // .dataArray[indexPath.row].title];
+  cell.titleLabel.text=titleText;
+  cell.contentLabel.text=detailText;
+
   return cell;
 }
 
