@@ -68,10 +68,9 @@
                             @"the result isn't an array");
                   NSCAssert([result[0] isKindOfClass:[NSDictionary class]],
                             @"the result[0] isn't a dictionary");
-                  NSCAssert([result count]>=numbers,@"the returned numbers "
-                      "does not match");
+                 // NSCAssert([result count]>=numbers,@"the returned numbers does not match");
                   NSMutableArray *resArray=[[NSMutableArray alloc]init];
-                  for(int i=0;i<numbers;i++) {
+                  for(int i=0;i<[result count];i++) {
 
                     NSDictionary *dict = (NSDictionary *) result[i];
                     NSLog(@"the dict is %@", dict);

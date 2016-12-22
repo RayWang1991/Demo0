@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "WRPersonModel.h"
 #import "SQLManager.h"
-#import "RWUIScrollView.h"
+#import "BMTBannerScrollView.h"
 #import "NSFileManaer+WRFileManager.h"
 #import "KnowledgePageViewController.h"
 
@@ -30,7 +30,7 @@
 @property(strong, nonatomic) UIButton *clearButton;
 @property (strong, nonatomic) UIButton *nextButton;
 
-@property(strong,nonatomic) RWUIScrollView *bannerView;
+@property(strong,nonatomic) BMTBannerScrollView *bannerView;
 @property(strong, nonatomic) WRPersonModel *personModel;
 
 //TODO the knowledge page should be retained in a navigation view

@@ -16,8 +16,15 @@
 
 @interface BMTBannerTable : DBTableWithUniquePrimaryKey
 
-- (instancetype)initWithDatabase:(FMDatabase*)db;
-- (NSArray*)getBannersOrderedById:(NSUInteger)num;
--(BOOL) updateBanner:(BMTEntityBanner *)banner;
-//- (BOOL)updateBannerConfig:(BMTEntityBanner*)config;
+- (instancetype)initWithDatabase:(FMDatabase *)db;
+-(BOOL) addBanner:(BMTEntityBanner *)banner;
+-(BOOL) addBanners:(NSArray *)bannerArray;
+-(BOOL) deleteAllBanners;
+
+//-(BOOL) updateBannerWithId:;
+//-(BOOL) deleteBannerWithId:();
+
+- (NSArray<BMTEntityBanner *> *)getBannersOrderedByName:(NSUInteger)num;
+//- (BMTEntityBanner *)getBanner
+-(Class)queryClassWithResultDictionary:(NSDictionary *)dict;
 @end

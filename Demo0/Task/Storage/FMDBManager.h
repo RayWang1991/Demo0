@@ -19,7 +19,8 @@ extern NSString *const kBMTStorageErrorDomain;
       // NSString *WRStorageDomain=@"WRSORAGE";
 
 @interface FMDBManager : NSObject
-
+@property (nonatomic) FMDatabaseQueue *db;
+@property (nonatomic) BMTBannerTable * bannerTable;
 
 + (instancetype)sharedInstance;
 

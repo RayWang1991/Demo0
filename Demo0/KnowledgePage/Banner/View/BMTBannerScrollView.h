@@ -1,5 +1,5 @@
 //
-//  RWUIScrollView.h
+//  BMTBannerScrollView.h
 //  Hello
 //
 //  Created by ray wang on 16/12/14.
@@ -8,11 +8,14 @@
 
 #import "Constants.h"
 #import <UIKit/UIKit.h>
-#import "RWUIScrollView.h"
+#import "BMTBannerScrollView.h"
 #import "Masonry/Masonry.h"
 #import "BMTEntityBanner.h"
-@interface RWUIScrollView : UIScrollView
+@interface BMTBannerScrollView : UIScrollView
+@property (assign,nonatomic) NSUInteger bannerNumber;
+@property (strong, nonatomic) NSMutableArray <UIImageView *>* bannerImageViews;
 
+-(instancetype)initWithBannerNumber:(NSUInteger)num;
 - (void)setStyle1;
 - (void)LoadImagesFromBanners:(NSArray<BMTEntityBanner *>  *)banners;
 @end

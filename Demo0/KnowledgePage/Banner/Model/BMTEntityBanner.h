@@ -27,17 +27,17 @@ typedef NS_ENUM (NSInteger, PosterType) {
 };
 @interface BMTEntityBanner : JSONModel
 
-@property (strong , nonatomic)NSNumber<Optional> *bannerId;
-@property(strong, nonatomic) NSString *altText;
-@property(strong, nonatomic) NSNumber *height;
-@property(strong, nonatomic) NSNumber *width;
+@property(strong, nonatomic) NSString<Optional> *name;// Prim Key
 @property(strong, nonatomic) NSString *href;
 @property(strong, nonatomic) NSString *imgSrc;
+@property(strong, nonatomic) NSString *altText;
+
+@property(strong, nonatomic) NSNumber *height;
+@property(strong, nonatomic) NSNumber *width;
 @property(strong, nonatomic) NSNumber *language;
 
 @property(strong, nonatomic) NSNumber *status;
 @property(strong, nonatomic) NSNumber *type;
 //@property (weak, nonatomic) UIImage<Optional> *bannerImage;
-
 
 @end

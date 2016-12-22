@@ -27,6 +27,7 @@
 		3AED23A9006AD789FF0A036D /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2041DFE32263B3FE0375 /* FMDBManager.m */; };
 		3AED240DEE72B6C4D88D6DC0 /* NSObject+BMTAutoDetached.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED252EF66D618E43F38AC2 /* NSObject+BMTAutoDetached.m */; };
 		3AED242314B3BDF712F51B15 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2C48F0ACEDDD7FC1663C /* 3.jpg */; };
+		3AED244E1826E7CEDD9DE3AC /* KnowledgeHomePageCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2D2ECD8921465FD81294 /* KnowledgeHomePageCategoryTableViewCell.m */; };
 		3AED249DC2E5A77AEA50AA73 /* BMTLayoutConstraintLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2C0D48B16A975BA3D19F /* BMTLayoutConstraintLanguage.m */; };
 		3AED24D6705C8E5B6D62A486 /* KeyValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED29E1CB55088BC8314D2D /* KeyValueView.m */; };
 		3AED24E5E8F0E08000C56821 /* NSFoundation+NSNullEraser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2DC6CB643937602445FA /* NSFoundation+NSNullEraser.m */; };
@@ -37,17 +38,21 @@
 		3AED25FE632E0F692B8DD94F /* WRracCal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED237845F177A641C181AA /* WRracCal.m */; };
 		3AED2677B0050D8176F0CAB4 /* MASConstraint+DeviceAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2947B9EE9BC4AA50ACCB /* MASConstraint+DeviceAdapter.m */; };
 		3AED272723266B61229561B6 /* DBAbstractTable+ForSubclassEyesOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2D20A0FC3F589EADE4A6 /* DBAbstractTable+ForSubclassEyesOnly.m */; };
+		3AED27915536BEBABF78ECC6 /* KnowledgeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED29108F54437C6F019611 /* KnowledgeTableView.m */; };
 		3AED27B6B16C46DC57A7791C /* BMTBannerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2469406EB207909F6437 /* BMTBannerTable.m */; };
 		3AED27C6BB7F897B10F103D4 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27FD2F0A9A049E33BEAB /* 1.jpg */; };
 		3AED27D61E3216255028361C /* BMTEntityBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2D76AAB26B88530D682B /* BMTEntityBanner.m */; };
 		3AED27E7211AF6ED91FDC711 /* BMTLayoutConstraintInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2588BA9458C0AF33C15F /* BMTLayoutConstraintInterpreter.m */; };
+		3AED27F6323F61F229C39B47 /* MicroClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2CFC82C880B6A659BA46 /* MicroClassViewController.m */; };
+		3AED28057ACD6B627B0F2997 /* KnowledgePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED25BEEDD8B181BF68295E /* KnowledgePageViewController.m */; };
 		3AED280B4EA9C5B94D9D7D99 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2AF2F365F4DE2615D656 /* 2.jpg */; };
 		3AED288474D6F29D38004311 /* WRPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED237809A54A41AFC60068 /* WRPersonModel.m */; };
-		3AED28E23B449FE1E5C5ACA2 /* RWUIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2911FC29C05E8C814F0E /* RWUIScrollView.m */; };
+		3AED28E23B449FE1E5C5ACA2 /* BMTBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2911FC29C05E8C814F0E /* BMTBannerScrollView.m */; };
 		3AED2948E6C34BC18FAB874A /* JSONIOForNSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED202CFEF9DEDCC71B7F94 /* JSONIOForNSFoundation.m */; };
 		3AED29F236AA5E171C5DB655 /* BMTBannersTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2FDDA38B79F86A2539C8 /* BMTBannersTable.m */; };
 		3AED2A17D61355F8BF872BA0 /* KnowledgeStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED20B10CBB02620E84B2FC /* KnowledgeStoreManager.m */; };
 		3AED2A2E7B17F84606DE4266 /* DBTableWithUniquePrimaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED20168F0593D0CE2C0939 /* DBTableWithUniquePrimaryKey.m */; };
+		3AED2A4A647A3478F90418DB /* KnowledgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED21EA33F4DB37BF4497A7 /* KnowledgeModel.m */; };
 		3AED2A8A529DA4F2C1DAB4BA /* WRStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2CF677F060F03E211047 /* WRStorageManager.m */; };
 		3AED2B29B64DF07DE891A3DD /* DBTableWithCouplePrimaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED231CF7490643B52C3117 /* DBTableWithCouplePrimaryKey.m */; };
 		3AED2BA1BDE1120C354D60AB /* MergeableObject+ForSubclassEyesOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED26AF886C3495E2A29F47 /* MergeableObject+ForSubclassEyesOnly.m */; };
@@ -58,13 +63,11 @@
 		3AED2CA04E42E43409F5BF20 /* SQLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2CF2F5E49D90F3CC44C5 /* SQLManager.m */; };
 		3AED2CB5D4B31F4D1DB4B7B3 /* BMTLayoutConstraintBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED24276563D9C393D0DF0F /* BMTLayoutConstraintBase.m */; };
 		3AED2CBDD312F6032F2030B6 /* NSDate+ForStorageField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED210516EABB8C90C7229F /* NSDate+ForStorageField.m */; };
-		3AED2CC5CC255BD015DC1228 /* FMDBTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2288C3E59DA2E3581627 /* FMDBTest.m */; };
 		3AED2D1217AE674A10293CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2C68B6B10A1F0D55A686 /* Main.storyboard */; };
 		3AED2D1277D1D6413ED975FF /* DBKey2DBValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED233AFD3F8DD6CAC4D2B6 /* DBKey2DBValue.m */; };
 		3AED2D75C72828079AC66FB9 /* UIScreen+BMTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED223AAE49BC3DA47F75E2 /* UIScreen+BMTExtension.m */; };
 		3AED2D9862FD618101A9BAE3 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED261F168C9659DA58BB84 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m */; };
 		3AED2DA2C21F1C71BE4553D9 /* GetBannerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED22E6C4498FE3D310979D /* GetBannerRequest.m */; };
-		3AED2EA8D62B38E1EAC603A1 /* KnowledgePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED249B252A98E7C513CEC9 /* KnowledgePageViewController.m */; };
 		3AED2EC01994CCDAC8C2EBCC /* DBTableWithUniqueIntegerPrimaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED23AEFBF029BE061AB42D /* DBTableWithUniqueIntegerPrimaryKey.m */; };
 		3AED2EFB47E00021154230FB /* NSFileManager+BMTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2B2B06282EED7F4ECAD4 /* NSFileManager+BMTExtension.m */; };
 		3AED2F39DF1CDB108BE58904 /* BMTLayoutConstraintConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2638A214B0C189004344 /* BMTLayoutConstraintConstant.m */; };
@@ -80,7 +83,6 @@
 		E1727F291E01483700EBDEFA /* Demo0UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1727F281E01483700EBDEFA /* Demo0UITests.m */; };
 		E1727F371E01567B00EBDEFA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1727F361E01567B00EBDEFA /* libsqlite3.tbd */; };
 		E1727F3A1E023CA700EBDEFA /* NSFileManaer+WRFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1727F391E023CA700EBDEFA /* NSFileManaer+WRFileManager.m */; };
-		E1727F3D1E039CEC00EBDEFA /* MicroClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1727F3C1E039CEC00EBDEFA /* MicroClassViewController.m */; };
 		EBCED8163F25C2CE61A64FD3 /* Pods_Demo0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6503F8FA3556302CEC855B1E /* Pods_Demo0UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,16 +124,18 @@
 		3AED215440C73FEE5E0C1777 /* BannersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannersViewController.h; sourceTree = "<group>"; };
 		3AED2171AFAE1B962E064753 /* NSError+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED217EE70A30DADFB88D9B /* NSObject+BMTAutoDetached.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BMTAutoDetached.h"; sourceTree = "<group>"; };
+		3AED217FDE5D356C1B82D1A0 /* KnowledgePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgePageViewController.h; sourceTree = "<group>"; };
 		3AED21CA9A0B77B1A62B54CD /* WRCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCalculator.h; sourceTree = "<group>"; };
+		3AED21EA33F4DB37BF4497A7 /* KnowledgeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeModel.m; sourceTree = "<group>"; };
 		3AED21FCDCD6CAEDECE5726B /* DBKeyValueTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBKeyValueTable.m; sourceTree = "<group>"; };
 		3AED223AAE49BC3DA47F75E2 /* UIScreen+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+BMTExtension.m"; sourceTree = "<group>"; };
-		3AED2288C3E59DA2E3581627 /* FMDBTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTest.m; sourceTree = "<group>"; };
+		3AED225A72BF9F9A5B25924D /* KnowledgeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeTableView.h; sourceTree = "<group>"; };
 		3AED22AEBEF0A4FEB2060EB2 /* UIScreen+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED22BDCC3AE6198672F574 /* BMTLayoutConstraintInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTLayoutConstraintInterpreter.h; sourceTree = "<group>"; };
 		3AED22E6C4498FE3D310979D /* GetBannerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBannerRequest.m; sourceTree = "<group>"; };
+		3AED22FEA12A40A9567BB888 /* KnowledgeHomePageCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeHomePageCategoryTableViewCell.h; sourceTree = "<group>"; };
 		3AED231CF7490643B52C3117 /* DBTableWithCouplePrimaryKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTableWithCouplePrimaryKey.m; sourceTree = "<group>"; };
 		3AED233AFD3F8DD6CAC4D2B6 /* DBKey2DBValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBKey2DBValue.m; sourceTree = "<group>"; };
-		3AED233D8AF78B80BAA4E9BB /* FMDBTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBTest.h; sourceTree = "<group>"; };
 		3AED23568DB7E1CC3A86CB93 /* BMTStorageConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTStorageConstant.h; sourceTree = "<group>"; };
 		3AED235ED11912EBC36DD3CE /* NSDictionary+ForStorageField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ForStorageField.h"; sourceTree = "<group>"; };
 		3AED236F024E5FA1397E97C6 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.h"; sourceTree = "<group>"; };
@@ -146,7 +150,6 @@
 		3AED242EADDC34526CE11284 /* DBKeyValueIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBKeyValueIO.h; sourceTree = "<group>"; };
 		3AED243E8CB29602BF9F6DA6 /* DBTableWithCouplePrimaryKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTableWithCouplePrimaryKey.h; sourceTree = "<group>"; };
 		3AED2469406EB207909F6437 /* BMTBannerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTBannerTable.m; sourceTree = "<group>"; };
-		3AED249B252A98E7C513CEC9 /* KnowledgePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgePageViewController.m; sourceTree = "<group>"; };
 		3AED24F8D1D08B7C93EF1200 /* JSONUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtil.m; sourceTree = "<group>"; };
 		3AED252EF66D618E43F38AC2 /* NSObject+BMTAutoDetached.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BMTAutoDetached.m"; sourceTree = "<group>"; };
 		3AED2531BFCD87AA7C63AB21 /* JSONValueTransformer+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+BMTExtension.m"; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		3AED2550310DAEAEFCEF3DD0 /* BMTResourceBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTResourceBanner.m; sourceTree = "<group>"; };
 		3AED2588BA9458C0AF33C15F /* BMTLayoutConstraintInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTLayoutConstraintInterpreter.m; sourceTree = "<group>"; };
 		3AED2591E92E3F5C7C39B780 /* BMTBannersTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTBannersTable.h; sourceTree = "<group>"; };
+		3AED25BEEDD8B181BF68295E /* KnowledgePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgePageViewController.m; sourceTree = "<group>"; };
 		3AED25C0D5E6E25EBC14509F /* NSNotificationCenter+BMTAutoDetached.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+BMTAutoDetached.h"; sourceTree = "<group>"; };
 		3AED261F168C9659DA58BB84 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m"; sourceTree = "<group>"; };
 		3AED26232D3A7D55B3B1F623 /* BMTLayoutConstraintConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTLayoutConstraintConstant.h; sourceTree = "<group>"; };
@@ -163,22 +167,23 @@
 		3AED270B0BF79FB14809772E /* BannersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannersViewController.m; sourceTree = "<group>"; };
 		3AED271B6D2975F2AEB55C99 /* BMTStorageConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTStorageConstant.m; sourceTree = "<group>"; };
 		3AED2724F1D8548C935E1AA7 /* NSString+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BMTExtension.h"; sourceTree = "<group>"; };
-		3AED2732379FC308CD547734 /* KnowledgePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgePageViewController.h; sourceTree = "<group>"; };
 		3AED274382A923106ECA2D79 /* BMLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLayoutConstraint.h; sourceTree = "<group>"; };
 		3AED278F87F4447C4D2ACE37 /* UIDevice+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED27EB55E0B96A9C8F7E66 /* NSDate+ForStorageField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ForStorageField.h"; sourceTree = "<group>"; };
 		3AED27FD2F0A9A049E33BEAB /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		3AED28590749C56AD97C82ED /* BMTBannerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTBannerTable.h; sourceTree = "<group>"; };
+		3AED28701EF78B946DEF58D3 /* MicroClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroClassViewController.h; sourceTree = "<group>"; };
 		3AED28B131890F13C6132594 /* KeyValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueView.h; sourceTree = "<group>"; };
 		3AED28C413FD038ECFE5BA84 /* DBAbstractTable+ForSubclassEyesOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBAbstractTable+ForSubclassEyesOnly.h"; sourceTree = "<group>"; };
 		3AED28C9BBAE46C0F1239C70 /* UIView+LayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutConstraint.m"; sourceTree = "<group>"; };
 		3AED28DBF95AF7FE6DDB4F08 /* KnowledgeStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeStoreManager.h; sourceTree = "<group>"; };
-		3AED2911FC29C05E8C814F0E /* RWUIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWUIScrollView.m; sourceTree = "<group>"; };
+		3AED29108F54437C6F019611 /* KnowledgeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeTableView.m; sourceTree = "<group>"; };
+		3AED2911FC29C05E8C814F0E /* BMTBannerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTBannerScrollView.m; sourceTree = "<group>"; };
 		3AED2947B9EE9BC4AA50ACCB /* MASConstraint+DeviceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MASConstraint+DeviceAdapter.m"; sourceTree = "<group>"; };
 		3AED2962947DA3B21D969F22 /* NSFoundation+NSNullEraser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFoundation+NSNullEraser.h"; sourceTree = "<group>"; };
 		3AED29DF6B5DE3B6CAAE6268 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		3AED29E1CB55088BC8314D2D /* KeyValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueView.m; sourceTree = "<group>"; };
-		3AED2A0790F41FC47D40DCED /* RWUIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWUIScrollView.h; sourceTree = "<group>"; };
+		3AED2A0790F41FC47D40DCED /* BMTBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTBannerScrollView.h; sourceTree = "<group>"; };
 		3AED2A4B87DD922216EAD2FB /* SessionRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionRequestManager.h; sourceTree = "<group>"; };
 		3AED2A65B1EDB7BB7B1CECEE /* BMMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMacro.h; sourceTree = "<group>"; };
 		3AED2A807C447E8F91FEB80C /* GetBannerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBannerRequest.h; sourceTree = "<group>"; };
@@ -191,6 +196,7 @@
 		3AED2B27BFCCDEAD1BA646C5 /* NSNotificationCenter+BMTAutoDetached.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+BMTAutoDetached.m"; sourceTree = "<group>"; };
 		3AED2B2B06282EED7F4ECAD4 /* NSFileManager+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED2B306C93DCEC89C79819 /* MergeableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeableObject.m; sourceTree = "<group>"; };
+		3AED2B4B7270C4EF1730AFD2 /* KnowledgeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeModel.h; sourceTree = "<group>"; };
 		3AED2B5B4550C19C81EDDDF0 /* BMTUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTUIConstants.h; sourceTree = "<group>"; };
 		3AED2B68B1DCF99854BAF53E /* WRStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRStorageManager.h; sourceTree = "<group>"; };
 		3AED2B7481785CEB3F411B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -209,7 +215,9 @@
 		3AED2CF3664F9117E0E28CD5 /* UIDevice+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED2CF677F060F03E211047 /* WRStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRStorageManager.m; sourceTree = "<group>"; };
 		3AED2CF760F8F2F91256FBE7 /* FMDatabase+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+Extension.m"; sourceTree = "<group>"; };
+		3AED2CFC82C880B6A659BA46 /* MicroClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroClassViewController.m; sourceTree = "<group>"; };
 		3AED2D20A0FC3F589EADE4A6 /* DBAbstractTable+ForSubclassEyesOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBAbstractTable+ForSubclassEyesOnly.m"; sourceTree = "<group>"; };
+		3AED2D2ECD8921465FD81294 /* KnowledgeHomePageCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeHomePageCategoryTableViewCell.m; sourceTree = "<group>"; };
 		3AED2D54D0F5B34675F272D2 /* DeepCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeepCopyable.m; sourceTree = "<group>"; };
 		3AED2D6402AD009FEBD6E36B /* DBKeyValueRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBKeyValueRecord.h; sourceTree = "<group>"; };
 		3AED2D76AAB26B88530D682B /* BMTEntityBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTEntityBanner.m; sourceTree = "<group>"; };
@@ -250,8 +258,6 @@
 		E1727F361E01567B00EBDEFA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		E1727F381E023CA700EBDEFA /* NSFileManaer+WRFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManaer+WRFileManager.h"; sourceTree = "<group>"; };
 		E1727F391E023CA700EBDEFA /* NSFileManaer+WRFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManaer+WRFileManager.m"; sourceTree = "<group>"; };
-		E1727F3B1E039CEC00EBDEFA /* MicroClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroClassViewController.h; sourceTree = "<group>"; };
-		E1727F3C1E039CEC00EBDEFA /* MicroClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroClassViewController.m; sourceTree = "<group>"; };
 		E6F151D177B75F1705B7043A /* Pods-Demo0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo0/Pods-Demo0.release.xcconfig"; sourceTree = "<group>"; };
 		EF0ACB51BF33A3D5C761347F /* Pods-Demo0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo0/Pods-Demo0.debug.xcconfig"; sourceTree = "<group>"; };
 		F86101BB30B6151AD0E958BC /* Pods-Demo0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo0UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo0UITests/Pods-Demo0UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +292,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AED2095EA23A10E4B4BEF24 /* KnowledgeBody */ = {
+			isa = PBXGroup;
+			children = (
+				3AED2C434C1EC2DA49D3E7C0 /* Model */,
+				3AED23D1EB8E83759839D42E /* ViewCell */,
+				3AED2B648DADAFBF1C21D0FE /* Controller */,
+				3AED225A72BF9F9A5B25924D /* KnowledgeTableView.h */,
+				3AED29108F54437C6F019611 /* KnowledgeTableView.m */,
+			);
+			path = KnowledgeBody;
+			sourceTree = "<group>";
+		};
 		3AED20E3FC1CDCFDD39A393F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +394,15 @@
 			path = UITil;
 			sourceTree = "<group>";
 		};
+		3AED23D1EB8E83759839D42E /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3AED22FEA12A40A9567BB888 /* KnowledgeHomePageCategoryTableViewCell.h */,
+				3AED2D2ECD8921465FD81294 /* KnowledgeHomePageCategoryTableViewCell.m */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		3AED255FF675E1B3AFD93B6A /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +422,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3AED25C7E8CED4A193E182C6 /* Knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				3AED2B4B7270C4EF1730AFD2 /* KnowledgeModel.h */,
+				3AED21EA33F4DB37BF4497A7 /* KnowledgeModel.m */,
+			);
+			path = Knowledge;
+			sourceTree = "<group>";
+		};
 		3AED271C66D4D7937EDEFE5A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,12 +443,19 @@
 		3AED27265314984C7D424C16 /* KnowledgePage */ = {
 			isa = PBXGroup;
 			children = (
-				3AED249B252A98E7C513CEC9 /* KnowledgePageViewController.m */,
-				3AED2732379FC308CD547734 /* KnowledgePageViewController.h */,
 				3AED2F347632421B01C987F9 /* Banner */,
 				3AED2A91B4C5CC89EB4982E6 /* MicroClass */,
+				3AED25C7E8CED4A193E182C6 /* Knowledge */,
+				3AED2095EA23A10E4B4BEF24 /* KnowledgeBody */,
 			);
 			path = KnowledgePage;
+			sourceTree = "<group>";
+		};
+		3AED276932CAAAB4F131707A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3AED279AAD3B2CB0668CED3D /* resource */ = {
@@ -436,10 +479,17 @@
 		3AED2835970386BE639326EC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3AED2A0790F41FC47D40DCED /* RWUIScrollView.h */,
-				3AED2911FC29C05E8C814F0E /* RWUIScrollView.m */,
+				3AED2A0790F41FC47D40DCED /* BMTBannerScrollView.h */,
+				3AED2911FC29C05E8C814F0E /* BMTBannerScrollView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3AED285E3D1B47BEE981CCD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3AED28E581C552D0CA9F90B3 /* base */ = {
@@ -450,6 +500,15 @@
 				3AED2B14402A08AE5F43D61E /* BMTJSONModel.m */,
 			);
 			path = base;
+			sourceTree = "<group>";
+		};
+		3AED291B96F0F1A93CD60956 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AED28701EF78B946DEF58D3 /* MicroClassViewController.h */,
+				3AED2CFC82C880B6A659BA46 /* MicroClassViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3AED297747BF660D901E289C /* Base */ = {
@@ -534,10 +593,20 @@
 		3AED2A91B4C5CC89EB4982E6 /* MicroClass */ = {
 			isa = PBXGroup;
 			children = (
-				E1727F3B1E039CEC00EBDEFA /* MicroClassViewController.h */,
-				E1727F3C1E039CEC00EBDEFA /* MicroClassViewController.m */,
+				3AED291B96F0F1A93CD60956 /* Controller */,
+				3AED285E3D1B47BEE981CCD3 /* Model */,
+				3AED276932CAAAB4F131707A /* View */,
 			);
 			path = MicroClass;
+			sourceTree = "<group>";
+		};
+		3AED2B648DADAFBF1C21D0FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AED217FDE5D356C1B82D1A0 /* KnowledgePageViewController.h */,
+				3AED25BEEDD8B181BF68295E /* KnowledgePageViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3AED2B9F3694FDB19AC8CAAE /* MainPage */ = {
@@ -567,6 +636,13 @@
 			path = BMLayoutConstraint;
 			sourceTree = "<group>";
 		};
+		3AED2C434C1EC2DA49D3E7C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3AED2D29FE55272E9D2F2EED /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,8 +656,6 @@
 				3AED23D8E5F2ACEF4ACCE6D6 /* FMDBManager.h */,
 				3AED2469406EB207909F6437 /* BMTBannerTable.m */,
 				3AED28590749C56AD97C82ED /* BMTBannerTable.h */,
-				3AED2288C3E59DA2E3581627 /* FMDBTest.m */,
-				3AED233D8AF78B80BAA4E9BB /* FMDBTest.h */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -993,7 +1067,6 @@
 				E1727F3A1E023CA700EBDEFA /* NSFileManaer+WRFileManager.m in Sources */,
 				E1727F021E01483700EBDEFA /* main.m in Sources */,
 				E1727F0E1E01483700EBDEFA /* Demo0.xcdatamodeld in Sources */,
-				E1727F3D1E039CEC00EBDEFA /* MicroClassViewController.m in Sources */,
 				3AED24D6705C8E5B6D62A486 /* KeyValueView.m in Sources */,
 				3AED20DFCC4E66F9DB7F4A88 /* UserInfoViewController.m in Sources */,
 				3AED288474D6F29D38004311 /* WRPersonModel.m in Sources */,
@@ -1002,11 +1075,10 @@
 				3AED2A8A529DA4F2C1DAB4BA /* WRStorageManager.m in Sources */,
 				3AED215A16973C3B2EC05A8D /* WRCalculator.m in Sources */,
 				3AED25FE632E0F692B8DD94F /* WRracCal.m in Sources */,
-				3AED28E23B449FE1E5C5ACA2 /* RWUIScrollView.m in Sources */,
+				3AED28E23B449FE1E5C5ACA2 /* BMTBannerScrollView.m in Sources */,
 				3AED27D61E3216255028361C /* BMTEntityBanner.m in Sources */,
 				3AED2A17D61355F8BF872BA0 /* KnowledgeStoreManager.m in Sources */,
 				3AED222554E985CDCFE8BF23 /* BannersViewController.m in Sources */,
-				3AED2EA8D62B38E1EAC603A1 /* KnowledgePageViewController.m in Sources */,
 				3AED21EDCC70AF8529FD938C /* UIView+LayoutConstraint.m in Sources */,
 				3AED2CB5D4B31F4D1DB4B7B3 /* BMTLayoutConstraintBase.m in Sources */,
 				3AED2F39DF1CDB108BE58904 /* BMTLayoutConstraintConstant.m in Sources */,
@@ -1049,7 +1121,11 @@
 				3AED27B6B16C46DC57A7791C /* BMTBannerTable.m in Sources */,
 				3AED22B4398EB4B946BC9A17 /* BMTJSONModel.m in Sources */,
 				3AED2513B0D7A94C11475818 /* BMTResourceBanner.m in Sources */,
-				3AED2CC5CC255BD015DC1228 /* FMDBTest.m in Sources */,
+				3AED27F6323F61F229C39B47 /* MicroClassViewController.m in Sources */,
+				3AED2A4A647A3478F90418DB /* KnowledgeModel.m in Sources */,
+				3AED244E1826E7CEDD9DE3AC /* KnowledgeHomePageCategoryTableViewCell.m in Sources */,
+				3AED28057ACD6B627B0F2997 /* KnowledgePageViewController.m in Sources */,
+				3AED27915536BEBABF78ECC6 /* KnowledgeTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

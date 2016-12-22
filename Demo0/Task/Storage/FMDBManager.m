@@ -9,14 +9,16 @@
 
 #import "FMDBManager.h"
 #import "NSError+BMTExtension.h"
-#import "FMDatabase+Extension.h"
+#import "FMDatabase+Extension.h"]
 
+/*
 @interface FMDBManager ()
 
 @property (nonatomic) FMDatabaseQueue *db;
 @property (nonatomic) BMTBannerTable * bannerTable;
 
 @end
+*/
 
 @implementation FMDBManager {
 
@@ -54,7 +56,7 @@
                                                        YES)[0];
   path = [path stringByAppendingPathComponent:BMT_DB_NAME];
 
-  NSLog(@"the database path is : %@",path);
+  NSLog(@"the  path is : %@",path);
 
   self.db = [FMDatabaseQueue databaseQueueWithPath:path];
   if (self.db == nil) {

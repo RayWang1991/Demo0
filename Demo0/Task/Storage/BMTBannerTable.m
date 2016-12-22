@@ -22,7 +22,8 @@
 @property (assign, nonatomic) PosterType type;
 */
 
-#define BANNER_COLUMN_ID @"bannerId"
+#define BANNER_COLUMN_NAME @"name"
+//#define BANNER_COLUMN_ID @"bannerId"
 #define BANNER_COLUMN_ALTTEXT @"altText"
 #define BANNER_COLUMN_HEIGHT @"height"
 #define BANNER_COLUMN_WIDTH @"width"
@@ -66,19 +67,18 @@
     return nil;
   }
 
+  self.name = [content stringValueForDBFieldName:BANNER_COLUMN_NAME];
 
-  self.bannerId=[content numberValueForDBFieldName:BANNER_COLUMN_ID];
+  self.altText = [content stringValueForDBFieldName:BANNER_COLUMN_ALTTEXT];
+  self.imgSrc = [content stringValueForDBFieldName:BANNER_COLUMN_IMGSRC];
+  self.height = [content numberValueForDBFieldName:BANNER_COLUMN_HEIGHT];
+  self.href = [content stringValueForDBFieldName:BANNER_COLUMN_HREF];
+  self.width = [content numberValueForDBFieldName:BANNER_COLUMN_WIDTH];
 
-  self.altText=[content stringValueForDBFieldName:BANNER_COLUMN_ALTTEXT];
-  self.imgSrc=[content stringValueForDBFieldName:BANNER_COLUMN_IMGSRC];
-  self.height=[content numberValueForDBFieldName:BANNER_COLUMN_HEIGHT];
-  self.href=[content stringValueForDBFieldName:BANNER_COLUMN_HREF];
-  self.width=[content numberValueForDBFieldName:BANNER_COLUMN_WIDTH];
+  self.language = [content numberValueForDBFieldName:BANNER_COLUMN_LANGUAGE];
 
-  self.language=[content numberValueForDBFieldName:BANNER_COLUMN_LANGUAGE];
-
-  self.type=[content numberValueForDBFieldName:BANNER_COLUMN_TYPE];
-  self.status=[content numberValueForDBFieldName:BANNER_COLUMN_STATUS];
+  self.type = [content numberValueForDBFieldName:BANNER_COLUMN_TYPE];
+  self.status = [content numberValueForDBFieldName:BANNER_COLUMN_STATUS];
 
   return self;
 }
@@ -87,20 +87,27 @@
 
   NSMutableDictionary *result = [NSMutableDictionary dictionary];
 
-  [result setValue:self.bannerId forKey:BANNER_COLUMN_ID];
-  [result setValue:self.altText forKey:BANNER_COLUMN_ALTTEXT];
-  [result setValue:self.imgSrc forKey:BANNER_COLUMN_IMGSRC];
-  [result setValue:self.type forKey:BANNER_COLUMN_TYPE];
-  [result setValue:self.status forKey:BANNER_COLUMN_STATUS];
-  [result setValue:self.language forKey:BANNER_COLUMN_LANGUAGE];
-  [result setValue:self.height forKey:BANNER_COLUMN_HEIGHT];
-  [result setValue:self.width forKey:BANNER_COLUMN_WIDTH];
-  [result setValue:self.href forKey:BANNER_COLUMN_HREF];
+  [result setValue:self.name
+            forKey:BANNER_COLUMN_NAME];
+  [result setValue:self.altText
+            forKey:BANNER_COLUMN_ALTTEXT];
+  [result setValue:self.imgSrc
+            forKey:BANNER_COLUMN_IMGSRC];
+  [result setValue:self.type
+            forKey:BANNER_COLUMN_TYPE];
+  [result setValue:self.status
+            forKey:BANNER_COLUMN_STATUS];
+  [result setValue:self.language
+            forKey:BANNER_COLUMN_LANGUAGE];
+  [result setValue:self.height
+            forKey:BANNER_COLUMN_HEIGHT];
+  [result setValue:self.width
+            forKey:BANNER_COLUMN_WIDTH];
+  [result setValue:self.href
+            forKey:BANNER_COLUMN_HREF];
 
   return result;
 }
-
-
 
 /*
 - (instancetype)initWithDBKey2DBValue:(DBKey2DBValue*)key2Value {
@@ -146,24 +153,24 @@ DBKey2DBValue *result=[[DBKey2DBValue alloc]init];
 }
 */
 
-- (instancetype)initWithResource:(BMTResourceBanner*)resource{
+- (instancetype)initWithResource:(BMTResourceBanner *)resource {
   self = [super init];
   if (!self) {
     return nil;
   }
-  self.altText=resource.altText;
-  self.status=resource.status;
-  self.href=resource.href;
-  self.imgSrc=resource.imgSrc;
-  self.language=resource.language;
-  self.width=resource.width;
-  self.height=resource.height;
+  self.altText = resource.altText;
+  self.status = resource.status;
+  self.href = resource.href;
+  self.imgSrc = resource.imgSrc;
+  self.language = resource.language;
+  self.width = resource.width;
+  self.height = resource.height;
 
   return self;
 }
 
--(BOOL) updateBanner:(BMTEntityBanner *)banner{
-
+- (BOOL)updateBanner:(BMTEntityBanner *)banner {
+    return NO;
 }
 
 
@@ -172,15 +179,40 @@ DBKey2DBValue *result=[[DBKey2DBValue alloc]init];
 @implementation BMTBannerTable {
 
 }
-- (instancetype)initWithDatabase:(FMDatabase*)db {
+
+- (instancetype)initWithDatabase:(FMDatabase *)db {
   return [self initWithTableName:BMT_TABLENAME_BANNER
                       inDatabase:db
-                  withKeyName: BANNER_COLUMN_ID];
+                     withKeyName:BANNER_COLUMN_IMGSRC];
+}
+- (BOOL)addBanner:(BMTEntityBanner *)banner {
+  return [self addItemOrReplace:banner];
+}
+- (BOOL)addBanners:(NSArray *)bannerArray {
+  BOOL success=YES;
+  for(BMTEntityBanner *banner in bannerArray){
+    success=success&&[self addBanner:banner];
+  }
+  return success;
+}
+- (BOOL)deleteAllBanners {
+  return [self deleteAllItems];
 }
 
-- (NSArray*)getBannersOrderedById:(NSUInteger)num  {
-  NSString *otherPart =[NSString stringWithFormat:@"order by %@ desc",
-          BANNER_COLUMN_ID];
+- (NSArray<BMTEntityBanner *> *)getBannersOrderedByName:(NSUInteger)num {
+  NSInteger count=[self selectItemCount];
+  if(num>count){
+    return nil;
+  }
+  NSArray *resArray=[self selectItemsWithOtherPart:[NSString stringWithFormat:@"order by name desc "
+          "LIMIT 0,%@",@(num)]
+                                         withParam:nil];
+  return resArray;
+}
+
+- (NSArray *)getBannersOrderedById:(NSUInteger)num {
+  NSString *otherPart = [NSString stringWithFormat:@"order by %@ desc",
+          BANNER_COLUMN_IMGSRC];
   return [self selectItemsWithOtherPart:otherPart
                               withParam:nil];
 }
@@ -189,15 +221,16 @@ DBKey2DBValue *result=[[DBKey2DBValue alloc]init];
 
 - (NSError *)createTableIfNeeded {
   NSString *sql = @"CREATE TABLE IF NOT EXISTS " BMT_TABLENAME_BANNER @"("
-  BANNER_COLUMN_ID @" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"
-  BANNER_COLUMN_STATUS @" INTEGER,"
-  BANNER_COLUMN_TYPE @" INTEGER,"
-  BANNER_COLUMN_IMGSRC @" TEXT,"
-  BANNER_COLUMN_HREF @" TEXT,"
-  BANNER_COLUMN_ALTTEXT @"TEXT,"
-  BANNER_COLUMN_LANGUAGE @" INTEGER,"
-  BANNER_COLUMN_HEIGHT @" INTEGER,"
-  BANNER_COLUMN_WIDTH @" INTEGER)";
+      //BANNER_COLUMN_ID @" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"
+      BANNER_COLUMN_NAME@" TEXT PRIMARY KEY NOT NULL,"
+      BANNER_COLUMN_STATUS @" INTEGER,"
+      BANNER_COLUMN_TYPE @" INTEGER,"
+      BANNER_COLUMN_IMGSRC @" TEXT ,"
+      BANNER_COLUMN_HREF @" TEXT,"
+      BANNER_COLUMN_ALTTEXT @" TEXT,"
+      BANNER_COLUMN_LANGUAGE @" INTEGER,"
+      BANNER_COLUMN_HEIGHT @" INTEGER,"
+      BANNER_COLUMN_WIDTH @" INTEGER)";
 
   BOOL success = [self.db executeUpdate:sql];
 
@@ -207,23 +240,7 @@ DBKey2DBValue *result=[[DBKey2DBValue alloc]init];
   return nil;
 }
 
-- (BOOL)upgrade {
-  BOOL success = YES;
-  success = success && [self checkAndAddColumn: BANNER_COLUMN_IMGSRC
-                                      withType:@"TEXT"];
-  success = success && [self checkAndAddColumn: BANNER_COLUMN_TYPE
-                                      withType:@"INTEGER"];
-  success = success && [self checkAndAddColumn: BANNER_COLUMN_ALTTEXT
-                                      withType:@"TEXT"];
-  success = success && [self checkAndAddColumn: BANNER_COLUMN_HREF
-                                      withType:@"TEXT"];
-  success = success && [self checkAndAddColumn: BANNER_COLUMN_STATUS
-                                      withType:@"INTEGER"];
-  success = success && [self checkAndAddColumn: BANNER_COLUMN_WIDTH
-                                      withType:@"INTEGER"];
-  success = success && [self checkAndAddColumn: BANNER_COLUMN_HEIGHT
-                                      withType:@"INTEGER"];
-  return success;
+- (Class)queryClassWithResultDictionary:(NSDictionary *)dict {
+  return [BMTEntityBanner class];
 }
-
 @end

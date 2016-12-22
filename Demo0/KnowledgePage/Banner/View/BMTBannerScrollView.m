@@ -1,5 +1,5 @@
 //
-//  RWUIScrollView.m
+//  BMTBannerScrollView.m
 //  Hello
 //
 //  Created by ray wang on 16/12/14.
@@ -7,13 +7,30 @@
 //
 
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "RWUIScrollView.h"
+#import "BMTBannerScrollView.h"
 
-@implementation RWUIScrollView
+@implementation BMTBannerScrollView
+
+- (instancetype)initWithBannerNumber:(NSUInteger)num {
+  self=[super init];
+  if(self){
+    // set bannerImageViews (no images are available here)
+    _bannerNumber=num;
+    _bannerImageViews= [[NSMutableArray alloc] initWithCapacity:num];
+    for(NSUInteger i=0;i<num;i++){
+      UIImageView * view=[[UIImageView alloc] initWithFrame:CGRectMake(i *
+          375, 0, 375, 190.5)];
+      [_bannerImageViews addObject:view];
+      [self addSubview:view];
+    }
+
+  }
+  return self;
+}
 
 - (void)setStyle1 {
   self.frame = CGRectMake(0, 0, 375, 190.5);
-  self.contentSize = CGSizeMake(4 * (375), 190.5);
+  self.contentSize = CGSizeMake(self.bannerNumber * (375), 190.5);
 
   self.pagingEnabled = YES;
   self.scrollEnabled = YES;
@@ -23,20 +40,20 @@
   self.alwaysBounceVertical = NO;
   self.alwaysBounceHorizontal = YES;
   self.backgroundColor = [UIColor blueColor];
+
+
 }
 
 - (void)LoadImagesFromBanners:(NSArray<BMTEntityBanner *> *)banners {
-  NSUInteger n = [banners count];
+  NSCAssert(banners.count>=self.bannerNumber,@"banner shortage!");
+  NSUInteger n = self.bannerNumber;
   for (NSUInteger i = 0; i < n; i++) {
-    UIImageView *imageView =
-        [[UIImageView alloc] initWithFrame:CGRectMake(i * 375, 0, 375, 190.5)];\
-        NSLog(@"the original string is: %@ ", banners[i].imgSrc);
+    UIImageView *imageView =self.bannerImageViews[i];
     NSString *convertedStr = [banners[i]
         .imgSrc stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"^"]
         .invertedSet];
     NSURL *imageURL = [NSURL URLWithString:convertedStr];
 
-    [self addSubview:imageView];
     [imageView sd_setImageWithURL:imageURL
                  placeholderImage:[UIImage imageNamed:@"1"
                      ".jpg"]
@@ -71,4 +88,7 @@
     //[imageView setImage:[UIImage imageNamed:@"1.jpg"]];
   }
 }
+
+
+
 @end
