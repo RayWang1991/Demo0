@@ -8,6 +8,7 @@
  */
 
 #import "SessionRequestManager.h"
+#import "BMTEntityKnowledgeInfo.h"
 #define kBMBASEURL @"https://api.bongmi.com/v1"
 
 #define kTESTURL(d) @"https://raw.githubusercontent.com/RayWang1991/TestData/master/person" # d ".json"
@@ -110,8 +111,8 @@
                                     failure:(void (^)(NSError *error))failBlock
                                  categoryId:(NSUInteger)categoryId {
   NSString *str = [kBMBASEURL
-      stringByAppendingFormat:@"/w/knowledge?category_id=%d&language=%d"
-                                  "&pageNo=%d&pageSize=%d",categoryId,1,1,5];
+      stringByAppendingFormat:@"/w/knowledge?category_id=%ld&language=%d&count=%d"
+                                  "&pageNo=%d",categoryId,1,5,0];
 
   NSLog(@"%@", str);
   NSURL *url = [NSURL URLWithString:str];
@@ -136,8 +137,7 @@
                   failBlock(dataError);
                 } else {
                   // the give class must be a subclass of JSONModel
-                  // NSCAssert([classType isSubclassOfClass:[JSONModel class]],
-                            @"not a jsonmodel");
+                  // NSCAssert([classType isSubclassOfClass:[JSONModel class]],@"not a jsonmodel");
 
                   // now convert json dict to model
                   // assuming we receive an array containing
@@ -155,8 +155,9 @@
                     NSLog(@"the dict is %@", dict);
 
                     JSONModelError *jsonModelError = nil;
-
-                    //i d aModel = [[classType alloc] initWithDictionary:dict
+// TODO
+                    id aModel = [[BMTEntityKnowledgeInfo alloc]
+                        initWithDictionary:dict error:&jsonModelError];
                     // error:&jsonModelError];
 
                     if (jsonModelError != nil) {

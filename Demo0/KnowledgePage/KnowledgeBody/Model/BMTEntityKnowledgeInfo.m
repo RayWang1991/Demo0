@@ -7,9 +7,11 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "KnowledgeBriefModel.h"
+#import "BMTEntityKnowledgeInfo.h"
 
-@implementation KnowledgeBriefModel {
+/*
+@implementation BMTEntityKnowledgeInfo {
 
 }
 @end
+ */

@@ -15,7 +15,7 @@
 #import "WRPersonModel.h"
 #import "Constants.h"
 
-@interface BannersViewController : UIViewController
+@interface BannersViewController : UIViewController<UIScrollViewDelegate>
 
 @property(assign, nonatomic) NSInteger bannerNums;
 @property(strong, nonatomic) NSArray<BMTEntityBanner *> *banners;

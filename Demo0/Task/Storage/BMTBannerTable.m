@@ -75,7 +75,7 @@
   self.href = [content stringValueForDBFieldName:BANNER_COLUMN_HREF];
   self.width = [content numberValueForDBFieldName:BANNER_COLUMN_WIDTH];
 
-  self.language = [content numberValueForDBFieldName:BANNER_COLUMN_LANGUAGE];
+  self.language = [content stringValueForDBFieldName:BANNER_COLUMN_LANGUAGE];
 
   self.type = [content numberValueForDBFieldName:BANNER_COLUMN_TYPE];
   self.status = [content numberValueForDBFieldName:BANNER_COLUMN_STATUS];
@@ -228,7 +228,7 @@ DBKey2DBValue *result=[[DBKey2DBValue alloc]init];
       BANNER_COLUMN_IMGSRC @" TEXT ,"
       BANNER_COLUMN_HREF @" TEXT,"
       BANNER_COLUMN_ALTTEXT @" TEXT,"
-      BANNER_COLUMN_LANGUAGE @" INTEGER,"
+      BANNER_COLUMN_LANGUAGE @" TEXT,"
       BANNER_COLUMN_HEIGHT @" INTEGER,"
       BANNER_COLUMN_WIDTH @" INTEGER)";
 

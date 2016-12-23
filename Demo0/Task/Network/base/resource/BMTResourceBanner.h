@@ -17,7 +17,7 @@
 @property(strong, nonatomic) NSNumber *width;
 @property(strong, nonatomic) NSString *href;
 @property(strong, nonatomic) NSString *imgSrc;
-@property(strong, nonatomic) NSNumber *language;
+@property(strong, nonatomic) NSString *language;
 
 @property(strong, nonatomic) NSNumber *status;
 @property(strong, nonatomic) NSNumber *type;

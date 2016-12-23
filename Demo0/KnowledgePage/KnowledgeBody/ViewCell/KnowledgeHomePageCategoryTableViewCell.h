@@ -9,15 +9,16 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "KnowledgeBriefModel.h"
+#import "BMTEntityKnowledgeInfo.h"
 #import "BottomView.h"
+
 @interface KnowledgeHomePageCategoryTableViewCell : UITableViewCell
 @property(strong, nonatomic) UIView *backView;
 @property (strong, nonatomic) UIImageView * knowledgeImageView;
 @property(strong, nonatomic) UILabel *titleLabel;
 @property(strong, nonatomic) UILabel *contentLabel;
 @property(strong, nonatomic) BottomView *bottomView;
-//@property (strong, nonatomic) KnowledgeBriefModel *model;
+//@property (strong, nonatomic) BMTEntityKnowledgeInfo *model;
 
 + (NSString *)bmt_reuseId;
 

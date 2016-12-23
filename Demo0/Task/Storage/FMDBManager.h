@@ -10,18 +10,19 @@
 #import <Foundation/Foundation.h>
 #import "FMDB/FMDB.h"
 #import "BMTBannerTable.h"
+#import "KnowledgeInfoTable.h"
 #import "BMTStorageConstant.h"
-
 
 #define DBNAME @"raywang.db"
 
 extern NSString *const kBMTStorageErrorDomain;
-      // NSString *WRStorageDomain=@"WRSORAGE";
+// NSString *WRStorageDomain=@"WRSORAGE";
 
 @interface FMDBManager : NSObject
-@property (nonatomic) FMDatabaseQueue *db;
-@property (nonatomic) BMTBannerTable * bannerTable;
-
+@property(nonatomic) FMDatabaseQueue *db;
+@property(nonatomic) BMTBannerTable *bannerTable;
+@property(nonatomic) NSMutableArray <KnowledgeInfoTable *>
+    *knowledgeInfoTableArray;
 + (instancetype)sharedInstance;
 
 - (void)prepare;

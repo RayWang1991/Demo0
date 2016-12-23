@@ -9,47 +9,62 @@
 
 #import "KnowledgePageViewController.h"
 #import "KnowledgeTableView.h"
+#define DEFAULT_KNOWLEDGE_NUM (5u)
 
 @implementation KnowledgePageViewController {
 
 }
--(void)laodView{
-  self.view= [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+- (void)loadView {
+  self.view = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self setViewBasicStyle];
 
+
+
+
   self.bannersVC = [[BannersViewController alloc] init];
 
-
-  self.tableView= [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
-                                               style:UITableViewStylePlain];
+  self.tableView = [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
+                                                       style:UITableViewStylePlain];
   [self.view addSubview:self.tableView];
 
-  _tableView.tableHeaderView= _bannersVC.view;
-  _tableView.tableFooterView=nil;// TODO, button
-  _tableView.delegate=self;
-  _tableView.dataSource=self;//TODO, split later
+  _tableView.tableHeaderView = _bannersVC.view;
+  _tableView.tableFooterView = nil;// TODO, button
+  _tableView.delegate = self;
+  _tableView.dataSource = self;//TODO, split later
 
   [_tableView registerClass:[KnowledgeHomePageCategoryTableViewCell class]
      forCellReuseIdentifier:[KnowledgeHomePageCategoryTableViewCell bmt_reuseId]];
 
-  _dataArray= [[NSMutableArray alloc] init];
-  for(int i=0;i<20;i++){
-    [_dataArray addObject:[[KnowledgeDataSourceModel alloc] initWithRandom]];
+  _dataArray = [[NSMutableArray alloc] init];
+  for (int i = 0; i < 20; i++) {
+    [_dataArray addObject:[[KnowledgeInfoDataSourceManager alloc] initWithRandom]];
+      
+      
   }
+    [self testStorage];
+    [self testNetRequest];
 
 
 }
 
-
-
-
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)testNetRequest {
+  SessionRequestManager *requestManager = [SessionRequestManager sharedManager];
+  [requestManager getKnowledgeBriefsFromServerSuccess:^(NSArray* array){;}
+                                              failure:^(NSError* error){;}
+                                           categoryId:1];
+}
+
+-(void)testStorage{
+
 }
 
 /*
@@ -69,28 +84,34 @@
   return self.dataArray.count;
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1;
 }
 
--(CGFloat)    tableView:(UITableView *)tableView
+- (CGFloat)   tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSString *cellStr=[KnowledgeHomePageCategoryTableViewCell bmt_reuseId];//used for reuse
-  KnowledgeHomePageCategoryTableViewCell *cell=[self.tableView
-      dequeueReusableCellWithIdentifier:cellStr forIndexPath:indexPath];
+  NSString *cellStr =
+      [KnowledgeHomePageCategoryTableViewCell bmt_reuseId];//used for reuse
+  KnowledgeHomePageCategoryTableViewCell *cell = [self.tableView
+      dequeueReusableCellWithIdentifier:cellStr
+                           forIndexPath:indexPath];
 
-  NSString * titleText=[NSString stringWithFormat:@"Row %@",self.dataArray[indexPath.row].title];
-  NSString * detailText=[NSString stringWithFormat:@"Row %@",self
-      .dataArray[indexPath.row].detail];
+  NSString *titleText = [NSString stringWithFormat:@"Row %d %@",indexPath.row,
+                                                   self.dataArray[indexPath.row]
+                                                       .title];
+  NSString *detailText = [NSString stringWithFormat:@"%@",
+                                                    self
+                                                        .dataArray[indexPath
+                                                        .row].detail];
   //NSString * Text=[NSString stringWithFormat:@"Row %@",self
   // .dataArray[indexPath.row].title];
-  cell.titleLabel.text=titleText;
-  cell.contentLabel.text=detailText;
+  cell.titleLabel.text = titleText;
+  cell.contentLabel.text = detailText;
 
   return cell;
 }

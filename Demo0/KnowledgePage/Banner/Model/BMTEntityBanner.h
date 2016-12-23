@@ -30,14 +30,17 @@ typedef NS_ENUM (NSInteger, PosterType) {
 @property(strong, nonatomic) NSString<Optional> *name;// Prim Key
 @property(strong, nonatomic) NSString *href;
 @property(strong, nonatomic) NSString *imgSrc;
-@property(strong, nonatomic) NSString *altText;
+@property(strong, nonatomic) NSString<Optional>  *altText;
 
-@property(strong, nonatomic) NSNumber *height;
-@property(strong, nonatomic) NSNumber *width;
-@property(strong, nonatomic) NSNumber *language;
+@property(strong, nonatomic) NSNumber<Optional>  *height;
+@property(strong, nonatomic) NSNumber<Optional>  *width;
+@property(strong, nonatomic) NSString<Optional>  *language;
 
-@property(strong, nonatomic) NSNumber *status;
-@property(strong, nonatomic) NSNumber *type;
+@property(strong, nonatomic) NSNumber<Optional>  *status;
+@property(strong, nonatomic) NSNumber<Optional>  *type;
 //@property (weak, nonatomic) UIImage<Optional> *bannerImage;
 
+- (instancetype)initWithDBRecord:(NSDictionary *)content;
+
+- (NSDictionary *)encodeForDBRecord;
 @end
