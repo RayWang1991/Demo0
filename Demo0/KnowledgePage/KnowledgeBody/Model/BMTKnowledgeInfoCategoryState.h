@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ENUM(NSInteger, CATEGORY_ID) {
+typedef NS_ENUM(NSInteger, CATEGORY_ID) {
   CAT_1 = 1,
   CAT_2,
   CAT_3,
@@ -17,7 +17,7 @@ NS_ENUM(NSInteger, CATEGORY_ID) {
 };
 
 @interface BMTKnowledgeInfoCategoryState : NSObject
-@property (nonatomic) enum CATEGORY_ID categoryId;
+@property (nonatomic)  CATEGORY_ID categoryId;
 // should show numbers info items at offset, after shown, refresh
 @property (nonatomic) NSUInteger number;
 @property (nonatomic) NSUInteger offset;

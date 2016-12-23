@@ -13,22 +13,24 @@
 #import "BMTEntityKnowledgeInfo.h"
 #import "FMDBManager.h"
 #import "SessionRequestManager.h"
+
 @interface KnowledgeInfoDataSourceManager : NSObject
 //@property(strong, nonatomic) BMTKnowledgeInfoNumState *knowledgeInfoNumState;
-@property (strong, nonatomic) NSMutableArray <NSNumber *>*knowledgeInfoNumStateArray;
-@property(strong, nonatomic) NSMutableArray <BMTEntityKnowledgeInfo *>
-    *knowledgeInfoArrayCat1;
-@property(strong, nonatomic) NSMutableArray <BMTEntityKnowledgeInfo *>
-    *knowledgeInfoArrayCat2;
-@property(strong, nonatomic) NSMutableArray <BMTEntityKnowledgeInfo *>
-    *knowledgeInfoArrayCat3;
-@property(strong, nonatomic) NSMutableArray <BMTEntityKnowledgeInfo *>
-    *knowledgeInfoArrayCat4;
+@property(strong, nonatomic) NSMutableArray <NSNumber *>
+    *knowledgeInfoOffsetStateArray;
+@property(strong, nonatomic) NSMutableArray <NSMutableArray<BMTEntityKnowledgeInfo *> *>
+    *knowledgeInfoEntityArray;
 
 @property(weak, nonatomic) FMDBManager *storageManager;
 @property(weak, nonatomic) SessionRequestManager *requestManager;
--(instancetype)init;
--(void)getMoreKnowledgeInfo:(NSUInteger)number;
--(void)getRefreshedKnowledgeInfo:(NSUInteger)number;
-//- (instancetype)initWithRandom;
++ (instancetype)sharedManager;
+- (instancetype)init;
+
+- (NSInteger)getMoreKnowledgeInfo:(NSUInteger)number
+                       categoryId:(NSUInteger)catId;
+
+- (NSInteger)getRefreshedKnowledgeInfo:(NSUInteger)number
+                       categoryId:(NSUInteger)catId;
+
+
 @end

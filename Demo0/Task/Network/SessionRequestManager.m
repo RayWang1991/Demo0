@@ -109,10 +109,16 @@
 
 - (void)getKnowledgeBriefsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
                                     failure:(void (^)(NSError *error))failBlock
-                                 categoryId:(NSUInteger)categoryId {
+                                 categoryId:(NSUInteger)categoryId
+                                     offset:(NSUInteger)offset
+                                     number:(NSUInteger)number {
   NSString *str = [kBMBASEURL
-      stringByAppendingFormat:@"/w/knowledge?category_id=%ld&language=%d&count=%d"
-                                  "&pageNo=%d",categoryId,1,5,0];
+      stringByAppendingFormat:@"/w/knowledge?"
+                                  "category_id=%u"
+                                  "&language=%d"
+                                  "&count=%u"
+                                  "&pageNo=%u"
+                                  "&pageSize=%u",categoryId,1,number,1,offset];
 
   NSLog(@"%@", str);
   NSURL *url = [NSURL URLWithString:str];
@@ -147,7 +153,9 @@
                             @"the result isn't an array");
                   NSCAssert([result[0] isKindOfClass:[NSDictionary class]],
                             @"the result[0] isn't a dictionary");
+
                   // NSCAssert([result count]>=numbers,@"the returned numbers does not match");
+
                   NSMutableArray *resArray=[[NSMutableArray alloc]init];
                   for(int i=0;i<[result count];i++) {
 
@@ -164,7 +172,7 @@
                       NSLog(@"Model convert fails, error: %@, json: %@",
                             jsonModelError, dict);
                     }
-                   // [resArray addObject:aModel];
+                    [resArray addObject:aModel];
                   }
                   sucBlock(resArray);
                 }

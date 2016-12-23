@@ -18,7 +18,7 @@
 
 @interface KnowledgeInfoTable : DBTableWithUniquePrimaryKey
 
-@property (nonatomic)enum CATEGORY_ID catId;
+@property (nonatomic)CATEGORY_ID catId;
 
 - (instancetype)initWithDatabase:(FMDatabase *)db
                       categoryId:(NSUInteger)catId;

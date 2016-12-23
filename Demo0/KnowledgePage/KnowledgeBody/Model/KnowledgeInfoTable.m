@@ -128,13 +128,13 @@
 - (instancetype)initWithDatabase:(FMDatabase *)db
                       categoryId:(NSUInteger)catId {
   NSString *tableName = [BMT_TABLENAME_KNOWLEDGEINFO_CAT
-      stringByAppendingFormat:@"%d",
+      stringByAppendingFormat:@"%ld",
                               catId];
   self = [super initWithTableName:tableName
                        inDatabase:db
                       withKeyName:KNOWLEDGEINFO_COLUMN_INFOID];
   if (self) {
-    self.catId =(enum CATEGORY_ID)(catId%4);
+    self.catId =(CATEGORY_ID)((catId-1)%4+1);
   }
   return self;
 }
@@ -152,7 +152,7 @@
   return [self deleteAllItems];// clear current category table
 }
 - (NSUInteger)itemsCount {
-  [self selectItemCount];
+  return [self selectItemCount];
 }
 - (NSArray<BMTEntityKnowledgeInfo *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num {
   // if number of items in table < num, return all
@@ -168,9 +168,9 @@
                                                                offset:(NSUInteger)offset {
   NSArray *resArray =
       [self selectItemsWithOtherPart:[NSString stringWithFormat:@"order by "
-                                                                    "timestamp LIMIT  %d 　OFFSET %d",
-                                                                num,
-                                                                offset]
+                                                                    "timestamp LIMIT  %d, %d",
+                                                                offset,
+                                                                num]
                            withParam:nil];
   return resArray;
 }

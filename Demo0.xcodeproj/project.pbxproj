@@ -138,7 +138,7 @@
 		3AED223AAE49BC3DA47F75E2 /* UIScreen+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED225A72BF9F9A5B25924D /* KnowledgeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeTableView.h; sourceTree = "<group>"; };
 		3AED228945E0A8C0F3F16F4B /* BMTKnowledgeInfoCategoryState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTKnowledgeInfoCategoryState.m; sourceTree = "<group>"; };
-		3AED229C9E6C122731D9A092 /* KnowledgeInfoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeInfoTable.h; sourceTree = "<group>"; };
+		3AED229C9E6C122731D9A092 /* KnowledgeInfoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KnowledgeInfoTable.h; path = ../../KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.h; sourceTree = "<group>"; };
 		3AED22AEBEF0A4FEB2060EB2 /* UIScreen+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED22BDCC3AE6198672F574 /* BMTLayoutConstraintInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTLayoutConstraintInterpreter.h; sourceTree = "<group>"; };
 		3AED22E6C4498FE3D310979D /* GetBannerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBannerRequest.m; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		3AED2588BA9458C0AF33C15F /* BMTLayoutConstraintInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTLayoutConstraintInterpreter.m; sourceTree = "<group>"; };
 		3AED25BEEDD8B181BF68295E /* KnowledgePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgePageViewController.m; sourceTree = "<group>"; };
 		3AED25C0D5E6E25EBC14509F /* NSNotificationCenter+BMTAutoDetached.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+BMTAutoDetached.h"; sourceTree = "<group>"; };
-		3AED25D371E6C1E198CC3F09 /* KnowledgeInfoTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeInfoTable.m; sourceTree = "<group>"; };
+		3AED25D371E6C1E198CC3F09 /* KnowledgeInfoTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KnowledgeInfoTable.m; path = ../../KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.m; sourceTree = "<group>"; };
 		3AED261F168C9659DA58BB84 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m"; sourceTree = "<group>"; };
 		3AED26232D3A7D55B3B1F623 /* BMTLayoutConstraintConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTLayoutConstraintConstant.h; sourceTree = "<group>"; };
 		3AED2638A214B0C189004344 /* BMTLayoutConstraintConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTLayoutConstraintConstant.m; sourceTree = "<group>"; };
@@ -651,8 +651,6 @@
 				3AED2BC860EB347187B2543F /* BMTEntityKnowledgeInfo.h */,
 				3AED2F9173E8F4F69B112127 /* KnowledgeInfoDataSourceManager.m */,
 				3AED29B1258DCEAAC152CF1C /* KnowledgeInfoDataSourceManager.h */,
-				3AED25D371E6C1E198CC3F09 /* KnowledgeInfoTable.m */,
-				3AED229C9E6C122731D9A092 /* KnowledgeInfoTable.h */,
 				3AED2F6D8EBC8085A2BE990E /* BMTKnowledgeInfoNumState.m */,
 				3AED290B6B402C3764254B7A /* BMTKnowledgeInfoNumState.h */,
 				3AED228945E0A8C0F3F16F4B /* BMTKnowledgeInfoCategoryState.m */,
@@ -674,6 +672,8 @@
 				3AED23D8E5F2ACEF4ACCE6D6 /* FMDBManager.h */,
 				3AED2469406EB207909F6437 /* BMTBannerTable.m */,
 				3AED28590749C56AD97C82ED /* BMTBannerTable.h */,
+				3AED25D371E6C1E198CC3F09 /* KnowledgeInfoTable.m */,
+				3AED229C9E6C122731D9A092 /* KnowledgeInfoTable.h */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -1323,6 +1323,65 @@
 					"\"${PROJECT_DIR}/Demo0/thermometer/ThirdParty/SDK/weibo\"/**",
 					"\"${PROJECT_DIR}/Demo0/thermometer/ThirdParty/SDK/wechat\"/**",
 				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-l\"z\"",
+					"-framework",
+					"\"AFDownloadRequestOperation\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"AMapLocationKit\"",
+					"-framework",
+					"\"AspectsV1_4_2\"",
+					"-framework",
+					"\"BMLayoutConstraint\"",
+					"-framework",
+					"\"BTInfiniteScrollView\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"EGOCache\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"JSONKit_NoWarning\"",
+					"-framework",
+					"\"JSONModel\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"NJKWebViewProgress\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"UIActionSheet_Blocks\"",
+					"-framework",
+					"\"UIAlertView_Blocks\"",
+					"-framework",
+					"\"UIView_Loading\"",
+					"-framework",
+					"\"YTKKeyValueStore\"",
+					"-framework",
+					"\"YTKNetwork\"",
+					"-framework",
+					"\"nv_ios_http_status\"",
+					"-framework",
+					"\"pop\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = IDEEVA.Demo0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "@(PRODUCT_DIR)/**";
@@ -1341,6 +1400,65 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"${PROJECT_DIR}/Demo0/thermometer/ThirdParty/SDK/weibo\"/**",
 					"\"${PROJECT_DIR}/Demo0/thermometer/ThirdParty/SDK/wechat\"/**",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-l\"z\"",
+					"-framework",
+					"\"AFDownloadRequestOperation\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"AMapLocationKit\"",
+					"-framework",
+					"\"AspectsV1_4_2\"",
+					"-framework",
+					"\"BMLayoutConstraint\"",
+					"-framework",
+					"\"BTInfiniteScrollView\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"EGOCache\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"JSONKit_NoWarning\"",
+					"-framework",
+					"\"JSONModel\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"NJKWebViewProgress\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"UIActionSheet_Blocks\"",
+					"-framework",
+					"\"UIAlertView_Blocks\"",
+					"-framework",
+					"\"UIView_Loading\"",
+					"-framework",
+					"\"YTKKeyValueStore\"",
+					"-framework",
+					"\"YTKNetwork\"",
+					"-framework",
+					"\"nv_ios_http_status\"",
+					"-framework",
+					"\"pop\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = IDEEVA.Demo0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

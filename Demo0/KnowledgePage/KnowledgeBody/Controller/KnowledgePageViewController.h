@@ -26,9 +26,9 @@
 
 // table view's body
 @property (strong, nonatomic) KnowledgeTableView * tableView;
-@property (strong, nonatomic) NSMutableArray <KnowledgeInfoDataSourceManager *>*dataArray;
+//@property (strong, nonatomic) NSMutableArray <KnowledgeInfoDataSourceManager*>*dataArray;
 
-@property
+@property (strong, nonatomic) KnowledgeInfoDataSourceManager *dataSourceManager;
 // footer
 @property (strong, nonatomic) UIButton *loadMoreButton;
 

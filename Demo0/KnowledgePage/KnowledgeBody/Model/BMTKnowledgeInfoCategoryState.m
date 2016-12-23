@@ -17,7 +17,7 @@
                             offset:(NSUInteger)offset {
   self = [super init];
   if (self) {
-    _categoryId=(enum CATEGORY_ID)(1+(catId%4));
+    _categoryId=(CATEGORY_ID)(1+(catId%4));
     _offset = offset;
     _number = catId;
   }

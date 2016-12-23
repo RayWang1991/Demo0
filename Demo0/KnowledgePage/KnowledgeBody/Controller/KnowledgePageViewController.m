@@ -22,9 +22,6 @@
   [super viewDidLoad];
   [self setViewBasicStyle];
 
-
-
-
   self.bannersVC = [[BannersViewController alloc] init];
 
   self.tableView = [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
@@ -39,15 +36,18 @@
   [_tableView registerClass:[KnowledgeHomePageCategoryTableViewCell class]
      forCellReuseIdentifier:[KnowledgeHomePageCategoryTableViewCell bmt_reuseId]];
 
-  _dataArray = [[NSMutableArray alloc] init];
-  for (int i = 0; i < 20; i++) {
-    [_dataArray addObject:[[KnowledgeInfoDataSourceManager alloc] initWithRandom]];
-      
-      
-  }
-    [self testStorage];
-    [self testNetRequest];
+  _dataSourceManager = [[KnowledgeInfoDataSourceManager alloc] init];
 
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(dataArrived:)
+                                               name:@"KnowledgeInfoDataArrived"
+                                             object:nil];
+
+  [self.dataSourceManager getMoreKnowledgeInfo:5
+                                    categoryId:1];
+
+ // [self testFirstGetInfoNumber:DEFAULT_KNOWLEDGE_NUMBERS catId:CAT_1];
+  //[self testNetRequest];
 
 }
 
@@ -58,12 +58,21 @@
 
 - (void)testNetRequest {
   SessionRequestManager *requestManager = [SessionRequestManager sharedManager];
-  [requestManager getKnowledgeBriefsFromServerSuccess:^(NSArray* array){;}
-                                              failure:^(NSError* error){;}
-                                           categoryId:1];
+  [requestManager getKnowledgeBriefsFromServerSuccess:^(NSArray *array) { ; }
+                                              failure:^(NSError *error) { ; }
+                                           categoryId:1
+                                               offset:0
+                                               number:5];
 }
-
--(void)testStorage{
+- (void)testGetInfoMoreNumber:(NSUInteger)number
+                        catId:(NSUInteger)catId {
+  NSInteger gotNumber = [self.dataSourceManager getMoreKnowledgeInfo:number
+                                                               categoryId:catId];
+}
+- (void)testFirstGetInfoNumber:(NSUInteger)number
+                         catId:(NSUInteger)catId {
+  NSInteger gotNumber = [self.dataSourceManager getRefreshedKnowledgeInfo:number
+                                                               categoryId:catId];
 
 }
 
@@ -76,12 +85,31 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - dataArrive
+- (void)dataArrived:(NSNotification *)notification {
+  NSInteger askedNum =
+      [notification.userInfo[@"askedNum"] integerValue];
+  NSInteger returnNum =
+      [notification.userInfo[@"returnNum"] integerValue];
+  //
+  if (returnNum < 0) {
+    NSLog(@"get info error");
+
+  } else {
+    if (returnNum < askedNum) {
+      NSLog(@"get info shortage");
+    } else {
+      NSLog(@"get info success");
+    }
+    [self.tableView reloadData];
+  }
+}
 
 #pragma mark - tableViewSettings
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-  return self.dataArray.count;
+  return self.dataSourceManager.knowledgeInfoEntityArray[0].count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -101,13 +129,18 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
       dequeueReusableCellWithIdentifier:cellStr
                            forIndexPath:indexPath];
 
-  NSString *titleText = [NSString stringWithFormat:@"Row %d %@",indexPath.row,
-                                                   self.dataArray[indexPath.row]
+  NSString *titleText = [NSString stringWithFormat:@"Row %d %@",
+                                                   indexPath.row,
+                                                   self.dataSourceManager
+                                                       .knowledgeInfoEntityArray[0][indexPath
+                                                       .row]
                                                        .title];
   NSString *detailText = [NSString stringWithFormat:@"%@",
-                                                    self
-                                                        .dataArray[indexPath
-                                                        .row].detail];
+
+                                                    self.dataSourceManager
+                                                        .knowledgeInfoEntityArray[0][indexPath
+                                                        .row]
+                                                        .summary];
   //NSString * Text=[NSString stringWithFormat:@"Row %@",self
   // .dataArray[indexPath.row].title];
   cell.titleLabel.text = titleText;
@@ -116,7 +149,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return cell;
 }
 
-#pragma mark UISettings
+#pragma mark - UISettings
 - (void)setViewBasicStyle {
   self.view.backgroundColor = [UIColor orangeColor];
 }
@@ -133,5 +166,10 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)setSubViewsToSuperView {
   [self.view addSubview:self.bannersVC.view];
   //TODO add [self.view addSubview:self.mClassVC];
+}
+
+#pragma mark - private
+- (KnowledgeInfoDataSourceManager *)dataSourceManager {
+  return [KnowledgeInfoDataSourceManager sharedManager];
 }
 @end

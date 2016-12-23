@@ -16,7 +16,7 @@
 @interface BMTKnowledgeInfoNumState : NSObject
 @property(nonatomic) BMTKnowledgeInfoCategoryState
     *currentCategoryStateManager;
-@property(nonatomic) enum CATEGORY_ID catId;
+@property(nonatomic) CATEGORY_ID catId;
 @property(nonatomic) NSMutableArray <BMTKnowledgeInfoCategoryState *>
     *catStateManagerArray;
 // init the should shown number in each category number manager, the default

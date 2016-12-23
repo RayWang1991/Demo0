@@ -30,7 +30,9 @@
 
 - (void)getKnowledgeBriefsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
                                     failure:(void (^)(NSError *error))failBlock
-                                 categoryId:(NSUInteger)categoryId;
+                                 categoryId:(NSUInteger)categoryId
+                                     offset:(NSUInteger)offset
+                                     number:(NSUInteger)number;
 
 - (void)getBannerFromServer:(NSInteger)num
                     success:(void (^)(NSArray *array))sucBlock
