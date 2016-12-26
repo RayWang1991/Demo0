@@ -49,12 +49,13 @@
   self.contentView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size
       .width, 100);
   self.backView.frame = self.contentView.bounds;
-  self.titleLabel.frame = CGRectMake(80, 10, [UIScreen mainScreen].bounds.size
-      .width, 20);
-  self.contentLabel.frame = CGRectMake(80, 30, [UIScreen mainScreen].bounds.size
-      .width, 50);
-  self.bottomView.frame = CGRectMake(80, 80, [UIScreen mainScreen].bounds.size
-      .width, 20);
+  self.titleLabel.frame = CGRectMake(100, 10, [UIScreen mainScreen].bounds.size
+      .width-20, 20);
+  self.contentLabel.frame = CGRectMake(100, 30, [UIScreen mainScreen].bounds
+      .size
+      .width-20, 50);
+  self.bottomView.frame = CGRectMake(100, 80, [UIScreen mainScreen].bounds.size
+      .width-20, 20);
 }
 
 #pragma mark - getter
@@ -85,18 +86,18 @@
     _bottomView.thumbImageView.image =
         [UIImage imageNamed:@"preview-icon_small_like_it.png"];
     //
-    _bottomView.eyeNumView =
+    _bottomView.clickedNumLabel =
         [[UILabel alloc] initWithFrame:CGRectMake(40, 0, 40, 20)];
-    _bottomView.eyeNumView.text=@"0";
+    _bottomView.clickedNumLabel.text=@"0";
     //
-    _bottomView.thumbNumView =
+    _bottomView.likeNumLabel =
         [[UILabel alloc] initWithFrame:CGRectMake(140, 0, 40, 20)];
-    _bottomView.thumbNumView.text=@"0";
+    _bottomView.likeNumLabel.text=@"0";
 
     [_bottomView addSubview:_bottomView.eyeImageView];
     [_bottomView addSubview:_bottomView.thumbImageView];
-    [_bottomView addSubview:_bottomView.eyeNumView];
-    [_bottomView addSubview:_bottomView.thumbNumView];
+    [_bottomView addSubview:_bottomView.clickedNumLabel];
+    [_bottomView addSubview:_bottomView.likeNumLabel];
   }
   return _bottomView;
 }
@@ -125,8 +126,8 @@
 - (UIImageView *)knowledgeImageView {
   if (!_knowledgeImageView) {
     _knowledgeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(4,
-                                                                        4, 40,
-                                                                        40)];
+                                                                        4, 78,
+                                                                        70)];
   }
   return _knowledgeImageView;
 }

@@ -12,8 +12,8 @@
 @interface BottomView : UIView
 @property(strong, nonatomic) UIImageView *eyeImageView;
 @property(strong, nonatomic) UIImageView *thumbImageView;
-@property(strong, nonatomic) UILabel *eyeNumView;
-@property(strong, nonatomic) UILabel *thumbNumView;
+@property(strong, nonatomic) UILabel *clickedNumLabel;
+@property(strong, nonatomic) UILabel *likeNumLabel;
 
 /*
 - (void)setEyeImageView:(UIImage *)eyeImageView

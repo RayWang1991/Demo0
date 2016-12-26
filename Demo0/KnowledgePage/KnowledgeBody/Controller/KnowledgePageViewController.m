@@ -7,29 +7,56 @@
  * Created by ray wang on 16/12/16.
  */
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "KnowledgePageViewController.h"
 #import "KnowledgeTableView.h"
+#import "UILabel+RefreshPanelView.h"
 #define DEFAULT_KNOWLEDGE_NUM (5u)
 
 @implementation KnowledgePageViewController {
 
 }
 - (void)loadView {
-  self.view = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+  /*
+  CGFloat height = UIScreen.mainScreen.bounds.size.height + REFRESH_PANEL_HEIGHT;
+  CGFloat width = UIScreen.mainScreen.bounds.size.width + REFRESH_PANEL_HEIGHT;
+
+  self.view = [[UIView alloc] initWithFrame:CGRectMake(0, -REFRESH_PANEL_HEIGHT,
+                                                       width, height)];
+                                                       */
+  self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [self setViewBasicStyle];
 
-  self.bannersVC = [[BannersViewController alloc] init];
+  _bannersVC = [[BannersViewController alloc] init];
 
-  self.tableView = [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
-                                                       style:UITableViewStylePlain];
+  _tableView = [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
+                                                   style:UITableViewStylePlain];
   [self.view addSubview:self.tableView];
 
-  _tableView.tableHeaderView = _bannersVC.view;
-  _tableView.tableFooterView = nil;// TODO, button
+  _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                                        -REFRESH_PANEL_HEIGHT,
+                                                                        375,
+                                                                        277.5)];
+
+  [_tableView.tableHeaderView addSubview:_bannersVC.view];
+  // should be adding sub view cause
+  // refresh panel and microClass are subviews too
+
+  _loadMoreButtonView = [[UIView alloc] initWithAddMoreButton];
+  _tableView.tableFooterView = _loadMoreButtonView;
+  UIButton *addMoreButton = _loadMoreButtonView.subviews[0];
+  [addMoreButton addTarget:self
+                    action:@selector
+                    (addMoreButtonClicked)
+          forControlEvents:UIControlEventTouchUpInside];
+
+  _refreshPanelLabel = [[UILabel alloc] initWithHintText];
+
+  [_tableView.tableHeaderView addSubview:_refreshPanelLabel];
+
   _tableView.delegate = self;
   _tableView.dataSource = self;//TODO, split later
 
@@ -37,6 +64,8 @@
      forCellReuseIdentifier:[KnowledgeHomePageCategoryTableViewCell bmt_reuseId]];
 
   _dataSourceManager = [[KnowledgeInfoDataSourceManager alloc] init];
+
+  [self setViewBasicStyle];
 
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(dataArrived:)
@@ -46,7 +75,7 @@
   [self.dataSourceManager getMoreKnowledgeInfo:5
                                     categoryId:1];
 
- // [self testFirstGetInfoNumber:DEFAULT_KNOWLEDGE_NUMBERS catId:CAT_1];
+  // [self testFirstGetInfoNumber:DEFAULT_KNOWLEDGE_NUMBERS catId:CAT_1];
   //[self testNetRequest];
 
 }
@@ -66,13 +95,13 @@
 }
 - (void)testGetInfoMoreNumber:(NSUInteger)number
                         catId:(NSUInteger)catId {
-  NSInteger gotNumber = [self.dataSourceManager getMoreKnowledgeInfo:number
-                                                               categoryId:catId];
+  [self.dataSourceManager getMoreKnowledgeInfo:number
+                                    categoryId:catId];
 }
 - (void)testFirstGetInfoNumber:(NSUInteger)number
                          catId:(NSUInteger)catId {
-  NSInteger gotNumber = [self.dataSourceManager getRefreshedKnowledgeInfo:number
-                                                               categoryId:catId];
+  [self.dataSourceManager getRefreshedKnowledgeInfo:number
+                                         categoryId:catId];
 
 }
 
@@ -85,26 +114,36 @@
     // Pass the selected object to the new view controller.
 }
 */
-#pragma mark - dataArrive
+#pragma mark - event
 - (void)dataArrived:(NSNotification *)notification {
   NSInteger askedNum =
       [notification.userInfo[@"askedNum"] integerValue];
   NSInteger returnNum =
       [notification.userInfo[@"returnNum"] integerValue];
-  //
-  if (returnNum < 0) {
+  // return Number -1 error, 0 do not get
+  if (returnNum <= 0) {
     NSLog(@"get info error");
-
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.loadMoreButtonView.hidden = YES;
+    });
   } else {
     if (returnNum < askedNum) {
       NSLog(@"get info shortage");
     } else {
       NSLog(@"get info success");
     }
-    [self.tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.tableView reloadData];
+      self.loadMoreButtonView.hidden = NO;
+    });
   }
+
 }
 
+- (void)addMoreButtonClicked {
+  [self.dataSourceManager getMoreKnowledgeInfo:DEFAULT_KNOWLEDGE_NUMBERS
+                                    categoryId:1];
+}
 #pragma mark - tableViewSettings
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -141,10 +180,53 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
                                                         .knowledgeInfoEntityArray[0][indexPath
                                                         .row]
                                                         .summary];
+  NSNumber *clickedNum = self.dataSourceManager
+      .knowledgeInfoEntityArray[0][indexPath.row]
+      .click;
+  NSNumber *likeNum = self.dataSourceManager
+      .knowledgeInfoEntityArray[0][indexPath.row]
+      .like;
+  // turn the chinese URL into % format
+  NSString *originalURLStr =
+      self.dataSourceManager
+          .knowledgeInfoEntityArray[0][indexPath.row].thumbSrc;
+  NSLog(@"the original URL string is %@", originalURLStr);
+  NSString *formatedURLStr = [originalURLStr
+      stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet
+          characterSetWithCharactersInString:@"^ "]
+          .invertedSet];
+  NSLog(@"the formated URL string is %@", formatedURLStr);
+  NSURL *knowledgeImageURL = [NSURL URLWithString:formatedURLStr];
   //NSString * Text=[NSString stringWithFormat:@"Row %@",self
   // .dataArray[indexPath.row].title];
   cell.titleLabel.text = titleText;
   cell.contentLabel.text = detailText;
+  cell.bottomView.clickedNumLabel.text = [NSString stringWithFormat:@"%@",
+                                                                    clickedNum];
+  cell.bottomView.likeNumLabel.text = [NSString stringWithFormat:@"%@",
+                                                                 likeNum];
+  [cell.knowledgeImageView sd_setImageWithURL:knowledgeImageURL
+                             placeholderImage:[UIImage imageNamed:@"1.jpg"]
+                                      options:SDWebImageRetryFailed
+                                     progress:nil
+                                    completed:
+                                        ^(UIImage *image, NSError *error, SDImageCacheType
+                                        cacheType, NSURL *completeImageURL) {
+                                          //save the image here
+                                          //banners[i].bannerImage=imageView.image;
+
+                                          NSLog(@"refesh knowledgeInfo images, done!");
+                                          switch (cacheType) {
+                                            case SDImageCacheTypeNone:NSLog(@"knowledgeInfo Image 直接下载");
+                                              break;
+                                            case SDImageCacheTypeDisk:NSLog(@"knowledgeInfo Image 磁盘缓存");
+                                              break;
+                                            case SDImageCacheTypeMemory:NSLog(@"knowledgeInfo Image 内存缓存");
+                                              break;
+                                            default:break;
+                                          }
+                                        }
+  ];
 
   return cell;
 }
@@ -164,12 +246,34 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 */
 
 - (void)setSubViewsToSuperView {
-  [self.view addSubview:self.bannersVC.view];
+  //[self.view addSubview:self.bannersVC.view];
   //TODO add [self.view addSubview:self.mClassVC];
+}
+
+#pragma mark - refresh UI
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  if (self.tableView.contentOffset.y < -REFRESH_PANEL_HEIGHT - 30) {
+    [self.refreshPanelLabel setCompleteText];
+    self.shouldRefresh = YES;
+  } else {
+    [self.refreshPanelLabel setHintText];
+  }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+                  willDecelerate:(BOOL)decelerate {
+  if ((self.tableView.contentOffset.y >= -REFRESH_PANEL_HEIGHT - 5)
+      && self.shouldRefresh) {
+    self.shouldRefresh = NO;
+    [self.dataSourceManager getRefreshedKnowledgeInfo:5
+                                           categoryId:1];
+  }
 }
 
 #pragma mark - private
 - (KnowledgeInfoDataSourceManager *)dataSourceManager {
   return [KnowledgeInfoDataSourceManager sharedManager];
 }
+
 @end

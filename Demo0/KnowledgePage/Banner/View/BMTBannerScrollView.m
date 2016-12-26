@@ -63,7 +63,7 @@
                          
                          }
                         completed:^(UIImage *image, NSError *error, SDImageCacheType
-                        cacheType, NSURL *imageURL) {
+                        cacheType, NSURL *completeImageURL) {
                           //save the image here
                            //banners[i].bannerImage=imageView.image;
                             

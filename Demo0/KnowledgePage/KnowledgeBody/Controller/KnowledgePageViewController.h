@@ -16,6 +16,8 @@
 #import "KnowledgeHomePageCategoryTableViewCell.h"
 #import "KnowledgeInfoDataSourceManager.h"
 #import "SessionRequestManager.h"
+#import "UIView+AddMoreButtonView.h"
+#import "UILabel+RefreshPanelView.h"
 
 @class KnowledgeTableView;
 @interface KnowledgePageViewController :
@@ -23,14 +25,16 @@
 // header
 @property (strong, nonatomic) BannersViewController *bannersVC;
 @property (strong, nonatomic) MicroClassViewController *microClassVC;
-
+// refresh panel
+@property (assign, nonatomic) BOOL shouldRefresh;
+@property (strong, nonatomic) UILabel *refreshPanelLabel;
 // table view's body
 @property (strong, nonatomic) KnowledgeTableView * tableView;
 //@property (strong, nonatomic) NSMutableArray <KnowledgeInfoDataSourceManager*>*dataArray;
 
 @property (strong, nonatomic) KnowledgeInfoDataSourceManager *dataSourceManager;
 // footer
-@property (strong, nonatomic) UIButton *loadMoreButton;
+@property (strong, nonatomic) UIView *loadMoreButtonView;
 
 // data source for table
 //@property (strong, nonatomic) NSMutableArray * dataArray;

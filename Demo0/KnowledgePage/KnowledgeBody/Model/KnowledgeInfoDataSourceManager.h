@@ -20,16 +20,17 @@
     *knowledgeInfoOffsetStateArray;
 @property(strong, nonatomic) NSMutableArray <NSMutableArray<BMTEntityKnowledgeInfo *> *>
     *knowledgeInfoEntityArray;
-
+@property(strong, nonatomic) NSMutableArray <BMTEntityKnowledgeInfo *> *
+    currentEntityArray;
 @property(weak, nonatomic) FMDBManager *storageManager;
 @property(weak, nonatomic) SessionRequestManager *requestManager;
 + (instancetype)sharedManager;
 - (instancetype)init;
 
-- (NSInteger)getMoreKnowledgeInfo:(NSUInteger)number
-                       categoryId:(NSUInteger)catId;
+- (void)getMoreKnowledgeInfo:(NSUInteger)number
+                  categoryId:(NSUInteger)catId;
 
-- (NSInteger)getRefreshedKnowledgeInfo:(NSUInteger)number
+- (void)getRefreshedKnowledgeInfo:(NSUInteger)number
                        categoryId:(NSUInteger)catId;
 
 

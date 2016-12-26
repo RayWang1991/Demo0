@@ -50,7 +50,7 @@
                 id result = [NSJSONSerialization JSONObjectWithData:data
                                                             options:0
                                                               error:&dataError];
-                NSLog(@"the dic is %@", data);
+                NSLog(@"the dic is %@", result);
 
                 if (dataError) {
                   // there may be data analysis error
@@ -149,10 +149,8 @@
                   // assuming we receive an array containing
                   // dicionaries indicating the objects
 
-                  NSCAssert([result isKindOfClass:[NSArray class]],
-                            @"the result isn't an array");
-                  NSCAssert([result[0] isKindOfClass:[NSDictionary class]],
-                            @"the result[0] isn't a dictionary");
+                  //NSCAssert([result isKindOfClass:[NSArray class]],@"the result isn't an array");
+                  //NSCAssert([result[0] isKindOfClass:[NSDictionary class]],@"the result[0] isn't a dictionary");
 
                   // NSCAssert([result count]>=numbers,@"the returned numbers does not match");
 

@@ -46,10 +46,11 @@
 }
 
 #pragma mark -provide data to controller
-- (NSInteger)getMoreKnowledgeInfo:(NSUInteger)number
-                       categoryId:(NSUInteger)catId {
+- (void)getMoreKnowledgeInfo:(NSUInteger)number
+                  categoryId:(NSUInteger)catId {
   // add more event
   // just get more knowledge information, dont refresh
+  // 0 get from current entity array(according to offset)
   // 1 get from database ,if fail/error/shortage then
   // 2 get from server, if success ,refresh the database
 
@@ -65,9 +66,7 @@
       .unsignedIntegerValue;
 
   if (currentCatEntityArray.count
-      >= self.knowledgeInfoOffsetStateArray[catIndex].unsignedIntegerValue
-          +
-              number) {
+      >= currentOffset + number) {
     // get from current entity array
     NSLog(@"GET More Infos from CURRENT ENTITY ARRAY");
     NSRange range = NSMakeRange(currentOffset, number);
@@ -75,11 +74,13 @@
     NSArray *resArray = [currentCatEntityArray subarrayWithRange:range];
 
     [currentCatEntityArray addObjectsFromArray:resArray];
+
     self.knowledgeInfoOffsetStateArray[catIndex] =
         @(currentOffset + resArray.count);
+    // refresh the offset
     [self sendNotificationWithAskedNum:number
                              returnNum:resArray.count];
-    return resArray.count;
+
   } else {
     // get from database
     NSArray *resArray =
@@ -92,11 +93,9 @@
           @(currentOffset + resArray.count);
       [self sendNotificationWithAskedNum:number
                                returnNum:resArray.count];
-      return resArray.count;
-      return resArray.count;
-    } else {
-      __block NSInteger retNumber = -1;
 
+
+    } else {
       [self.requestManager
           getKnowledgeBriefsFromServerSuccess:^(NSArray *serverResultArray) {
             // if success , add the result array to entity array
@@ -107,27 +106,26 @@
             NSLog(@"GET More Infos from SERVER");
             // and save the result to database later
             [currentCatTable addKnowledgeInfoArray:serverResultArray];
-            retNumber = serverResultArray.count;
+
             [self sendNotificationWithAskedNum:number
-                                     returnNum:retNumber];
+                                     returnNum:serverResultArray.count];
           }
                                       failure:^(NSError *error) {
-                                        // TODO deal with error
+                                        // deal with error
                                         NSLog(@"GET More Infos FAILED!");
-                                        retNumber = -1;
+
                                         [self sendNotificationWithAskedNum:number
-                                                                 returnNum:retNumber];
+                                                                 returnNum: -1];
                                       }
                                    categoryId:catId
                                        offset:currentOffset
                                        number:number];
-      return retNumber;
     }
   }
 }
 
-- (NSInteger)getRefreshedKnowledgeInfo:(NSUInteger)number
-                            categoryId:(NSUInteger)catId {
+- (void)getRefreshedKnowledgeInfo:(NSUInteger)number
+                       categoryId:(NSUInteger)catId {
   // refresh event
   // just get from server, if success , refresh the database
 
@@ -142,39 +140,39 @@
   /*NSUInteger currentOffset = self.knowledgeInfoOffsetStateArray[catIndex]
       .unsignedIntegerValue;
   */
-  __block NSInteger retNumber = -1;
+
   [self.requestManager
       getKnowledgeBriefsFromServerSuccess:^(NSArray *serverResultArray) {
         // if success , add the result array to entity array
         // and return the number of result array
 
         // reset the offset
+        [currentCatEntityArray removeAllObjects];
         [currentCatEntityArray addObjectsFromArray:serverResultArray];
         self.knowledgeInfoOffsetStateArray[catIndex] =
             @(serverResultArray.count);
+
         NSLog(@"GET Refreshed Infos from SERVER");
         // notification
         [self sendNotificationWithAskedNum:number
-                                 returnNum:retNumber];
+                                 returnNum:serverResultArray.count];
 
         // save the result to database later
         [currentCatTable addKnowledgeInfoArray:serverResultArray];
-        retNumber = serverResultArray.count;
+
 
       }
                                   failure:^(NSError *error) {
                                     // TODO deal with error
 
-                                    retNumber = -1;
                                     NSLog(@"GET Refreshed Infos FAILED!");
 
                                     [self sendNotificationWithAskedNum:number
-                                                             returnNum:retNumber];
+                                                             returnNum:-1];
                                   }
                                categoryId:catId
                                    offset:0
                                    number:number];
-  return retNumber;
 }
 
 //TODO

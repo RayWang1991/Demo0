@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "BMTKnowledgeInfoCategoryState.h"
 
-#define DEFAULT_KNOWLEDGE_NUMBERS (5u)
+#define DEFAULT_KNOWLEDGE_NUMBERS (40u)
 
 
 @interface BMTKnowledgeInfoNumState : NSObject
