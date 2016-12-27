@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMTMicroClassInfoEntity.h"
+#import "BMTMicroClassView.h"
 
 @interface MicroClassViewController : UIViewController
 

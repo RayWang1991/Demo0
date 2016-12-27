@@ -32,6 +32,8 @@
 
   _bannersVC = [[BannersViewController alloc] init];
 
+  _microClassVC =[[MicroClassViewController alloc]init];
+
   _tableView = [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
                                                    style:UITableViewStylePlain];
   [self.view addSubview:self.tableView];
@@ -39,9 +41,19 @@
   _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,
                                                                         -REFRESH_PANEL_HEIGHT,
                                                                         375,
-                                                                        277.5)];
+                                                                        320)];
+  CGFloat catBarHeight = 30;
+  CGFloat headerHeight=_tableView.tableHeaderView.bounds.size.height;
+  _categoryBarsView =
+      [[KnowledgeInfoCategoryTabBarsView alloc] initWithFrame:CGRectMake(0,
+                                                                  headerHeight-catBarHeight,
+                                                                  375,
+                                                                  catBarHeight)];
+
+  [_tableView.tableHeaderView addSubview:_categoryBarsView];
 
   [_tableView.tableHeaderView addSubview:_bannersVC.view];
+  [_tableView.tableHeaderView addSubview:_microClassVC.view];
   // should be adding sub view cause
   // refresh panel and microClass are subviews too
 

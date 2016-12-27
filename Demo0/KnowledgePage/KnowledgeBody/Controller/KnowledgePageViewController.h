@@ -18,23 +18,26 @@
 #import "SessionRequestManager.h"
 #import "UIView+AddMoreButtonView.h"
 #import "UILabel+RefreshPanelView.h"
+#import "KnowledgeInfoCategoryTabBarsView.h"
 
 @class KnowledgeTableView;
-@interface KnowledgePageViewController :
-    UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface KnowledgePageViewController : UIViewController
+    <UITableViewDataSource, UITableViewDelegate>
 // header
-@property (strong, nonatomic) BannersViewController *bannersVC;
-@property (strong, nonatomic) MicroClassViewController *microClassVC;
+@property(strong, nonatomic) BannersViewController *bannersVC;
+@property(strong, nonatomic) MicroClassViewController *microClassVC;
+@property (strong, nonatomic) KnowledgeInfoCategoryTabBarsView *categoryBarsView;
 // refresh panel
-@property (assign, nonatomic) BOOL shouldRefresh;
-@property (strong, nonatomic) UILabel *refreshPanelLabel;
+@property(assign, nonatomic) BOOL shouldRefresh;
+@property(strong, nonatomic) UILabel *refreshPanelLabel;
 // table view's body
-@property (strong, nonatomic) KnowledgeTableView * tableView;
+@property(strong, nonatomic) KnowledgeTableView *tableView;
 //@property (strong, nonatomic) NSMutableArray <KnowledgeInfoDataSourceManager*>*dataArray;
 
-@property (strong, nonatomic) KnowledgeInfoDataSourceManager *dataSourceManager;
+@property(strong, nonatomic) KnowledgeInfoDataSourceManager<BMTGetKnowledgeInfoDelegate>
+    *dataSourceManager;
 // footer
-@property (strong, nonatomic) UIView *loadMoreButtonView;
+@property(strong, nonatomic) UIView *loadMoreButtonView;
 
 // data source for table
 //@property (strong, nonatomic) NSMutableArray * dataArray;

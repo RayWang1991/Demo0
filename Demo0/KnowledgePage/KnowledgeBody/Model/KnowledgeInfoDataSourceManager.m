@@ -45,7 +45,7 @@
   return self;
 }
 
-#pragma mark -provide data to controller
+#pragma mark -provide data to controller and implement getKnowledgeInfoDelegate
 - (void)getMoreKnowledgeInfo:(NSUInteger)number
                   categoryId:(NSUInteger)catId {
   // add more event
@@ -179,6 +179,11 @@
 - (NSInteger)getBackupKnowledgeInfo:(NSUInteger)number
                          categoryId:(NSUInteger)catId {
   return -1;
+}
+
+- (void)getFirstShownKnowledgeInfo:(NSUInteger)number
+                        categoryId:(NSUInteger)catId {
+
 }
 
 #pragma mark - private

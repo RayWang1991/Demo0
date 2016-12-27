@@ -33,7 +33,7 @@
   //TODO add view after found in either db(first) or server
   //find out if the banners in the db
   //yes no
-  self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 375, 277.5)];
+  self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 375, 190.5)];
   self.scrollView =
       [[BMTBannerScrollView alloc] initWithBannerNumber:DEFAULTNUMS];
 

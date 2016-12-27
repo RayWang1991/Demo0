@@ -13,6 +13,10 @@
 @end
 
 @implementation MicroClassViewController
+-(void)loadView{
+    self.view= [[BMTMicroClassView alloc] initWithFrame:CGRectMake(0,190,375,
+                                                                   80)];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

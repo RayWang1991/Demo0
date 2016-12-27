@@ -13,9 +13,10 @@
 #import "BMTEntityKnowledgeInfo.h"
 #import "FMDBManager.h"
 #import "SessionRequestManager.h"
-
-@interface KnowledgeInfoDataSourceManager : NSObject
-//@property(strong, nonatomic) BMTKnowledgeInfoNumState *knowledgeInfoNumState;
+#import "BMTGetKnowledgeInfoDelegate.h"
+@interface KnowledgeInfoDataSourceManager : NSObject<BMTGetKnowledgeInfoDelegate>
+//@property(strong, nonatomic) BMTKnowledgeInfoNumState
+// *knowledgeInfoNumState;
 @property(strong, nonatomic) NSMutableArray <NSNumber *>
     *knowledgeInfoOffsetStateArray;
 @property(strong, nonatomic) NSMutableArray <NSMutableArray<BMTEntityKnowledgeInfo *> *>
@@ -33,5 +34,7 @@
 - (void)getRefreshedKnowledgeInfo:(NSUInteger)number
                        categoryId:(NSUInteger)catId;
 
+- (void)getFirstShownKnowledgeInfo:(NSUInteger)number
+                        categoryId:(NSUInteger)catId;
 
 @end
