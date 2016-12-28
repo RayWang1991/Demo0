@@ -10,17 +10,7 @@
 #import "BMTBannerTable.h"
 #import "NSDictionary+ForStorageField.h"
 
-/*
-@property(strong, nonatomic) NSString *altText;
-@property(assign, nonatomic) NSInteger height;
-@property(assign, nonatomic) NSInteger width;
-@property(strong, nonatomic) NSString *href;
-@property(strong, nonatomic) NSString *imgSrc;
-@property(assign, nonatomic) LanguageType language;
 
-@property (assign, nonatomic) StatusType status;
-@property (assign, nonatomic) PosterType type;
-*/
 
 #define BANNER_COLUMN_NAME @"name"
 //#define BANNER_COLUMN_ID @"bannerId"
@@ -108,50 +98,6 @@
 
   return result;
 }
-
-/*
-- (instancetype)initWithDBKey2DBValue:(DBKey2DBValue*)key2Value {
-  self = [super init];
-  if (!self) {
-    return nil;
-  }
-  self.altText=[key2Value stringValueForKey:BANNER_COLUMN_ALTTEXT];
-  self.imgSrc=[key2Value stringValueForKey:BANNER_COLUMN_IMGSRC];
-  self.height=[key2Value integerValueForKey:BANNER_COLUMN_HEIGHT];
-  self.href=[key2Value stringValueForKey:BANNER_COLUMN_HREF];
-  self.width=[key2Value integerValueForKey:BANNER_COLUMN_WIDTH];
-
-  self.language=[key2Value integerValueForKey:BANNER_COLUMN_LANGUAGE];
-
-  self.type=[key2Value stringValueForKey:BANNER_COLUMN_TYPE];
-  self.status=[key2Value integerValueForKey:BANNER_COLUMN_STATUS];
-
-  return self;
-}
-
-
-- (DBKey2DBValue *)encodeForDBKey2DBValue {
-DBKey2DBValue *result=[[DBKey2DBValue alloc]init];
-  [result setNumberValue:self.status
-                  forKey:BANNER_COLUMN_STATUS];
-  [result setNumberValue:self.width
-                  forKey:BANNER_COLUMN_WIDTH];
-  [result setNumberValue:self.height
-                  forKey:BANNER_COLUMN_HEIGHT];
-  [result setNumberValue:self.type
-                  forKey:BANNER_COLUMN_TYPE];
-  [result setNumberValue:self.language
-                  forKey:BANNER_COLUMN_LANGUAGE];
-  [result setStringValue:self.imgSrc
-                  forKey:BANNER_COLUMN_IMGSRC];
-  [result setStringValue:self.href
-                  forKey:BANNER_COLUMN_HREF];
-  [result setStringValue:self.altText
-                  forKey:BANNER_COLUMN_ALTTEXT];
-
-  return result;
-}
-*/
 
 - (instancetype)initWithResource:(BMTResourceBanner *)resource {
   self = [super init];

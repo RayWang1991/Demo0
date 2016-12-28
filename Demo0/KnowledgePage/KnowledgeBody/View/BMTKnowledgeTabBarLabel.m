@@ -7,9 +7,9 @@
  * Created by ray wang on 16/12/27.
  */
 
-#import "KnowledgeTabBarLabel.h"
+#import "BMTKnowledgeTabBarLabel.h"
 
-@implementation KnowledgeTabBarLabel {
+@implementation BMTKnowledgeTabBarLabel {
 
 }
 - (void)setUnselectedStyle {

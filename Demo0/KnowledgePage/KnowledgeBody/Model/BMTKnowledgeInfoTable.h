@@ -16,7 +16,7 @@
 #import "DBTableWithUniqueIntegerPrimaryKey.h"
 #import "BMTKnowledgeInfoCategoryState.h"
 
-@interface KnowledgeInfoTable : DBTableWithUniquePrimaryKey
+@interface BMTKnowledgeInfoTable : DBTableWithUniquePrimaryKey
 
 @property (nonatomic)CATEGORY_ID catId;
 

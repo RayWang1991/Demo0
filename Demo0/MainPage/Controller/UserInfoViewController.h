@@ -14,7 +14,7 @@
 #import "SQLManager.h"
 #import "BMTBannerScrollView.h"
 #import "NSFileManaer+WRFileManager.h"
-#import "KnowledgePageViewController.h"
+#import "BMTKnowledgePageViewController.h"
 
 @interface UserInfoViewController : UIViewController<NSURLConnectionDelegate>
 @property(strong, nonatomic) NSMutableData *dataFrag;
@@ -34,6 +34,6 @@
 @property(strong, nonatomic) WRPersonModel *personModel;
 
 //TODO the knowledge page should be retained in a navigation view
-@property (strong, nonatomic) KnowledgePageViewController *knowledgePageVC;
+@property (strong, nonatomic) BMTKnowledgePageViewController *knowledgePageVC;
 
 @end

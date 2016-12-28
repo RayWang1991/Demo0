@@ -30,7 +30,7 @@ static unsigned int count = 0u;
     
     _bannerView=[[BMTBannerScrollView alloc]initWithFrame:CGRectMake(50, 70+10*30, 320, 200)];
     _bannerView.contentSize=CGSizeMake(3*(320), 200);
-    [_bannerView setStyle1];
+  [_bannerView setStyle];
 //    [_bannerView LoadImagesFromBanners];
     [self.view addSubview:_bannerView];
     

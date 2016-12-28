@@ -10,31 +10,31 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BMLayoutConstraint.h"
-#import "BannersViewController.h"
+#import "BMTBannersViewController.h"
 #import "MicroClassViewController.h"
 #import "Constants.h"
-#import "KnowledgeHomePageCategoryTableViewCell.h"
-#import "KnowledgeInfoDataSourceManager.h"
+#import "BMTKnowledgeHomePageCategoryTableCellView.h"
+#import "BMTKnowledgeInfoDataSourceManager.h"
 #import "SessionRequestManager.h"
 #import "UIView+AddMoreButtonView.h"
 #import "UILabel+RefreshPanelView.h"
-#import "KnowledgeInfoCategoryTabBarsView.h"
+#import "BMTKnowledgeInfoCategoryTabBarsView.h"
 
-@class KnowledgeTableView;
-@interface KnowledgePageViewController : UIViewController
+@class BMTKnowledgeTableView;
+@interface BMTKnowledgePageViewController : UIViewController
     <UITableViewDataSource, UITableViewDelegate>
 // header
-@property(strong, nonatomic) BannersViewController *bannersVC;
+@property(strong, nonatomic) BMTBannersViewController *bannersVC;
 @property(strong, nonatomic) MicroClassViewController *microClassVC;
-@property (strong, nonatomic) KnowledgeInfoCategoryTabBarsView *categoryBarsView;
+@property (strong, nonatomic) BMTKnowledgeInfoCategoryTabBarsView *categoryBarsView;
 // refresh panel
 @property(assign, nonatomic) BOOL shouldRefresh;
 @property(strong, nonatomic) UILabel *refreshPanelLabel;
 // table view's body
-@property(strong, nonatomic) KnowledgeTableView *tableView;
-//@property (strong, nonatomic) NSMutableArray <KnowledgeInfoDataSourceManager*>*dataArray;
+@property(strong, nonatomic) BMTKnowledgeTableView *tableView;
+//@property (strong, nonatomic) NSMutableArray <BMTKnowledgeInfoDataSourceManager*>*dataArray;
 
-@property(strong, nonatomic) KnowledgeInfoDataSourceManager<BMTGetKnowledgeInfoDelegate>
+@property(strong, nonatomic) BMTKnowledgeInfoDataSourceManager<BMTGetKnowledgeInfoDelegate>
     *dataSourceManager;
 // footer
 @property(strong, nonatomic) UIView *loadMoreButtonView;

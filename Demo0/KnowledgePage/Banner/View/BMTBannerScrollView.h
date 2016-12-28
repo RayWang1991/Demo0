@@ -16,6 +16,6 @@
 @property (strong, nonatomic) NSMutableArray <UIImageView *>* bannerImageViews;
 
 -(instancetype)initWithBannerNumber:(NSUInteger)num;
-- (void)setStyle1;
+- (void)setStyle;
 - (void)LoadImagesFromBanners:(NSArray<BMTEntityBanner *>  *)banners;
 @end

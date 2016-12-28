@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BMTMicroClassInfoEntity.h"
 #import "BMTMicroClassView.h"
+#import "SessionRequestManager.h"
 
 @interface MicroClassViewController : UIViewController
 

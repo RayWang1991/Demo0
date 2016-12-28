@@ -7,9 +7,9 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "BottomView.h"
+#import "BMTKnowledgeInfoCellBottomView.h"
 
-@implementation BottomView {
+@implementation BMTKnowledgeInfoCellBottomView {
 
 }
 - (instancetype)initWithEyeImage:(UIImage *)eyeImage

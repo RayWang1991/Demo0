@@ -16,6 +16,7 @@
 -(void)loadView{
     self.view= [[BMTMicroClassView alloc] initWithFrame:CGRectMake(0,190,375,
                                                                    80)];
+    [self testNetwork];
 }
 
 - (void)viewDidLoad {
@@ -28,6 +29,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) testNetwork{
+  [[SessionRequestManager sharedManager]
+      getLatestMicroClassInfoFromServerOnSuccess:nil
+                                         failure:nil];
+}
 /*
 #pragma mark - Navigation
 

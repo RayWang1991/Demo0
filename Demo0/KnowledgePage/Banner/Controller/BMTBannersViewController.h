@@ -1,5 +1,5 @@
 //
-//  BannersViewController.h
+//  BMTBannersViewController.h
 //  HTTPRequestTest
 //
 //  Created by ray wang on 16/12/14.
@@ -15,7 +15,7 @@
 #import "WRPersonModel.h"
 #import "Constants.h"
 
-@interface BannersViewController : UIViewController<UIScrollViewDelegate>
+@interface BMTBannersViewController : UIViewController<UIScrollViewDelegate>
 
 @property(assign, nonatomic) NSInteger bannerNums;
 @property(strong, nonatomic) NSArray<BMTEntityBanner *> *banners;

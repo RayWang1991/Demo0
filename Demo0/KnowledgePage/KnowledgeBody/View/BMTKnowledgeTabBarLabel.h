@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
-@interface KnowledgeTabBarLabel : UILabel
+@interface BMTKnowledgeTabBarLabel : UILabel
 
 -(void) setUnselectedStyle;
 -(void) setSelectedStyle;

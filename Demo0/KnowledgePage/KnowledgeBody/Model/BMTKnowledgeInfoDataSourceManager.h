@@ -14,7 +14,8 @@
 #import "FMDBManager.h"
 #import "SessionRequestManager.h"
 #import "BMTGetKnowledgeInfoDelegate.h"
-@interface KnowledgeInfoDataSourceManager : NSObject<BMTGetKnowledgeInfoDelegate>
+
+@interface BMTKnowledgeInfoDataSourceManager : NSObject<BMTGetKnowledgeInfoDelegate>
 //@property(strong, nonatomic) BMTKnowledgeInfoNumState
 // *knowledgeInfoNumState;
 @property(strong, nonatomic) NSMutableArray <NSNumber *>

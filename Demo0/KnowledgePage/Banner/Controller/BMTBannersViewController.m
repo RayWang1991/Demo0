@@ -1,20 +1,20 @@
 //
-//  BannersViewController.m
+//  BMTBannersViewController.m
 //  HTTPRequestTest
 //
 //  Created by ray wang on 16/12/14.
 //  Copyright © 2016年 ray wang. All rights reserved.
 //
 
-#import "BannersViewController.h"
+#import "BMTBannersViewController.h"
 #define DEFAULTNUMS (5)
 #define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0\
         alpha:1.0]
-@interface BannersViewController ()
+@interface BMTBannersViewController ()
 
 @end
 
-@implementation BannersViewController
+@implementation BMTBannersViewController
 
 - (instancetype)init {
   return [self initWithBannerNums:DEFAULTNUMS];
@@ -49,7 +49,7 @@
 
   //self.banners;//make sure banners info are ready
 
-  [self.scrollView setStyle1];
+  [self.scrollView setStyle];
   self.scrollView.delegate = self;
   [self.view addSubview:self.scrollView];
 
@@ -58,7 +58,7 @@
   _pageControl.numberOfPages = self.bannerNums;
   _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
   _pageControl.pageIndicatorTintColor = UIColorFromHex(0xD0DFDE);
-  
+
   [_pageControl addTarget:self
                    action:@selector(pageAction:)
          forControlEvents:UIControlEventValueChanged];
@@ -140,28 +140,35 @@
 
       NSLog(@"get banners from server, start!");
       @weakify(self)
-      [self.sessionRequestManager getObjsFromServerSuccess:^(NSArray
-                                                             *resultArray) {
-            @strongify(self)
-            _banners = [NSArray arrayWithArray:resultArray];
-            for (BMTEntityBanner *aBanner in _banners) {
-              if (aBanner.name == nil) {
-                aBanner.name = [[aBanner.imgSrc
-                    componentsSeparatedByString:@"imgs/"] lastObject];
-              }
-            }
-            NSLog(@"get banners from server, done!");
-            [self refreshBanners];
-            [self.bannerTable addBanners:_banners];
 
-          }
-                                                   failure:^(NSError *error) {
-                                                     // show error here
-                                                     NSLog(@"get obj error: "
-                                                               "%@", error);
-                                                   }
-                                                      type:[BMTEntityBanner class]
-                                                       num:DEFAULTNUMS];
+      [self.sessionRequestManager
+          getBannersFromServerNumber:DEFAULTNUMS
+                             success:^(NSArray
+                                       *resultArray) {
+                               @strongify(self)
+                               _banners =
+                                   [NSArray arrayWithArray:resultArray];
+                               for (BMTEntityBanner
+                                   *aBanner in _banners) {
+                                 if (aBanner.name == nil) {
+                                   aBanner.name =
+                                       [[aBanner.imgSrc
+                                           componentsSeparatedByString:@"imgs/"]
+                                           lastObject];
+                                 }
+                               }
+                               NSLog(@"get banners from server, done!");
+                               [self refreshBanners];
+                               [self
+                                   .bannerTable addBanners:_banners];
+
+                             }
+                             failure:^(NSError *error) {
+                               // show error here
+                               NSLog(@"get obj error: "
+                                         "%@", error);
+                             }
+      ];
     } else {
       NSLog(@"banner found in database");
       _banners = [self.bannerTable getBannersOrderedByName:DEFAULTNUMS];

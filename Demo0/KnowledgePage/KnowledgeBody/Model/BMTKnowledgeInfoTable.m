@@ -7,7 +7,7 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "KnowledgeInfoTable.h"
+#import "BMTKnowledgeInfoTable.h"
 #import "NSDictionary+ForStorageField.h"
 
 #define KNOWLEDGEINFO_COLUMN_INFOID @"infoId"
@@ -121,7 +121,7 @@
 }
 @end
 
-@implementation KnowledgeInfoTable {
+@implementation BMTKnowledgeInfoTable {
 
 }
 

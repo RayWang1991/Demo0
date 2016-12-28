@@ -10,9 +10,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BMTChangeCategoryDelegate.h"
-#import "KnowledgeTabBarLabel.h"
+#import "BMTKnowledgeTabBarLabel.h"
 
-@interface KnowledgeInfoCategoryTabBarsView : UIView
+@interface BMTKnowledgeInfoCategoryTabBarsView : UIView
 
 @property (nonatomic,weak) UIViewController<BMTChangeCategoryDelegate>
     *delegate;

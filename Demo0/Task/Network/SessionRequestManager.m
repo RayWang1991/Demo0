@@ -27,16 +27,28 @@
   return manager;
 }
 
+#pragma - private
 - (void)getObjsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
                          failure:(void (^)(NSError *error))failBlock
+                            path:(NSString *)path
                             type:(Class)classType
-                             num:(NSInteger)numbers {
+                             arg:(NSDictionary *)dict {
+  NSMutableString *appendStr = [NSMutableString string];
+  [appendStr appendString:path];
+  if (dict && dict.count) {
+    NSUInteger argNumber = dict.count;
+    [appendStr appendString:@"?"];
+    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+      [appendStr appendFormat:@"%@=%@&",
+                              key,
+                              dict[key]];
+    }];
+    [appendStr deleteCharactersInRange:NSMakeRange(appendStr.length - 1, 1)];
+    // delete the last '&'
+  }
+  NSString *URLStr = [kBMBASEURL stringByAppendingString:appendStr];
 
-  //NSString *str=kTESTURL(1);
-  NSString *str = [kBMBASEURL stringByAppendingFormat:@"/w/poster?num=%d&language=1",numbers];
-
-  NSLog(@"%@", str);
-  NSURL *url = [NSURL URLWithString:str];
+  NSURL *url = [NSURL URLWithString:URLStr];
   NSURLRequest *request = [NSURLRequest requestWithURL:url
                                            cachePolicy:0
                                        timeoutInterval:30];
@@ -59,7 +71,7 @@
                 } else {
                   // the give class must be a subclass of JSONModel
                   NSCAssert([classType isSubclassOfClass:[JSONModel class]],
-                           @"not a jsonmodel");
+                            @"not a jsonmodel");
 
                   // now convert json dict to model
                   // assuming we receive an array containing
@@ -67,11 +79,13 @@
 
                   NSCAssert([result isKindOfClass:[NSArray class]],
                             @"the result isn't an array");
+
+                  // TODO optimize here
                   NSCAssert([result[0] isKindOfClass:[NSDictionary class]],
                             @"the result[0] isn't a dictionary");
-                 // NSCAssert([result count]>=numbers,@"the returned numbers does not match");
-                  NSMutableArray *resArray=[[NSMutableArray alloc]init];
-                  for(int i=0;i<[result count];i++) {
+                  // NSCAssert([result count]>=numbers,@"the returned numbers does not match");
+                  NSMutableArray *resArray = [[NSMutableArray alloc] init];
+                  for (int i = 0; i < [result count]; i++) {
 
                     NSDictionary *dict = (NSDictionary *) result[i];
                     NSLog(@"the dict is %@", dict);
@@ -107,24 +121,53 @@
             }] resume];
 }
 
-- (void)getKnowledgeBriefsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
-                                    failure:(void (^)(NSError *error))failBlock
-                                 categoryId:(NSUInteger)categoryId
-                                     offset:(NSUInteger)offset
-                                     number:(NSUInteger)number {
-  NSString *str = [kBMBASEURL
-      stringByAppendingFormat:@"/w/knowledge?"
-                                  "category_id=%u"
-                                  "&language=%d"
-                                  "&count=%u"
-                                  "&pageNo=%u"
-                                  "&pageSize=%u",categoryId,1,number,1,offset];
+#pragma - public
 
-  NSLog(@"%@", str);
-  NSURL *url = [NSURL URLWithString:str];
+- (void)getKnowledgeInfosFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
+                                   failure:(void (^)(NSError *error))failBlock
+                                categoryId:(NSUInteger)categoryId
+                                    offset:(NSUInteger)offset
+                                    number:(NSUInteger)number {
+  NSDictionary *dict =
+      @{@"category_id": @(categoryId),
+          @"language": @(1),
+          @"count": @(number),
+          @"pageNo": @(1),
+          @"pageSize": @(offset)};
+
+  [self getObjsFromServerSuccess:sucBlock
+                         failure:failBlock
+                            path:@"/w/knowledge"
+                            type:[BMTEntityKnowledgeInfo class]
+                             arg:dict];
+}
+
+- (void)getBannersFromServerNumber:(NSInteger)num
+                           success:(void (^)(NSArray *array))sucBlock
+                           failure:(void (^)(NSError *error))failBlock {
+/*
+  [self getObjsFromServerSuccess:sucBlock
+                         failure:failBlock
+                            type:[BMTEntityBanner class]
+                             num:num];
+                             */
+  NSDictionary *dict = @{@"num": @(num), @"language": @1};
+  [self getObjsFromServerSuccess:sucBlock
+                         failure:failBlock
+                            path:@"/w/poster"
+                            type:[BMTEntityBanner class]
+                             arg:dict];
+}
+- (void)getLatestMicroClassInfoFromServerOnSuccess:(void (^)(BMTMicroClassInfoEntity *resultEntity))sucBlock
+                                           failure:(void (^)(NSError *error))failBlock {
+
+  NSString *URLStr = [kBMBASEURL stringByAppendingString:@"/mc/0"];
+
+  NSURL *url = [NSURL URLWithString:URLStr];
   NSURLRequest *request = [NSURLRequest requestWithURL:url
                                            cachePolicy:0
                                        timeoutInterval:30];
+
   [[[NSURLSession sharedSession]
       dataTaskWithRequest:request
         completionHandler:
@@ -135,46 +178,30 @@
                 id result = [NSJSONSerialization JSONObjectWithData:data
                                                             options:0
                                                               error:&dataError];
-                NSLog(@"the dic is %@", data);
+                NSLog(@"the dic is %@", result);
 
                 if (dataError) {
                   // there may be data analysis error
                   NSLog(@"data analysis error : %@", dataError);
                   failBlock(dataError);
                 } else {
-                  // the give class must be a subclass of JSONModel
-                  // NSCAssert([classType isSubclassOfClass:[JSONModel class]],@"not a jsonmodel");
+                  // TODO optimize here
+                  NSDictionary *dict = (NSDictionary *) result;
+                  NSLog(@"the dict is %@", dict);
 
-                  // now convert json dict to model
-                  // assuming we receive an array containing
-                  // dicionaries indicating the objects
+                  BMTMicroClassInfoEntity *mcInfoEntity =
+                      [[BMTMicroClassInfoEntity alloc] init];
+                  mcInfoEntity.infoId=dict[@"microClass"][@"id"];
+                  mcInfoEntity.avatarAddress = dict[@"avatarAddress"];
+                  mcInfoEntity.title =
+                      dict[@"microClass"][@"subject"];
+                  mcInfoEntity.startTimestamp =
+                      dict[@"microClass"][@"startTimestamp"];
+                  mcInfoEntity.applicants =
+                      dict[@"microClass"][@"applicants"];
 
-                  //NSCAssert([result isKindOfClass:[NSArray class]],@"the result isn't an array");
-                  //NSCAssert([result[0] isKindOfClass:[NSDictionary class]],@"the result[0] isn't a dictionary");
-
-                  // NSCAssert([result count]>=numbers,@"the returned numbers does not match");
-
-                  NSMutableArray *resArray=[[NSMutableArray alloc]init];
-                  for(int i=0;i<[result count];i++) {
-
-                    NSDictionary *dict = (NSDictionary *) result[i];
-                    NSLog(@"the dict is %@", dict);
-
-                    JSONModelError *jsonModelError = nil;
-// TODO
-                    id aModel = [[BMTEntityKnowledgeInfo alloc]
-                        initWithDictionary:dict error:&jsonModelError];
-                    // error:&jsonModelError];
-
-                    if (jsonModelError != nil) {
-                      NSLog(@"Model convert fails, error: %@, json: %@",
-                            jsonModelError, dict);
-                    }
-                    [resArray addObject:aModel];
-                  }
-                  sucBlock(resArray);
+                  sucBlock(mcInfoEntity);
                 }
-
               } else {
                 NSError *resError = nil;
                 // there may be session error or no data error
@@ -191,14 +218,5 @@
               }
             }] resume];
 
-}
-- (void)getBannerFromServer:(NSInteger)num
-                    success:(void (^)(NSArray *array))sucBlock
-                    failure:(void (^)(NSError *error))failBlock {
-
-  [self getObjsFromServerSuccess:sucBlock
-                         failure:failBlock
-                            type:[BMTEntityBanner class]
-                             num:num];
 }
 @end

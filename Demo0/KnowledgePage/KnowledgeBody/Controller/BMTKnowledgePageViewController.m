@@ -8,12 +8,12 @@
  */
 
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "KnowledgePageViewController.h"
-#import "KnowledgeTableView.h"
+#import "BMTKnowledgePageViewController.h"
+#import "BMTKnowledgeTableView.h"
 #import "UILabel+RefreshPanelView.h"
 #define DEFAULT_KNOWLEDGE_NUM (5u)
 
-@implementation KnowledgePageViewController {
+@implementation BMTKnowledgePageViewController {
 
 }
 - (void)loadView {
@@ -30,11 +30,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  _bannersVC = [[BannersViewController alloc] init];
+  _bannersVC = [[BMTBannersViewController alloc] init];
 
   _microClassVC =[[MicroClassViewController alloc]init];
 
-  _tableView = [[KnowledgeTableView alloc] initWithFrame:self.view.bounds
+  _tableView = [[BMTKnowledgeTableView alloc] initWithFrame:self.view.bounds
                                                    style:UITableViewStylePlain];
   [self.view addSubview:self.tableView];
 
@@ -45,7 +45,7 @@
   CGFloat catBarHeight = 30;
   CGFloat headerHeight=_tableView.tableHeaderView.bounds.size.height;
   _categoryBarsView =
-      [[KnowledgeInfoCategoryTabBarsView alloc] initWithFrame:CGRectMake(0,
+      [[BMTKnowledgeInfoCategoryTabBarsView alloc] initWithFrame:CGRectMake(0,
                                                                   headerHeight-catBarHeight,
                                                                   375,
                                                                   catBarHeight)];
@@ -72,10 +72,10 @@
   _tableView.delegate = self;
   _tableView.dataSource = self;//TODO, split later
 
-  [_tableView registerClass:[KnowledgeHomePageCategoryTableViewCell class]
-     forCellReuseIdentifier:[KnowledgeHomePageCategoryTableViewCell bmt_reuseId]];
+  [_tableView registerClass:[BMTKnowledgeHomePageCategoryTableCellView class]
+     forCellReuseIdentifier:[BMTKnowledgeHomePageCategoryTableCellView bmt_reuseId]];
 
-  _dataSourceManager = [[KnowledgeInfoDataSourceManager alloc] init];
+  _dataSourceManager = [[BMTKnowledgeInfoDataSourceManager alloc] init];
 
   [self setViewBasicStyle];
 
@@ -99,11 +99,11 @@
 
 - (void)testNetRequest {
   SessionRequestManager *requestManager = [SessionRequestManager sharedManager];
-  [requestManager getKnowledgeBriefsFromServerSuccess:^(NSArray *array) { ; }
-                                              failure:^(NSError *error) { ; }
-                                           categoryId:1
-                                               offset:0
-                                               number:5];
+  [requestManager getKnowledgeInfosFromServerSuccess:^(NSArray *array) { ; }
+                                             failure:^(NSError *error) { ; }
+                                          categoryId:1
+                                              offset:0
+                                              number:5];
 }
 - (void)testGetInfoMoreNumber:(NSUInteger)number
                         catId:(NSUInteger)catId {
@@ -175,8 +175,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   NSString *cellStr =
-      [KnowledgeHomePageCategoryTableViewCell bmt_reuseId];//used for reuse
-  KnowledgeHomePageCategoryTableViewCell *cell = [self.tableView
+      [BMTKnowledgeHomePageCategoryTableCellView bmt_reuseId];//used for reuse
+  BMTKnowledgeHomePageCategoryTableCellView *cell = [self.tableView
       dequeueReusableCellWithIdentifier:cellStr
                            forIndexPath:indexPath];
 
@@ -249,9 +249,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 /*
--(BannersViewController *)bannersVC {
+-(BMTBannersViewController *)bannersVC {
   if(!_bannersVC){
-    _bannersVC=[[BannersViewController alloc]init];
+    _bannersVC=[[BMTBannersViewController alloc]init];
   }
   return _bannersVC;
 }
@@ -284,8 +284,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 #pragma mark - private
-- (KnowledgeInfoDataSourceManager *)dataSourceManager {
-  return [KnowledgeInfoDataSourceManager sharedManager];
+- (BMTKnowledgeInfoDataSourceManager *)dataSourceManager {
+  return [BMTKnowledgeInfoDataSourceManager sharedManager];
 }
 
 @end

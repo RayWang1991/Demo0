@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface BottomView : UIView
+@interface BMTKnowledgeInfoCellBottomView : UIView
 @property(strong, nonatomic) UIImageView *eyeImageView;
 @property(strong, nonatomic) UIImageView *thumbImageView;
 @property(strong, nonatomic) UILabel *clickedNumLabel;

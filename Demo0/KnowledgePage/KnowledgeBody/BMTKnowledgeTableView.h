@@ -9,6 +9,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface KnowledgeTableView : UITableView
+@interface BMTKnowledgeTableView : UITableView
 
 @end

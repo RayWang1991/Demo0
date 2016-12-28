@@ -7,9 +7,9 @@
  * Created by ray wang on 16/12/27.
  */
 
-#import "KnowledgeInfoCategoryTabBarsView.h"
+#import "BMTKnowledgeInfoCategoryTabBarsView.h"
 
-@implementation KnowledgeInfoCategoryTabBarsView {
+@implementation BMTKnowledgeInfoCategoryTabBarsView {
 
 }
 
@@ -39,7 +39,7 @@
 #pragma mark - change category event
 
 - (void)someLabelClicked:(UILabel *)subLabel {
-  for (KnowledgeTabBarLabel *label in self.subviews) {
+  for (BMTKnowledgeTabBarLabel *label in self.subviews) {
     if (label.tag != subLabel.tag) {
       [label setUnselectedStyle];
     } else {
@@ -71,9 +71,9 @@
       [[NSMutableArray alloc] initWithCapacity:4];
 
   for (int i = 0; i < 4; i++) {
-    KnowledgeTabBarLabel
+    BMTKnowledgeTabBarLabel
         *catBar =
-        [[KnowledgeTabBarLabel alloc] initWithFrame:CGRectMake(barWidth * i, 0,
+        [[BMTKnowledgeTabBarLabel alloc] initWithFrame:CGRectMake(barWidth * i, 0,
                                                                barWidth,
                                                                barHeight)];
 

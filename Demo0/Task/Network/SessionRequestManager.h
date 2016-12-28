@@ -11,30 +11,20 @@
 #import "BMTEntityBanner.h"
 #import <UIKit/UIKit.h>
 #import "WRPersonModel.h"
+#import "BMTMicroClassInfoEntity.h"
 @interface SessionRequestManager : NSObject
 + (instancetype)sharedManager;
 
-- (void)getObjsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
-                         failure:(void (^)(NSError *error))failBlock
-                            type:(Class)classType
-                             num:(NSInteger)numbers;
-/*
-- (void)getObjsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
-                         failure:(void (^)(NSError *error))failBlock
-                            type:(Class)classType
-                             num:(NSInteger)numbers
-                            path:(NSString *)path
-                            args:(NSDictionary *)dict;
+- (void)getKnowledgeInfosFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
+                                   failure:(void (^)(NSError *error))failBlock
+                                categoryId:(NSUInteger)categoryId
+                                    offset:(NSUInteger)offset
+                                    number:(NSUInteger)number;
 
-*/
+- (void)getBannersFromServerNumber:(NSInteger)num
+                           success:(void (^)(NSArray *array))sucBlock
+                           failure:(void (^)(NSError *error))failBlock;
 
-- (void)getKnowledgeBriefsFromServerSuccess:(void (^)(NSArray *objArray))sucBlock
-                                    failure:(void (^)(NSError *error))failBlock
-                                 categoryId:(NSUInteger)categoryId
-                                     offset:(NSUInteger)offset
-                                     number:(NSUInteger)number;
-
-- (void)getBannerFromServer:(NSInteger)num
-                    success:(void (^)(NSArray *array))sucBlock
-                    failure:(void (^)(NSError *error))failBlock;
+- (void)getLatestMicroClassInfoFromServerOnSuccess:(void (^)(BMTMicroClassInfoEntity *resultEntity))sucBlock
+                                           failure:(void (^)(NSError *error))failBlock;
 @end

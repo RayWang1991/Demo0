@@ -7,14 +7,14 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "KnowledgeInfoDataSourceManager.h"
+#import "BMTKnowledgeInfoDataSourceManager.h"
 
-@implementation KnowledgeInfoDataSourceManager {
+@implementation BMTKnowledgeInfoDataSourceManager {
 
 }
 
 + (instancetype)sharedManager {
-  static KnowledgeInfoDataSourceManager *manager = nil;
+  static BMTKnowledgeInfoDataSourceManager *manager = nil;
   static dispatch_once_t once;
   dispatch_once(&once, ^{
     if (!manager) {
@@ -59,7 +59,7 @@
   NSMutableArray <BMTEntityKnowledgeInfo *> *currentCatEntityArray = self
       .knowledgeInfoEntityArray[catIndex];
 
-  KnowledgeInfoTable *currentCatTable = self.storageManager
+  BMTKnowledgeInfoTable *currentCatTable = self.storageManager
       .knowledgeInfoTableArray[catIndex];
 
   NSUInteger currentOffset = self.knowledgeInfoOffsetStateArray[catIndex]
@@ -97,7 +97,7 @@
 
     } else {
       [self.requestManager
-          getKnowledgeBriefsFromServerSuccess:^(NSArray *serverResultArray) {
+          getKnowledgeInfosFromServerSuccess:^(NSArray *serverResultArray) {
             // if success , add the result array to entity array
             // and return the number of result array
             [currentCatEntityArray addObjectsFromArray:serverResultArray];
@@ -110,16 +110,16 @@
             [self sendNotificationWithAskedNum:number
                                      returnNum:serverResultArray.count];
           }
-                                      failure:^(NSError *error) {
-                                        // deal with error
-                                        NSLog(@"GET More Infos FAILED!");
+                                     failure:^(NSError *error) {
+                                       // deal with error
+                                       NSLog(@"GET More Infos FAILED!");
 
-                                        [self sendNotificationWithAskedNum:number
-                                                                 returnNum: -1];
-                                      }
-                                   categoryId:catId
-                                       offset:currentOffset
-                                       number:number];
+                                       [self sendNotificationWithAskedNum:number
+                                                                returnNum:-1];
+                                     }
+                                  categoryId:catId
+                                      offset:currentOffset
+                                      number:number];
     }
   }
 }
@@ -134,7 +134,7 @@
   NSMutableArray <BMTEntityKnowledgeInfo *> *currentCatEntityArray = self
       .knowledgeInfoEntityArray[catIndex];
 
-  KnowledgeInfoTable *currentCatTable = self.storageManager
+  BMTKnowledgeInfoTable *currentCatTable = self.storageManager
       .knowledgeInfoTableArray[catIndex];
 
   /*NSUInteger currentOffset = self.knowledgeInfoOffsetStateArray[catIndex]
@@ -142,7 +142,7 @@
   */
 
   [self.requestManager
-      getKnowledgeBriefsFromServerSuccess:^(NSArray *serverResultArray) {
+      getKnowledgeInfosFromServerSuccess:^(NSArray *serverResultArray) {
         // if success , add the result array to entity array
         // and return the number of result array
 
@@ -160,19 +160,18 @@
         // save the result to database later
         [currentCatTable addKnowledgeInfoArray:serverResultArray];
 
-
       }
-                                  failure:^(NSError *error) {
-                                    // TODO deal with error
+                                 failure:^(NSError *error) {
+                                   // TODO deal with error
 
-                                    NSLog(@"GET Refreshed Infos FAILED!");
+                                   NSLog(@"GET Refreshed Infos FAILED!");
 
-                                    [self sendNotificationWithAskedNum:number
-                                                             returnNum:-1];
-                                  }
-                               categoryId:catId
-                                   offset:0
-                                   number:number];
+                                   [self sendNotificationWithAskedNum:number
+                                                            returnNum:-1];
+                                 }
+                              categoryId:catId
+                                  offset:0
+                                  number:number];
 }
 
 //TODO

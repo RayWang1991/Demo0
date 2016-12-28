@@ -7,9 +7,9 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "KnowledgeHomePageCategoryTableViewCell.h"
+#import "BMTKnowledgeHomePageCategoryTableCellView.h"
 
-@implementation KnowledgeHomePageCategoryTableViewCell {
+@implementation BMTKnowledgeHomePageCategoryTableCellView {
 
 }
 
@@ -71,7 +71,7 @@
 }
 - (UIView *)bottomView {
   if (!_bottomView) {
-    _bottomView = [[BottomView alloc] init];
+    _bottomView = [[BMTKnowledgeInfoCellBottomView alloc] init];
     _bottomView.backgroundColor = [UIColor whiteColor];
     //_backView.cornerStyle = BMTRoundedViewStyleAllCorner;
     //_backView.cornerRadius = 4.0f;

@@ -28,7 +28,7 @@
   return self;
 }
 
-- (void)setStyle1 {
+- (void)setStyle {
   self.frame = CGRectMake(0, 0, 375, 190.5);
   self.contentSize = CGSizeMake(self.bannerNumber * (375), 190.5);
 

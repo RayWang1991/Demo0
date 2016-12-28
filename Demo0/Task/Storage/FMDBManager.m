@@ -75,7 +75,7 @@
     self.bannerTable = [[BMTBannerTable alloc] initWithDatabase:db];
       self.knowledgeInfoTableArray=[[NSMutableArray alloc]init];
       for(int i=1;i<=4;i++){
-          KnowledgeInfoTable *knowledgeInfotable=[[KnowledgeInfoTable alloc]initWithDatabase:db categoryId:i];
+          BMTKnowledgeInfoTable *knowledgeInfotable=[[BMTKnowledgeInfoTable alloc]initWithDatabase:db categoryId:i];
           [self.knowledgeInfoTableArray addObject:knowledgeInfotable];
       }
     NSArray *tables = @[self.bannerTable,

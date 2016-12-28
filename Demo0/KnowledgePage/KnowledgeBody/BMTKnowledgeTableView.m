@@ -7,9 +7,9 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "KnowledgeTableView.h"
+#import "BMTKnowledgeTableView.h"
 
-@implementation KnowledgeTableView {
+@implementation BMTKnowledgeTableView {
 
 }
 @end

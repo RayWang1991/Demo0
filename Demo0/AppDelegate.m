@@ -20,7 +20,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
 
   [[FMDBManager sharedInstance] prepare];
-  KnowledgePageViewController *vc = [[KnowledgePageViewController alloc] init];
+  BMTKnowledgePageViewController *vc = [[BMTKnowledgePageViewController alloc] init];
   self.window.rootViewController = vc;
   [self.window makeKeyAndVisible];
 

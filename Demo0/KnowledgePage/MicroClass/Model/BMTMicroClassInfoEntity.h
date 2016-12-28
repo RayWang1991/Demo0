@@ -11,9 +11,14 @@
 #import "JSONModel/JSONModel.h"
 
 @interface BMTMicroClassInfoEntity : JSONModel
+// what we need to display
+@property(nonatomic, strong) NSNumber *infoId;
 @property(nonatomic, strong) NSString *avatarAddress;
 @property(nonatomic, strong) NSString *title;
-@property(nonatomic, strong) NSNumber *participants;
+@property(nonatomic, strong) NSNumber *applicants;
 @property(nonatomic, assign) NSNumber *startTimestamp;
 
+- (instancetype)initWithDBRecord:(NSDictionary *)content;
+
+- (NSDictionary *)encodeForDBRecord;
 @end

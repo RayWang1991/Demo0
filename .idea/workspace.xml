@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7899b69f-c767-44f2-93c6-54b3ecf42707" name="Default" comment="" />
+    <list default="true" id="7899b69f-c767-44f2-93c6-54b3ecf42707" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTGetMicroClassInfoDelegate.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassDoctorEntity.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassDoctorEntity.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassEntity.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassEntity.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoDataManager.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoDataManager.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/Task/Storage/BMTMicroClassInfoTable.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo0/Task/Storage/BMTMicroClassInfoTable.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/KnowledgeStoreManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/KnowledgeStoreManager.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo0/Task/Network/GetBannerRequest.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo0/Task/Network/GetBannerRequest.m" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BannersViewController.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BMTBannersViewController.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BannersViewController.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BMTBannersViewController.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/BMTKnowledgePageViewController.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/BMTKnowledgePageViewController.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/KnowledgeTableView.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/BMTKnowledgeTableView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/KnowledgeTableView.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/BMTKnowledgeTableView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoDataSourceManager.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoDataSourceManager.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoTable.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoTable.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BottomView.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCellBottomView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BottomView.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCellBottomView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeHomePageCategoryTableViewCell.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeHomePageCategoryTableCellView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeHomePageCategoryTableViewCell.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeHomePageCategoryTableCellView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeInfoCategoryTabBarsView.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCategoryTabBarsView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeInfoCategoryTabBarsView.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCategoryTabBarsView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeTabBarLabel.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeTabBarLabel.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeTabBarLabel.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeTabBarLabel.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0.xcworkspace/xcuserdata/raywang.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Demo0.xcworkspace/xcuserdata/raywang.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Demo0.iml" afterPath="$PROJECT_DIR$/.idea/Demo0.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Demo0.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0.xcworkspace/xcuserdata/raywang.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/Demo0.xcworkspace/xcuserdata/raywang.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/AppDelegate.h" afterPath="$PROJECT_DIR$/Demo0/AppDelegate.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/AppDelegate.m" afterPath="$PROJECT_DIR$/Demo0/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.m" afterPath="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/MainPage/Controller/UserInfoViewController.h" afterPath="$PROJECT_DIR$/Demo0/MainPage/Controller/UserInfoViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/MainPage/Controller/UserInfoViewController.m" afterPath="$PROJECT_DIR$/Demo0/MainPage/Controller/UserInfoViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.h" afterPath="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.m" afterPath="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/Task/Storage/BMTBannerTable.m" afterPath="$PROJECT_DIR$/Demo0/Task/Storage/BMTBannerTable.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/Task/Storage/FMDBManager.h" afterPath="$PROJECT_DIR$/Demo0/Task/Storage/FMDBManager.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo0/Task/Storage/FMDBManager.m" afterPath="$PROJECT_DIR$/Demo0/Task/Storage/FMDBManager.m" />
+    </list>
     <ignored path="Demo0.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,113 +74,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="KnowledgePageViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.m">
+      <file leaf-file-name="BMTChangeCategoryDelegate.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTChangeCategoryDelegate.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnowledgeInfoTable.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.m">
+      <file leaf-file-name="BMTKnowledgeInfoNumState.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoNumState.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NSDictionary+ForStorageField.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/Util/Base/NSDictionary+ForStorageField.m">
+      <file leaf-file-name="BMTKnowledgeInfoDataSourceManager.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoDataSourceManager.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-              <folding>
-                <element signature="e#96#136#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="494">
+              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BMTMicroClassView.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.h">
+      <file leaf-file-name="BMTEntityKnowledgeInfo.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTEntityKnowledgeInfo.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BMTGetKnowledgeInfoDelegate.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTGetKnowledgeInfoDelegate.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-              <folding>
-                <element signature="e#155#188#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BMTMicroClassView.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding>
-                <element signature="e#155#198#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BMTMicroClassInfoEntity.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-              <folding>
-                <element signature="e#161#194#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnowledgeInfoDataSourceManager.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnowledgePageViewController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.h">
+      <file leaf-file-name="BMTBannersViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BMTBannersViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-              <folding>
-                <element signature="e#165#198#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MicroClassViewController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.h">
+      <file leaf-file-name="BMTBannerScrollView.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-              <folding>
-                <element signature="e#141#164#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MicroClassViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.m">
+      <file leaf-file-name="BMTEntityBanner.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+            <state relative-caret-position="418">
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BMTEntityBanner.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BMTBannersViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BMTBannersViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -140,20 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h" />
-        <option value="$PROJECT_DIR$/Demo0/Task/Network/base/resource/BMTResourceBanner.h" />
-        <option value="$PROJECT_DIR$/Demo0/Task/Storage/BMTBannerTable.m" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTEntityKnowledgeInfo.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoCategoryStateManager.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoCategoryStateManager.m" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoNumStateManager.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoNumStateManager.m" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeDataSourceManager.m" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/ViewCell/KnowledgeHomePageCategoryTableViewCell.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeDataSourceManager.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeinfoDataSourceManager.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.h" />
-        <option value="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoCategoryState.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/KnowledgeTableView.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/ViewCell/BottomView.h" />
@@ -163,17 +191,14 @@
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/AddMoreButtonView.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIView+(AddMoreButtonView).h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIView+(AddMoreButtonView).m" />
-        <option value="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoNumState.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+RefreshPanelView.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+RefreshPanelView.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/getKnowledgeInfoDelegate.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTGetKnowledgeInfoDelegate.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTChangeCategoryDelegate.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIButton+CategoryTabBar.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BannersViewController.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIButton+CategoryTabBar.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeCategoryBarsView.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+CategoryTabBar.h" />
@@ -184,13 +209,30 @@
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeTabBarLabel.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeInfoCategoryTabBarsView.m" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.h" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.m" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.h" />
-        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.m" />
         <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.m" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BannersViewController.m" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.m" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassEntity.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassDoctorEntity.h" />
+        <option value="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTGetMicroClassInfoDelegate.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoDataManager.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoDataManager.m" />
+        <option value="$PROJECT_DIR$/Demo0/Task/Storage/FMDBManager.h" />
+        <option value="$PROJECT_DIR$/Demo0/Task/Storage/BMTBannerTable.m" />
+        <option value="$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.m" />
+        <option value="$PROJECT_DIR$/Demo0/Task/Storage/BMTMicroClassInfoTable.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.m" />
+        <option value="$PROJECT_DIR$/Demo0/Task/Storage/BMTMicroClassInfoTable.m" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeHomePageCategoryTableCellView.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h" />
+        <option value="$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.h" />
       </list>
     </option>
   </component>
@@ -202,7 +244,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-336" />
+    <option name="x" value="-332" />
     <option name="y" value="-1057" />
     <option name="width" value="1920" />
     <option name="height" value="1057" />
@@ -407,6 +449,10 @@
               <option name="myItemId" value="MicroClass" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -525,6 +571,66 @@
               <option name="myItemId" value="KnowledgePage" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Banner" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demo0" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demo0" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KnowledgePage" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Banner" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demo0" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demo0" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KnowledgePage" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Banner" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -553,7 +659,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++/Objective-C" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo0/data/image/weike_2x.png" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Demo0" />
@@ -629,36 +735,37 @@
       <workItem from="1482500594633" duration="2692000" />
       <workItem from="1482717862830" duration="23446000" />
       <workItem from="1482756050910" duration="814000" />
-      <workItem from="1482804116929" duration="25245000" />
+      <workItem from="1482804116929" duration="25979000" />
+      <workItem from="1482889725699" duration="15048000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232960000" />
+    <option name="totallyTimeSpent" value="248742000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-336" y="-1057" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
+    <frame x="-332" y="-1057" width="1920" height="1057" extended-state="6" />
+    <editor active="false" />
     <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24802528" sideWeight="0.49429038" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029818956" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2080042" sideWeight="0.49429038" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50159746" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.011119937" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33598095" sideWeight="0.50570965" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029818956" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946004" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -700,21 +807,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/KnowledgeStoreManager.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/BMTKnowledgeTableView.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -722,10 +815,196 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/BMTKnowledgeTableView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTGetMicroClassInfoDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#161#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoCategoryState.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoDataManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTEntityKnowledgeInfo.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="873">
+          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/BMTBannerTable.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-627">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Util/Base/DBAbstractTable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Util/Base/DBTableWithUniquePrimaryKey.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Util/Base/DBTableWithUniquePrimaryKey.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Util/Base/DBAbstractTable.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/FMDBManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoTable.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="173" column="42" selection-start-line="173" selection-start-column="42" selection-end-line="173" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/BMTMicroClassInfoTable.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+          <folding>
+            <element signature="e#160#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/BMTMicroClassInfoTable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding>
+            <element signature="e#160#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoTable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+          <folding>
+            <element signature="e#157#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/NSFileManaer+WRFileManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/NSFileManaer+WRFileManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/WRStorageManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#157#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Storage/WRStorageManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/SQLManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Network/GetBannerRequest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -738,221 +1017,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/Task/Network/GetBannerRequest.h">
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="474">
+          <caret line="191" column="57" selection-start-line="191" selection-start-column="57" selection-end-line="191" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/Task/Network/SessionRequestManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding>
-            <element signature="e#143#176#0" expanded="true" />
+            <element signature="e#159#192#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/KnowledgeTableView.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="304">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/KnowledgeTableView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BottomView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIControl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIButton.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTEntityKnowledgeInfo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BottomView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoNumState.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoCategoryState.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoCategoryState.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BannersViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="e#148#171#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BannersViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+RefreshPanelView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITabBar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1402">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIButton+CategoryTabBar.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIButton+CategoryTabBar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+CategoryTabBar.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+CategoryTabBar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeCategoryBarsView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeCategoryBarsView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoNumState.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#169#202#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+RefreshPanelView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeTabBarLabel.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -960,70 +1051,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTEntityKnowledgeInfo.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCellBottomView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeHomePageCategoryTableViewCell.h">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeHomePageCategoryTableCellView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        <state relative-caret-position="665">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeTabBarLabel.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCategoryTabBarsView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeTabBarLabel.h">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIView+AddMoreButtonView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UILabel+RefreshPanelView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/UIView+AddMoreButtonView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#155#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeTabBarLabel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
             <element signature="e#158#191#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeInfoCategoryTabBarsView.h">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCellBottomView.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#170#203#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeHomePageCategoryTableViewCell.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeInfoCategoryTabBarsView.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTKnowledgeHomePageCategoryTableCellView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/BMTChangeCategoryDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/View/KnowledgeInfoCategoryTabBarsView.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoNumState.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoDataSourceManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/BMTEntityKnowledgeInfo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1036,94 +1175,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoDataSourceManager.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/KnowledgeStoreManager.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/KnowledgeStoreManager.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <element signature="e#161#194#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-          <folding>
-            <element signature="e#155#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/View/BMTMicroClassView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="e#155#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding>
-            <element signature="e#165#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="e#141#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/MicroClass/Controller/MicroClassViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Controller/KnowledgePageViewController.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+        <state relative-caret-position="418">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/Util/Base/NSDictionary+ForStorageField.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="e#96#136#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/KnowledgeBody/Model/KnowledgeInfoTable.m">
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BMTBannersViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="702">
+          <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/Controller/BMTBannersViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding />
         </state>
       </provider>

@@ -26,7 +26,7 @@
   [self.speakImageView setImage:[UIImage imageNamed:@"weike_2x.png"]];
   self.titleLabel.text = entity.title;
 
-  self.participantsLabel.text = [entity.participants.description
+  self.participantsLabel.text = [entity.applicants.description
       stringByAppendingString:@"人"];
 
   NSString *originalURLStr = entity.avatarAddress;

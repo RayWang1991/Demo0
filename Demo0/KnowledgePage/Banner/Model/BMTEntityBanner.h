@@ -38,7 +38,6 @@ typedef NS_ENUM (NSInteger, PosterType) {
 
 @property(strong, nonatomic) NSNumber<Optional>  *status;
 @property(strong, nonatomic) NSNumber<Optional>  *type;
-//@property (weak, nonatomic) UIImage<Optional> *bannerImage;
 
 - (instancetype)initWithDBRecord:(NSDictionary *)content;
 
