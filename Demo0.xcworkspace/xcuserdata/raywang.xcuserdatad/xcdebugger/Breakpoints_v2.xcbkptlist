@@ -372,7 +372,7 @@
                   moduleName = "Demo0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raywang/projects/Demo0/Demo0/Task/Network/SessionRequestManager.m"
-                  timestampString = "504597866.405795"
+                  timestampString = "504615141.34289"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "73"
@@ -387,7 +387,7 @@
                   moduleName = "Demo0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raywang/projects/Demo0/Demo0/Task/Network/SessionRequestManager.m"
-                  timestampString = "504597866.408974"
+                  timestampString = "504615141.345116"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "73"
@@ -436,7 +436,7 @@
                   moduleName = "Demo0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raywang/projects/Demo0/Demo0/Task/Network/SessionRequestManager.m"
-                  timestampString = "504597866.418358"
+                  timestampString = "504615141.353217"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -451,7 +451,7 @@
                   moduleName = "Demo0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raywang/projects/Demo0/Demo0/Task/Network/SessionRequestManager.m"
-                  timestampString = "504597866.420019"
+                  timestampString = "504615141.355085"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -466,7 +466,7 @@
                   moduleName = "Demo0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raywang/projects/Demo0/Demo0/Task/Network/SessionRequestManager.m"
-                  timestampString = "504597866.422476"
+                  timestampString = "504615141.357476"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -1063,7 +1063,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "-setStyle"
+            landmarkName = "-setStyle1"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2070,6 +2070,246 @@
             startingLineNumber = "200"
             endingLineNumber = "200"
             landmarkName = "-getLatestMicroClassInfoFromServerOnSuccess:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/Task/Network/SessionRequestManager.m"
+            timestampString = "504606331.244829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "-getLatestMicroClassInfoFromServerOnSuccess:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoDataManager.m"
+            timestampString = "504606458.149117"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-getLatestMicroClassInfo"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/MicroClass/Controller/BMTMicroClassViewController.m"
+            timestampString = "504606506.155845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-loadView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/MicroClass/Controller/BMTMicroClassViewController.m"
+            timestampString = "504606536.530212"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-testNetwork"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/MicroClass/Controller/BMTMicroClassViewController.m"
+            timestampString = "504606554.196543"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHomePageCategoryTableCellView.m"
+            timestampString = "504611940.649751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-bottomView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHomePageCategoryTableCellView.m"
+            timestampString = "504611978.86038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-bottomView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m"
+            timestampString = "504614423.952559"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-someLabelClicked:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BMTKnowledgeInfoCategoryTabBarsView someLabelClicked:]"
+                  moduleName = "Demo0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raywang/projects/Demo0/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m"
+                  timestampString = "504615141.42991"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BMTKnowledgeInfoCategoryTabBarsView someLabelClicked:]"
+                  moduleName = "Demo0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raywang/projects/Demo0/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m"
+                  timestampString = "504615141.432573"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "94">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m"
+            timestampString = "504614471.441319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-someLabelClicked:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m"
+            timestampString = "504614770.875559"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-touchesEnded:withEvent:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeTabBarLabel.m"
+            timestampString = "504614915.56157"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-setUnselectedStyle"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeTabBarLabel.m"
+            timestampString = "504614917.269526"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-setSelectedStyle"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m"
+            timestampString = "504614958.860347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-someLabelClicked:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

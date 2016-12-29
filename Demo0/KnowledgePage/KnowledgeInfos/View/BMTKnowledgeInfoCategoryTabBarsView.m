@@ -17,7 +17,7 @@
 
   self = [super initWithFrame:frame];
   self.backgroundColor = [UIColor clearColor];
-  [self addSubViews];
+  [self addSubviews];
   [self setDefaultCatBarNames];
   return self;
 }
@@ -39,7 +39,8 @@
 #pragma mark - change category event
 
 - (void)someLabelClicked:(UILabel *)subLabel {
-  for (BMTKnowledgeTabBarLabel *label in self.subviews) {
+  for (NSUInteger i = 0; i < 4; i++) {
+    BMTKnowledgeTabBarLabel *label = self.subviews[i];
     if (label.tag != subLabel.tag) {
       [label setUnselectedStyle];
     } else {
@@ -64,7 +65,7 @@
   }
 }
 #pragma mark - private
-- (void)addSubViews {
+- (void)addSubviews {
   CGFloat barWidth = self.bounds.size.width / 4;
   CGFloat barHeight = self.bounds.size.height;
   NSMutableArray *catArray =
@@ -73,9 +74,10 @@
   for (int i = 0; i < 4; i++) {
     BMTKnowledgeTabBarLabel
         *catBar =
-        [[BMTKnowledgeTabBarLabel alloc] initWithFrame:CGRectMake(barWidth * i, 0,
-                                                               barWidth,
-                                                               barHeight)];
+        [[BMTKnowledgeTabBarLabel alloc]
+            initWithFrame:CGRectMake(barWidth * i, 0,
+                                     barWidth,
+                                     barHeight)];
 
     catBar.tag = 100 + i;
 
@@ -92,5 +94,14 @@
 
     [self addSubview:catBar];
   }
+  // gray line
+  UIView *grayLine = [[UIView alloc] initWithFrame:CGRectMake(15,
+                                                              barHeight - 1,
+                                                              barWidth * 4 - 15,
+                                                              1)];
+  grayLine.backgroundColor = [UIColor colorWithWhite:0
+                                               alpha:0.26];
+  grayLine.tag = 99;
+  [self addSubview:grayLine];
 }
 @end

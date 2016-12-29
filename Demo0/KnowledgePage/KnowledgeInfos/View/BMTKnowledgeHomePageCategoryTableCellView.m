@@ -24,7 +24,7 @@
               reuseIdentifier:(NSString *)reuseIdentifier {
   if (self = [super initWithStyle:style
                   reuseIdentifier:reuseIdentifier]) {
-    self.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 
     [self contentAddSubViewToSuperView];
@@ -45,17 +45,16 @@
 }
 
 - (void)setStyle {
-
-  self.contentView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size
-      .width, 100);
-  self.backView.frame = self.contentView.bounds;
-  self.titleLabel.frame = CGRectMake(100, 10, [UIScreen mainScreen].bounds.size
-      .width-20, 20);
-  self.contentLabel.frame = CGRectMake(100, 30, [UIScreen mainScreen].bounds
-      .size
-      .width-20, 50);
-  self.bottomView.frame = CGRectMake(100, 80, [UIScreen mainScreen].bounds.size
-      .width-20, 20);
+  CGFloat x = 15;
+  CGFloat width = [UIScreen mainScreen].bounds.size.width - 15 * 2;
+  CGFloat height = 100;
+  self.contentView.frame =
+      CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height);
+  self.backView.frame = CGRectMake(x, 0, width, height);
+  self.titleLabel.frame = CGRectMake(105, 10, 240, 20);
+  self.contentLabel.frame = CGRectMake(105, 30, 240, 50);
+  self.bottomView.frame = CGRectMake(105, 80, 140, 14);
+  self.knowledgeImageView.frame = CGRectMake(0, 10, 90, 78);
 }
 
 #pragma mark - getter
@@ -69,10 +68,12 @@
   }
   return _backView;
 }
-- (UIView *)bottomView {
+- (BMTKnowledgeInfoCellBottomView *)bottomView {
   if (!_bottomView) {
     _bottomView = [[BMTKnowledgeInfoCellBottomView alloc] init];
     _bottomView.backgroundColor = [UIColor whiteColor];
+
+
     //_backView.cornerStyle = BMTRoundedViewStyleAllCorner;
     //_backView.cornerRadius = 4.0f;
     //
@@ -88,11 +89,22 @@
     //
     _bottomView.clickedNumLabel =
         [[UILabel alloc] initWithFrame:CGRectMake(40, 0, 40, 20)];
-    _bottomView.clickedNumLabel.text=@"0";
+    _bottomView.clickedNumLabel.text = @"";
     //
     _bottomView.likeNumLabel =
         [[UILabel alloc] initWithFrame:CGRectMake(140, 0, 40, 20)];
-    _bottomView.likeNumLabel.text=@"0";
+    //_bottomView.likeNumLabel.text = @"";
+
+
+    _bottomView.likeNumLabel.textColor = [UIColor colorWithWhite:0
+                                                           alpha:0.26];
+    _bottomView.likeNumLabel.font = [UIFont fontWithName:@"Helvetica"
+                                                    size:14];
+
+    _bottomView.clickedNumLabel.textColor = [UIColor colorWithWhite:0
+                                                              alpha:0.26];
+    _bottomView.clickedNumLabel.font = [UIFont fontWithName:@"Helvetica"
+                                                       size:14];
 
     [_bottomView addSubview:_bottomView.eyeImageView];
     [_bottomView addSubview:_bottomView.thumbImageView];
@@ -105,29 +117,27 @@
   if (!_titleLabel) {
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.font = [UIFont fontWithName:@"PingFangSC"
-                                       size:16];
+                                       size:17];
     _titleLabel.textColor =
         [[UIColor blackColor] colorWithAlphaComponent:0.87];
-    _titleLabel.numberOfLines = 2;
+    _titleLabel.numberOfLines = 1;
   }
   return _titleLabel;
 }
 - (UILabel *)contentLabel {
   if (!_contentLabel) {
     _contentLabel = [[UILabel alloc] init];
-    _contentLabel.font = [UIFont fontWithName:@"PingFangSC"
-                                         size:16];
+    _contentLabel.font = [UIFont fontWithName:@"Helvetica"
+                                         size:14];
     _contentLabel.textColor =
-        [[UIColor blackColor] colorWithAlphaComponent:0.87];
+        [[UIColor blackColor] colorWithAlphaComponent:0.54];
     _contentLabel.numberOfLines = 2;
   }
   return _contentLabel;
 }
 - (UIImageView *)knowledgeImageView {
   if (!_knowledgeImageView) {
-    _knowledgeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(4,
-                                                                        4, 78,
-                                                                        70)];
+    _knowledgeImageView = [[UIImageView alloc] init];
   }
   return _knowledgeImageView;
 }

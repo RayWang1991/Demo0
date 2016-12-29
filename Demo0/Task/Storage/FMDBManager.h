@@ -11,6 +11,7 @@
 #import "FMDB/FMDB.h"
 #import "BMTBannerTable.h"
 #import "BMTKnowledgeInfoTable.h"
+#import "BMTMicroClassInfoTable.h"
 #import "BMTStorageConstant.h"
 
 extern NSString *const kBMTStorageErrorDomain;
@@ -20,6 +21,7 @@ extern NSString *const kBMTStorageErrorDomain;
 @property(nonatomic) BMTBannerTable *bannerTable;
 @property(nonatomic) NSMutableArray <BMTKnowledgeInfoTable *>
     *knowledgeInfoTableArray;
+@property (nonatomic) BMTMicroClassInfoTable *microClassInfoTable;
 + (instancetype)sharedInstance;
 
 - (void)prepare;

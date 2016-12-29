@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "BMLayoutConstraint.h"
 #import "BMTBannersViewController.h"
-#import "MicroClassViewController.h"
+#import "BMTMicroClassViewController.h"
 #import "Constants.h"
 #import "BMTKnowledgeHomePageCategoryTableCellView.h"
 #import "BMTKnowledgeInfoDataSourceManager.h"
@@ -25,7 +25,7 @@
     <UITableViewDataSource, UITableViewDelegate>
 // header
 @property(strong, nonatomic) BMTBannersViewController *bannersVC;
-@property(strong, nonatomic) MicroClassViewController *microClassVC;
+@property(strong, nonatomic) BMTMicroClassViewController *microClassVC;
 @property (strong, nonatomic) BMTKnowledgeInfoCategoryTabBarsView *categoryBarsView;
 // refresh panel
 @property(assign, nonatomic) BOOL shouldRefresh;

@@ -8,7 +8,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "JSONModel/JSONModel.h"
+#import "../../../../../../Library/Caches/AppCode2016.2/DerivedData/Demo0-athjhommedpxxxgatmqzedtkshnz/Build/Products/Debug-iphoneos/JSONModel/JSONModel.framework/Headers/JSONModel.h"
 @interface BMTMicroClassEntity : JSONModel
 @property (nonatomic,strong) NSNumber *classId;
 @property (nonatomic, strong) NSString *subject;

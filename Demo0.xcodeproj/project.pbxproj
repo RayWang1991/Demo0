@@ -16,6 +16,7 @@
 		3AED20DFCC4E66F9DB7F4A88 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2BFBBD0FF37B2DC30700 /* UserInfoViewController.m */; };
 		3AED20F44CA8B397E4CDEAB1 /* UIDevice+BMTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED278F87F4447C4D2ACE37 /* UIDevice+BMTExtension.m */; };
 		3AED210C5CFE185D223C5187 /* NSError+BMTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED214546FFDB1932B1E8CB /* NSError+BMTExtension.m */; };
+		3AED2157CDC044FD823EE229 /* BMTMicroClassInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED23DCC813C76A06B61B8E /* BMTMicroClassInfoEntity.m */; };
 		3AED215A16973C3B2EC05A8D /* WRCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2F9B21CC1D544D8C246E /* WRCalculator.m */; };
 		3AED216157F2BFE1BEFBEAF6 /* JSONValueTransformer+BMTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2531BFCD87AA7C63AB21 /* JSONValueTransformer+BMTExtension.m */; };
 		3AED2164A8DA845C9F911C4D /* FMDatabase+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2CF760F8F2F91256FBE7 /* FMDatabase+Extension.m */; };
@@ -25,14 +26,12 @@
 		3AED22195C55899E7D739E24 /* DBKeyValueTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED21FCDCD6CAEDECE5726B /* DBKeyValueTable.m */; };
 		3AED222554E985CDCFE8BF23 /* BMTBannersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED270B0BF79FB14809772E /* BMTBannersViewController.m */; };
 		3AED2269148C3BF9FAABE2FD /* BMTKnowledgeInfoCellBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2054E47D34B74E608A11 /* BMTKnowledgeInfoCellBottomView.m */; };
-		3AED226AB5A7D0BD92572C2D /* BMTMicroClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED274D3E31BBEB387DCDCC /* BMTMicroClassView.m */; };
-		3AED2295E5AEA316009F8D46 /* BMTMicroClassInfoDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED20015A6CCA46C3A29FE8 /* BMTMicroClassInfoDataManager.m */; };
 		3AED22B4398EB4B946BC9A17 /* BMTJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2B14402A08AE5F43D61E /* BMTJSONModel.m */; };
-		3AED22E8BC6B5E11647DFD4C /* BMTMicroClassDoctorEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2D3D6D18D3595080BAB3 /* BMTMicroClassDoctorEntity.m */; };
 		3AED23126A2646F135120EC4 /* BMTKnowledgeInfoDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2F9173E8F4F69B112127 /* BMTKnowledgeInfoDataSourceManager.m */; };
 		3AED238A0D9DB309E52C9692 /* JSONUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED24F8D1D08B7C93EF1200 /* JSONUtil.m */; };
 		3AED23A9006AD789FF0A036D /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2041DFE32263B3FE0375 /* FMDBManager.m */; };
 		3AED23C0B3A7A41C852D33AC /* BMTKnowledgeTabBarLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED29DB70043CB4682E2B7F /* BMTKnowledgeTabBarLabel.m */; };
+		3AED23EB80173351F0812AF9 /* BMTMicroClassDoctorEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2BE5D8CC4B29A988A4C0 /* BMTMicroClassDoctorEntity.m */; };
 		3AED2405B3CF3DF6197ADFDF /* preview-icon_small_like_it.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2722F96FDF1D9374E967 /* preview-icon_small_like_it.png */; };
 		3AED240DEE72B6C4D88D6DC0 /* NSObject+BMTAutoDetached.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED252EF66D618E43F38AC2 /* NSObject+BMTAutoDetached.m */; };
 		3AED242314B3BDF712F51B15 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2C48F0ACEDDD7FC1663C /* 3.jpg */; };
@@ -51,22 +50,22 @@
 		3AED272723266B61229561B6 /* DBAbstractTable+ForSubclassEyesOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2D20A0FC3F589EADE4A6 /* DBAbstractTable+ForSubclassEyesOnly.m */; };
 		3AED273C3F5E60B2E1B8E3FE /* BMTKnowledgeInfoCategoryTabBarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED20E3E27962949F78BA92 /* BMTKnowledgeInfoCategoryTabBarsView.m */; };
 		3AED27769B773CA50071AC6E /* transparent pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2081495D929A1A52C0AB /* transparent pic.png */; };
+		3AED278ED0752188C1A114D0 /* BMTMicroClassInfoDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2591937A59F4E716CC3D /* BMTMicroClassInfoDataManager.m */; };
 		3AED27915536BEBABF78ECC6 /* BMTKnowledgeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED29108F54437C6F019611 /* BMTKnowledgeTableView.m */; };
 		3AED27B6B16C46DC57A7791C /* BMTBannerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2469406EB207909F6437 /* BMTBannerTable.m */; };
 		3AED27C6BB7F897B10F103D4 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AED27FD2F0A9A049E33BEAB /* 1.jpg */; };
 		3AED27D61E3216255028361C /* BMTEntityBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2D76AAB26B88530D682B /* BMTEntityBanner.m */; };
 		3AED27E7211AF6ED91FDC711 /* BMTLayoutConstraintInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2588BA9458C0AF33C15F /* BMTLayoutConstraintInterpreter.m */; };
-		3AED27F6323F61F229C39B47 /* MicroClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2CFC82C880B6A659BA46 /* MicroClassViewController.m */; };
+		3AED27FA32DE63F6B42A27F8 /* BMTMicroClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2A402BD7A92D3507BA5B /* BMTMicroClassView.m */; };
 		3AED28057ACD6B627B0F2997 /* BMTKnowledgePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED25BEEDD8B181BF68295E /* BMTKnowledgePageViewController.m */; };
 		3AED280B4EA9C5B94D9D7D99 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2AF2F365F4DE2615D656 /* 2.jpg */; };
+		3AED281CF181F74BE0F37398 /* BMTMicroClassEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED272C3C1C42E9F3E85DB4 /* BMTMicroClassEntity.m */; };
 		3AED288474D6F29D38004311 /* WRPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED237809A54A41AFC60068 /* WRPersonModel.m */; };
 		3AED28E23B449FE1E5C5ACA2 /* BMTBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2911FC29C05E8C814F0E /* BMTBannerScrollView.m */; };
 		3AED2948E6C34BC18FAB874A /* JSONIOForNSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED202CFEF9DEDCC71B7F94 /* JSONIOForNSFoundation.m */; };
 		3AED2A2E7B17F84606DE4266 /* DBTableWithUniquePrimaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED20168F0593D0CE2C0939 /* DBTableWithUniquePrimaryKey.m */; };
 		3AED2A8A529DA4F2C1DAB4BA /* WRStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2CF677F060F03E211047 /* WRStorageManager.m */; };
 		3AED2A994B3CAC5D530ADD97 /* UIView+AddMoreButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2FFB921B5D344C38FCF9 /* UIView+AddMoreButtonView.m */; };
-		3AED2A9E5E47B1845EA4ED5B /* BMTMicroClassEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2939864274FF51AA08CD /* BMTMicroClassEntity.m */; };
-		3AED2B02672F0B43112A6204 /* BMTMicroClassInfoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2B21AAD8F4B6B86764BD /* BMTMicroClassInfoEntity.m */; };
 		3AED2B29B64DF07DE891A3DD /* DBTableWithCouplePrimaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED231CF7490643B52C3117 /* DBTableWithCouplePrimaryKey.m */; };
 		3AED2BA1BDE1120C354D60AB /* MergeableObject+ForSubclassEyesOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED26AF886C3495E2A29F47 /* MergeableObject+ForSubclassEyesOnly.m */; };
 		3AED2BD76CFDB44410D99F11 /* NSObject+BMTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED2D9F175207D01C3874DF /* NSObject+BMTExtension.m */; };
@@ -80,6 +79,7 @@
 		3AED2CE94115431866B8A3C7 /* BMTKnowledgeInfoCategoryState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED228945E0A8C0F3F16F4B /* BMTKnowledgeInfoCategoryState.m */; };
 		3AED2D1217AE674A10293CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AED2C68B6B10A1F0D55A686 /* Main.storyboard */; };
 		3AED2D1277D1D6413ED975FF /* DBKey2DBValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED233AFD3F8DD6CAC4D2B6 /* DBKey2DBValue.m */; };
+		3AED2D22C027C14B74459DC7 /* BMTMicroClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED27ECC9A2EAD76ECC336C /* BMTMicroClassViewController.m */; };
 		3AED2D3F2F4C6F70EF8E0D78 /* UILabel+RefreshPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED26035C65C0E30EE14AF9 /* UILabel+RefreshPanelView.m */; };
 		3AED2D75C72828079AC66FB9 /* UIScreen+BMTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED223AAE49BC3DA47F75E2 /* UIScreen+BMTExtension.m */; };
 		3AED2D9862FD618101A9BAE3 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AED261F168C9659DA58BB84 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m */; };
@@ -121,9 +121,9 @@
 
 /* Begin PBXFileReference section */
 		05A37F323B2EF66DE34F2CD2 /* Pods-Demo0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo0Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo0Tests/Pods-Demo0Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3AED20015A6CCA46C3A29FE8 /* BMTMicroClassInfoDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassInfoDataManager.m; sourceTree = "<group>"; };
 		3AED2001F8DBAEEAC68D1E78 /* SessionRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionRequestManager.m; sourceTree = "<group>"; };
 		3AED20168F0593D0CE2C0939 /* DBTableWithUniquePrimaryKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTableWithUniquePrimaryKey.m; sourceTree = "<group>"; };
+		3AED2019C116C4994717E12E /* BMTMicroClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassViewController.h; sourceTree = "<group>"; };
 		3AED202CFEF9DEDCC71B7F94 /* JSONIOForNSFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONIOForNSFoundation.m; sourceTree = "<group>"; };
 		3AED203AED403B195E860BC7 /* BMTKnowledgeInfoCategoryState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTKnowledgeInfoCategoryState.h; sourceTree = "<group>"; };
 		3AED203EF014FFFFCF0834EE /* NSString+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BMTExtension.m"; sourceTree = "<group>"; };
@@ -141,7 +141,6 @@
 		3AED213B6EED2F54E20BC90E /* BMTJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTJSONModel.h; sourceTree = "<group>"; };
 		3AED214546FFDB1932B1E8CB /* NSError+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED2147E0E5CDE145BD499C /* NSThread+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+BMTExtension.h"; sourceTree = "<group>"; };
-		3AED2149C3EA890AE2805B88 /* BMTMicroClassDoctorEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassDoctorEntity.h; sourceTree = "<group>"; };
 		3AED215440C73FEE5E0C1777 /* BMTBannersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTBannersViewController.h; sourceTree = "<group>"; };
 		3AED2171AFAE1B962E064753 /* NSError+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED217DC2449C6D301844EC /* UIView+AddMoreButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AddMoreButtonView.h"; sourceTree = "<group>"; };
@@ -153,7 +152,7 @@
 		3AED223AAE49BC3DA47F75E2 /* UIScreen+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED225A72BF9F9A5B25924D /* BMTKnowledgeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTKnowledgeTableView.h; sourceTree = "<group>"; };
 		3AED228945E0A8C0F3F16F4B /* BMTKnowledgeInfoCategoryState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTKnowledgeInfoCategoryState.m; sourceTree = "<group>"; };
-		3AED229C9E6C122731D9A092 /* BMTKnowledgeInfoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMTKnowledgeInfoTable.h; path = ../../KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoTable.h; sourceTree = "<group>"; };
+		3AED229C9E6C122731D9A092 /* BMTKnowledgeInfoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMTKnowledgeInfoTable.h; path = ../../KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoTable.h; sourceTree = "<group>"; };
 		3AED22AEBEF0A4FEB2060EB2 /* UIScreen+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED22BDCC3AE6198672F574 /* BMTLayoutConstraintInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTLayoutConstraintInterpreter.h; sourceTree = "<group>"; };
 		3AED22FEA12A40A9567BB888 /* BMTKnowledgeHomePageCategoryTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTKnowledgeHomePageCategoryTableCellView.h; sourceTree = "<group>"; };
@@ -169,11 +168,13 @@
 		3AED23AEFBF029BE061AB42D /* DBTableWithUniqueIntegerPrimaryKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTableWithUniqueIntegerPrimaryKey.m; sourceTree = "<group>"; };
 		3AED23BEBCA15309547241F3 /* SQLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLManager.h; path = Demo0/SQLManager.h; sourceTree = SOURCE_ROOT; };
 		3AED23D8E5F2ACEF4ACCE6D6 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		3AED23DCC813C76A06B61B8E /* BMTMicroClassInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassInfoEntity.m; sourceTree = "<group>"; };
 		3AED240BEEBC600CDFBA2CC5 /* JSONValueTransformer+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED24276563D9C393D0DF0F /* BMTLayoutConstraintBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTLayoutConstraintBase.m; sourceTree = "<group>"; };
 		3AED242EADDC34526CE11284 /* DBKeyValueIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBKeyValueIO.h; sourceTree = "<group>"; };
 		3AED243E8CB29602BF9F6DA6 /* DBTableWithCouplePrimaryKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTableWithCouplePrimaryKey.h; sourceTree = "<group>"; };
 		3AED2469406EB207909F6437 /* BMTBannerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTBannerTable.m; sourceTree = "<group>"; };
+		3AED248389E4B85609950A45 /* BMTMicroClassInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassInfoEntity.h; sourceTree = "<group>"; };
 		3AED24F8D1D08B7C93EF1200 /* JSONUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtil.m; sourceTree = "<group>"; };
 		3AED252EF66D618E43F38AC2 /* NSObject+BMTAutoDetached.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BMTAutoDetached.m"; sourceTree = "<group>"; };
 		3AED2531BFCD87AA7C63AB21 /* JSONValueTransformer+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+BMTExtension.m"; sourceTree = "<group>"; };
@@ -181,36 +182,36 @@
 		3AED2550310DAEAEFCEF3DD0 /* BMTResourceBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTResourceBanner.m; sourceTree = "<group>"; };
 		3AED2588BA9458C0AF33C15F /* BMTLayoutConstraintInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTLayoutConstraintInterpreter.m; sourceTree = "<group>"; };
 		3AED258DA04774FD68B9AAA1 /* BMTKnowledgeInfoCategoryTabBarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTKnowledgeInfoCategoryTabBarsView.h; sourceTree = "<group>"; };
+		3AED2591937A59F4E716CC3D /* BMTMicroClassInfoDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassInfoDataManager.m; sourceTree = "<group>"; };
 		3AED25BEEDD8B181BF68295E /* BMTKnowledgePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTKnowledgePageViewController.m; sourceTree = "<group>"; };
 		3AED25C0D5E6E25EBC14509F /* NSNotificationCenter+BMTAutoDetached.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+BMTAutoDetached.h"; sourceTree = "<group>"; };
-		3AED25D371E6C1E198CC3F09 /* BMTKnowledgeInfoTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMTKnowledgeInfoTable.m; path = ../../KnowledgePage/KnowledgeBody/Model/BMTKnowledgeInfoTable.m; sourceTree = "<group>"; };
+		3AED25D371E6C1E198CC3F09 /* BMTKnowledgeInfoTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMTKnowledgeInfoTable.m; path = ../../KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoTable.m; sourceTree = "<group>"; };
 		3AED26035C65C0E30EE14AF9 /* UILabel+RefreshPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RefreshPanelView.m"; sourceTree = "<group>"; };
-		3AED261B8239DF987BF96DF2 /* BMTMicroClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassView.h; sourceTree = "<group>"; };
 		3AED261F168C9659DA58BB84 /* DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBTableWithUniqueIntegerPrimaryKey+ForSubclassEyesOnly.m"; sourceTree = "<group>"; };
 		3AED26232D3A7D55B3B1F623 /* BMTLayoutConstraintConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTLayoutConstraintConstant.h; sourceTree = "<group>"; };
 		3AED2638A214B0C189004344 /* BMTLayoutConstraintConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTLayoutConstraintConstant.m; sourceTree = "<group>"; };
-		3AED26974BDC4FB552ED20BC /* BMTMicroClassInfoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassInfoEntity.h; sourceTree = "<group>"; };
 		3AED26A2D35E5C6107EA1460 /* MergeableObject+ForSubclassEyesOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MergeableObject+ForSubclassEyesOnly.h"; sourceTree = "<group>"; };
 		3AED26AF886C3495E2A29F47 /* MergeableObject+ForSubclassEyesOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MergeableObject+ForSubclassEyesOnly.m"; sourceTree = "<group>"; };
 		3AED270B0BF79FB14809772E /* BMTBannersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTBannersViewController.m; sourceTree = "<group>"; };
 		3AED271B6D2975F2AEB55C99 /* BMTStorageConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTStorageConstant.m; sourceTree = "<group>"; };
 		3AED2722F96FDF1D9374E967 /* preview-icon_small_like_it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview-icon_small_like_it.png"; sourceTree = "<group>"; };
 		3AED2724F1D8548C935E1AA7 /* NSString+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BMTExtension.h"; sourceTree = "<group>"; };
+		3AED272C3C1C42E9F3E85DB4 /* BMTMicroClassEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassEntity.m; sourceTree = "<group>"; };
 		3AED274382A923106ECA2D79 /* BMLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLayoutConstraint.h; sourceTree = "<group>"; };
-		3AED274D3E31BBEB387DCDCC /* BMTMicroClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassView.m; sourceTree = "<group>"; };
-		3AED275778F95100D6ECDE4D /* BMTMicroClassEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassEntity.h; sourceTree = "<group>"; };
+		3AED277D7472983CBADDF36F /* BMTMicroClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassView.h; sourceTree = "<group>"; };
 		3AED278F87F4447C4D2ACE37 /* UIDevice+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED27EB55E0B96A9C8F7E66 /* NSDate+ForStorageField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ForStorageField.h"; sourceTree = "<group>"; };
+		3AED27ECC9A2EAD76ECC336C /* BMTMicroClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassViewController.m; sourceTree = "<group>"; };
+		3AED27F196A7405D126A5FF7 /* BMTGetMicroClassInfoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTGetMicroClassInfoDelegate.h; sourceTree = "<group>"; };
 		3AED27FD2F0A9A049E33BEAB /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		3AED281168CE72B63C9E5E76 /* BMTMicroClassDoctorEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassDoctorEntity.h; sourceTree = "<group>"; };
 		3AED28590749C56AD97C82ED /* BMTBannerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTBannerTable.h; sourceTree = "<group>"; };
-		3AED28701EF78B946DEF58D3 /* MicroClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroClassViewController.h; sourceTree = "<group>"; };
 		3AED28B131890F13C6132594 /* KeyValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueView.h; sourceTree = "<group>"; };
 		3AED28C413FD038ECFE5BA84 /* DBAbstractTable+ForSubclassEyesOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBAbstractTable+ForSubclassEyesOnly.h"; sourceTree = "<group>"; };
 		3AED28C9BBAE46C0F1239C70 /* UIView+LayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutConstraint.m"; sourceTree = "<group>"; };
 		3AED290B6B402C3764254B7A /* BMTKnowledgeInfoNumState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTKnowledgeInfoNumState.h; sourceTree = "<group>"; };
 		3AED29108F54437C6F019611 /* BMTKnowledgeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTKnowledgeTableView.m; sourceTree = "<group>"; };
 		3AED2911FC29C05E8C814F0E /* BMTBannerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTBannerScrollView.m; sourceTree = "<group>"; };
-		3AED2939864274FF51AA08CD /* BMTMicroClassEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassEntity.m; sourceTree = "<group>"; };
 		3AED2947B9EE9BC4AA50ACCB /* MASConstraint+DeviceAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MASConstraint+DeviceAdapter.m"; sourceTree = "<group>"; };
 		3AED2962947DA3B21D969F22 /* NSFoundation+NSNullEraser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFoundation+NSNullEraser.h"; sourceTree = "<group>"; };
 		3AED29B1258DCEAAC152CF1C /* BMTKnowledgeInfoDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTKnowledgeInfoDataSourceManager.h; sourceTree = "<group>"; };
@@ -219,6 +220,7 @@
 		3AED29E1CB55088BC8314D2D /* KeyValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueView.m; sourceTree = "<group>"; };
 		3AED2A0790F41FC47D40DCED /* BMTBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTBannerScrollView.h; sourceTree = "<group>"; };
 		3AED2A1D0ADDA207B96A48F6 /* weike_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weike_2x.png; sourceTree = "<group>"; };
+		3AED2A402BD7A92D3507BA5B /* BMTMicroClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassView.m; sourceTree = "<group>"; };
 		3AED2A4B87DD922216EAD2FB /* SessionRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionRequestManager.h; sourceTree = "<group>"; };
 		3AED2A65B1EDB7BB7B1CECEE /* BMMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMacro.h; sourceTree = "<group>"; };
 		3AED2ABD6BDA05E3308D8284 /* JSONIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONIO.h; sourceTree = "<group>"; };
@@ -228,17 +230,18 @@
 		3AED2AF5387EC90A9F48ABA8 /* JSONIOForNSFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONIOForNSFoundation.h; sourceTree = "<group>"; };
 		3AED2AFD34E8F9EB7D908D3F /* BMTUIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTUIConstants.m; sourceTree = "<group>"; };
 		3AED2B14402A08AE5F43D61E /* BMTJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTJSONModel.m; sourceTree = "<group>"; };
-		3AED2B21AAD8F4B6B86764BD /* BMTMicroClassInfoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassInfoEntity.m; sourceTree = "<group>"; };
 		3AED2B27BFCCDEAD1BA646C5 /* NSNotificationCenter+BMTAutoDetached.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+BMTAutoDetached.m"; sourceTree = "<group>"; };
 		3AED2B2B06282EED7F4ECAD4 /* NSFileManager+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED2B306C93DCEC89C79819 /* MergeableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeableObject.m; sourceTree = "<group>"; };
 		3AED2B3A12BF7E139E20E55E /* preview-icon_eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview-icon_eye.png"; sourceTree = "<group>"; };
+		3AED2B57ABEA7C5881152913 /* BMTMicroClassInfoDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassInfoDataManager.h; sourceTree = "<group>"; };
 		3AED2B5B4550C19C81EDDDF0 /* BMTUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTUIConstants.h; sourceTree = "<group>"; };
 		3AED2B68B1DCF99854BAF53E /* WRStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRStorageManager.h; sourceTree = "<group>"; };
 		3AED2B7481785CEB3F411B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		3AED2B882D35964B9D219F0D /* DBTableWithUniqueIntegerPrimaryKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTableWithUniqueIntegerPrimaryKey.h; sourceTree = "<group>"; };
 		3AED2BC6D6E070AE2105F35A /* Constans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constans.m; sourceTree = "<group>"; };
 		3AED2BC860EB347187B2543F /* BMTEntityKnowledgeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTEntityKnowledgeInfo.h; sourceTree = "<group>"; };
+		3AED2BE5D8CC4B29A988A4C0 /* BMTMicroClassDoctorEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassDoctorEntity.m; sourceTree = "<group>"; };
 		3AED2BFBBD0FF37B2DC30700 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		3AED2C0D48B16A975BA3D19F /* BMTLayoutConstraintLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTLayoutConstraintLanguage.m; sourceTree = "<group>"; };
 		3AED2C26A76F117579CCC013 /* BMTEntityBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTEntityBanner.h; sourceTree = "<group>"; };
@@ -249,15 +252,12 @@
 		3AED2C8601C1C48E8D8E306E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3AED2CACCB9AA05ED0F90E9F /* WRPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRPersonModel.h; sourceTree = "<group>"; };
 		3AED2CD49181463E98EF200B /* DBKeyValueTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBKeyValueTable.h; sourceTree = "<group>"; };
-		3AED2CDF4BB4EF14C6A1A488 /* BMTMicroClassInfoDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassInfoDataManager.h; sourceTree = "<group>"; };
 		3AED2CF2F5E49D90F3CC44C5 /* SQLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLManager.m; path = Demo0/SQLManager.m; sourceTree = SOURCE_ROOT; };
 		3AED2CF3664F9117E0E28CD5 /* UIDevice+BMTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BMTExtension.h"; sourceTree = "<group>"; };
 		3AED2CF677F060F03E211047 /* WRStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRStorageManager.m; sourceTree = "<group>"; };
 		3AED2CF760F8F2F91256FBE7 /* FMDatabase+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+Extension.m"; sourceTree = "<group>"; };
-		3AED2CFC82C880B6A659BA46 /* MicroClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroClassViewController.m; sourceTree = "<group>"; };
 		3AED2D20A0FC3F589EADE4A6 /* DBAbstractTable+ForSubclassEyesOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBAbstractTable+ForSubclassEyesOnly.m"; sourceTree = "<group>"; };
 		3AED2D2ECD8921465FD81294 /* BMTKnowledgeHomePageCategoryTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTKnowledgeHomePageCategoryTableCellView.m; sourceTree = "<group>"; };
-		3AED2D3D6D18D3595080BAB3 /* BMTMicroClassDoctorEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTMicroClassDoctorEntity.m; sourceTree = "<group>"; };
 		3AED2D54D0F5B34675F272D2 /* DeepCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeepCopyable.m; sourceTree = "<group>"; };
 		3AED2D6402AD009FEBD6E36B /* DBKeyValueRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBKeyValueRecord.h; sourceTree = "<group>"; };
 		3AED2D76AAB26B88530D682B /* BMTEntityBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTEntityBanner.m; sourceTree = "<group>"; };
@@ -265,6 +265,7 @@
 		3AED2D9B903137E5A664CF98 /* BMTKnowledgeInfoCellBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTKnowledgeInfoCellBottomView.h; sourceTree = "<group>"; };
 		3AED2D9F175207D01C3874DF /* NSObject+BMTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BMTExtension.m"; sourceTree = "<group>"; };
 		3AED2DC2A0276048F821FF9B /* DeepCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepCopyable.h; sourceTree = "<group>"; };
+		3AED2DC31B5BD8356D4BDF43 /* BMTMicroClassEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTMicroClassEntity.h; sourceTree = "<group>"; };
 		3AED2DC6CB643937602445FA /* NSFoundation+NSNullEraser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFoundation+NSNullEraser.m"; sourceTree = "<group>"; };
 		3AED2DFCE32C31EB2619C38C /* DBRecordIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecordIO.h; sourceTree = "<group>"; };
 		3AED2E3AE9E6621A848A0FCD /* NSDictionary+ForStorageField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ForStorageField.m"; sourceTree = "<group>"; };
@@ -275,7 +276,6 @@
 		3AED2F2A58344E38A34B966C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AED2F58FF956FF1922A4570 /* DBKeyValueTable+ForSubclassEyesOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBKeyValueTable+ForSubclassEyesOnly.h"; sourceTree = "<group>"; };
 		3AED2F5EC887C0D3844DB72E /* BMTLayoutConstraintLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTLayoutConstraintLanguage.h; sourceTree = "<group>"; };
-		3AED2F6D7152A5DE5491C003 /* BMTGetMicroClassInfoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTGetMicroClassInfoDelegate.h; sourceTree = "<group>"; };
 		3AED2F6D8EBC8085A2BE990E /* BMTKnowledgeInfoNumState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTKnowledgeInfoNumState.m; sourceTree = "<group>"; };
 		3AED2F869F39EBF563AF8B07 /* DBAbstractTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAbstractTable.m; sourceTree = "<group>"; };
 		3AED2F9173E8F4F69B112127 /* BMTKnowledgeInfoDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTKnowledgeInfoDataSourceManager.m; sourceTree = "<group>"; };
@@ -339,7 +339,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3AED2095EA23A10E4B4BEF24 /* KnowledgeBody */ = {
+		3AED2095EA23A10E4B4BEF24 /* KnowledgeInfos */ = {
 			isa = PBXGroup;
 			children = (
 				3AED2C434C1EC2DA49D3E7C0 /* Model */,
@@ -348,7 +348,7 @@
 				3AED225A72BF9F9A5B25924D /* BMTKnowledgeTableView.h */,
 				3AED29108F54437C6F019611 /* BMTKnowledgeTableView.m */,
 			);
-			path = KnowledgeBody;
+			path = KnowledgeInfos;
 			sourceTree = "<group>";
 		};
 		3AED20E3FC1CDCFDD39A393F /* Extension */ = {
@@ -475,6 +475,16 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		3AED256F07538927AAF161BD /* MicroClass */ = {
+			isa = PBXGroup;
+			children = (
+				3AED2F499043DD34FFB725F9 /* Controller */,
+				3AED26E382642741D02CB754 /* Model */,
+				3AED271470061ABBB8309067 /* View */,
+			);
+			path = MicroClass;
+			sourceTree = "<group>";
+		};
 		3AED25AD8F0E00905E951A34 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +492,31 @@
 				3AED237809A54A41AFC60068 /* WRPersonModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3AED26E382642741D02CB754 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AED23DCC813C76A06B61B8E /* BMTMicroClassInfoEntity.m */,
+				3AED248389E4B85609950A45 /* BMTMicroClassInfoEntity.h */,
+				3AED272C3C1C42E9F3E85DB4 /* BMTMicroClassEntity.m */,
+				3AED2DC31B5BD8356D4BDF43 /* BMTMicroClassEntity.h */,
+				3AED2BE5D8CC4B29A988A4C0 /* BMTMicroClassDoctorEntity.m */,
+				3AED281168CE72B63C9E5E76 /* BMTMicroClassDoctorEntity.h */,
+				3AED2591937A59F4E716CC3D /* BMTMicroClassInfoDataManager.m */,
+				3AED2B57ABEA7C5881152913 /* BMTMicroClassInfoDataManager.h */,
+				3AED27F196A7405D126A5FF7 /* BMTGetMicroClassInfoDelegate.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AED271470061ABBB8309067 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AED2A402BD7A92D3507BA5B /* BMTMicroClassView.m */,
+				3AED277D7472983CBADDF36F /* BMTMicroClassView.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3AED271C66D4D7937EDEFE5A /* Controller */ = {
@@ -497,19 +532,10 @@
 			isa = PBXGroup;
 			children = (
 				3AED2F347632421B01C987F9 /* Banner */,
-				3AED2A91B4C5CC89EB4982E6 /* MicroClass */,
-				3AED2095EA23A10E4B4BEF24 /* KnowledgeBody */,
+				3AED2095EA23A10E4B4BEF24 /* KnowledgeInfos */,
+				3AED256F07538927AAF161BD /* MicroClass */,
 			);
 			path = KnowledgePage;
-			sourceTree = "<group>";
-		};
-		3AED276932CAAAB4F131707A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3AED274D3E31BBEB387DCDCC /* BMTMicroClassView.m */,
-				3AED261B8239DF987BF96DF2 /* BMTMicroClassView.h */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		3AED279AAD3B2CB0668CED3D /* resource */ = {
@@ -539,22 +565,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3AED285E3D1B47BEE981CCD3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3AED2B21AAD8F4B6B86764BD /* BMTMicroClassInfoEntity.m */,
-				3AED26974BDC4FB552ED20BC /* BMTMicroClassInfoEntity.h */,
-				3AED2939864274FF51AA08CD /* BMTMicroClassEntity.m */,
-				3AED275778F95100D6ECDE4D /* BMTMicroClassEntity.h */,
-				3AED2D3D6D18D3595080BAB3 /* BMTMicroClassDoctorEntity.m */,
-				3AED2149C3EA890AE2805B88 /* BMTMicroClassDoctorEntity.h */,
-				3AED20015A6CCA46C3A29FE8 /* BMTMicroClassInfoDataManager.m */,
-				3AED2CDF4BB4EF14C6A1A488 /* BMTMicroClassInfoDataManager.h */,
-				3AED2F6D7152A5DE5491C003 /* BMTGetMicroClassInfoDelegate.h */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3AED28E581C552D0CA9F90B3 /* base */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,15 +573,6 @@
 				3AED2B14402A08AE5F43D61E /* BMTJSONModel.m */,
 			);
 			path = base;
-			sourceTree = "<group>";
-		};
-		3AED291B96F0F1A93CD60956 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				3AED28701EF78B946DEF58D3 /* MicroClassViewController.h */,
-				3AED2CFC82C880B6A659BA46 /* MicroClassViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		3AED297747BF660D901E289C /* Base */ = {
@@ -647,16 +648,6 @@
 				3AED2D76AAB26B88530D682B /* BMTEntityBanner.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		3AED2A91B4C5CC89EB4982E6 /* MicroClass */ = {
-			isa = PBXGroup;
-			children = (
-				3AED291B96F0F1A93CD60956 /* Controller */,
-				3AED285E3D1B47BEE981CCD3 /* Model */,
-				3AED276932CAAAB4F131707A /* View */,
-			);
-			path = MicroClass;
 			sourceTree = "<group>";
 		};
 		3AED2B648DADAFBF1C21D0FE /* Controller */ = {
@@ -750,6 +741,15 @@
 				3AED271C66D4D7937EDEFE5A /* Controller */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		3AED2F499043DD34FFB725F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AED2019C116C4994717E12E /* BMTMicroClassViewController.h */,
+				3AED27ECC9A2EAD76ECC336C /* BMTMicroClassViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5F9DE033161C92627553900B /* Frameworks */ = {
@@ -1192,7 +1192,6 @@
 				3AED27B6B16C46DC57A7791C /* BMTBannerTable.m in Sources */,
 				3AED22B4398EB4B946BC9A17 /* BMTJSONModel.m in Sources */,
 				3AED2513B0D7A94C11475818 /* BMTResourceBanner.m in Sources */,
-				3AED27F6323F61F229C39B47 /* MicroClassViewController.m in Sources */,
 				3AED244E1826E7CEDD9DE3AC /* BMTKnowledgeHomePageCategoryTableCellView.m in Sources */,
 				3AED28057ACD6B627B0F2997 /* BMTKnowledgePageViewController.m in Sources */,
 				3AED27915536BEBABF78ECC6 /* BMTKnowledgeTableView.m in Sources */,
@@ -1206,12 +1205,13 @@
 				3AED2D3F2F4C6F70EF8E0D78 /* UILabel+RefreshPanelView.m in Sources */,
 				3AED273C3F5E60B2E1B8E3FE /* BMTKnowledgeInfoCategoryTabBarsView.m in Sources */,
 				3AED23C0B3A7A41C852D33AC /* BMTKnowledgeTabBarLabel.m in Sources */,
-				3AED226AB5A7D0BD92572C2D /* BMTMicroClassView.m in Sources */,
-				3AED2B02672F0B43112A6204 /* BMTMicroClassInfoEntity.m in Sources */,
-				3AED2A9E5E47B1845EA4ED5B /* BMTMicroClassEntity.m in Sources */,
-				3AED22E8BC6B5E11647DFD4C /* BMTMicroClassDoctorEntity.m in Sources */,
-				3AED2295E5AEA316009F8D46 /* BMTMicroClassInfoDataManager.m in Sources */,
 				3AED20BC3F530412BCBD2FBE /* BMTMicroClassInfoTable.m in Sources */,
+				3AED2D22C027C14B74459DC7 /* BMTMicroClassViewController.m in Sources */,
+				3AED2157CDC044FD823EE229 /* BMTMicroClassInfoEntity.m in Sources */,
+				3AED281CF181F74BE0F37398 /* BMTMicroClassEntity.m in Sources */,
+				3AED23EB80173351F0812AF9 /* BMTMicroClassDoctorEntity.m in Sources */,
+				3AED278ED0752188C1A114D0 /* BMTMicroClassInfoDataManager.m in Sources */,
+				3AED27FA32DE63F6B42A27F8 /* BMTMicroClassView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   [self addSubviews];
-  self.backgroundColor = [UIColor clearColor];
+  self.backgroundColor = [UIColor whiteColor];
   return self;
 }
 - (void)setUpWithEntity:(BMTMicroClassInfoEntity *)entity {
@@ -29,7 +29,8 @@
   self.participantsLabel.text = [entity.applicants.description
       stringByAppendingString:@"人"];
 
-  NSString *originalURLStr = entity.avatarAddress;
+  NSString *originalURLStr = [@"http://lollypop-avatar.qiniudn.com/"
+      stringByAppendingString:entity.avatarAddress];
 
   NSLog(@"the original URL string is %@", originalURLStr);
   NSString *formatedURLStr = [originalURLStr
@@ -69,19 +70,37 @@
 #pragma - private
 - (void)addSubviews {
 
-  _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15,10,60,
+  _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 60,
                                                                    60)];
+  _avatarImageView.layer.masksToBounds = YES;
+  _avatarImageView.layer.cornerRadius = _avatarImageView.bounds.size.width / 2;
 
-  _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(88,20,200,17)];
+  _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(88, 20, 200, 17)];
+  _titleLabel.font = [UIFont fontWithName:@"Helvetica"
+                                     size:17];
+  _participantsLabel =
+      [[UILabel alloc] initWithFrame:CGRectMake(88, 45, 60, 14)];
+  _participantsLabel.font = [UIFont fontWithName:@"Helvetica"
+                                            size:14];
+  _participantsLabel.textColor = [UIColor colorWithWhite:0
+                                                   alpha:0.54];
+  _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 45, 70, 14)];
+  _timeLabel.font = [UIFont fontWithName:@"Helvetica"
+                                    size:14];
+  _timeLabel.textColor = [UIColor colorWithWhite:0
+                                           alpha:0.54];
+  _speakImageView =
+      [[UIImageView alloc] initWithFrame:CGRectMake(327, 14, 31, 30)];
 
-  _participantsLabel= [[UILabel alloc] initWithFrame:CGRectMake(88,45,60,14)];
+  _weikeLabel = [[UILabel alloc] initWithFrame:CGRectMake(327, 51, 30, 15)];
+  _weikeLabel.textAlignment = NSTextAlignmentCenter;
+  _weikeLabel.font = [UIFont fontWithName:@"Helvetica"
+                                     size:14];
 
-  _timeLabel= [[UILabel alloc] initWithFrame:CGRectMake(150,45,70,14)];
-
-  _speakImageView= [[UIImageView alloc] initWithFrame:CGRectMake(327,14,31,30)];
-
-  _weikeLabel= [[UILabel alloc] initWithFrame:CGRectMake(327,51,20,15)];
-  _weikeLabel.textAlignment=NSTextAlignmentCenter;
+  UIView
+      *separator = [[UIView alloc] initWithFrame:CGRectMake(307, 15, 1, 50)];
+  separator.backgroundColor = [UIColor colorWithWhite:0
+                                                alpha:0.12];
 
   [self addSubview:_avatarImageView];
   [self addSubview:_titleLabel];
@@ -89,10 +108,17 @@
   [self addSubview:_speakImageView];
   [self addSubview:_weikeLabel];
   [self addSubview:_timeLabel];
+  [self addSubview:separator];
 
 }
 
 - (NSString *)convertTime:(NSNumber *)time {
-  return @"tomorrow 19:00";
+
+
+  NSDate *now= [NSDate date];
+  NSDate *date=[NSDate dateWithTimeIntervalSince1970:time.integerValue];
+
+  NSDateComponents *nowComp=[now
+  return @"昨天 19:00";
 }
 @end

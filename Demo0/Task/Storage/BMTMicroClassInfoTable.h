@@ -18,6 +18,6 @@
 @interface BMTMicroClassInfoTable : DBTableWithUniquePrimaryKey
 
 - (BOOL)addMicroClassInfo:(BMTMicroClassInfoEntity *)info;
-
+- (instancetype)initWithDatabase:(FMDatabase *)db;
 - (BMTMicroClassInfoEntity *)getLatestMicroClassInfo;
 @end

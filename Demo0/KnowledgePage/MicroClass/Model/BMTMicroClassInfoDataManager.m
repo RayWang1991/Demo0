@@ -30,61 +30,50 @@
     _requestManager = [SessionRequestManager sharedManager];
   }
   return self;
-
-
-
-  [self.requestManager
-      getKnowledgeInfosFromServerSuccess:^(NSArray *serverResultArray) {
-        // if success , add the result array to entity array
-        // and return the number of result array
-
-        // reset the offset
-        [currentCatEntityArray removeAllObjects];
-        [currentCatEntityArray addObjectsFromArray:serverResultArray];
-        self.knowledgeInfoOffsetStateArray[catIndex] =
-            @(serverResultArray.count);
-
-        NSLog(@"GET Refreshed Infos from SERVER");
-        // notification
-        [self sendNotificationWithAskedNum:number
-                                 returnNum:serverResultArray.count];
-
-        // save the result to database later
-        [currentCatTable addKnowledgeInfoArray:serverResultArray];
-
-      }
-                                 failure:^(NSError *error) {
-                                   // TODO deal with error
-
-                                   NSLog(@"GET Refreshed Infos FAILED!");
-
-                                   [self sendNotificationWithAskedNum:number
-                                                            returnNum:-1];
-                                 }
-                              categoryId:catId
-                                  offset:0
-                                  number:number];
 }
 
 - (void)getLatestMicroClassInfo {
   // just get the latest mc information from server, if fail, use the backup
- [self.requestManager getLatestMicroClassInfoFromServerOnSuccess:^
-     (BMTMicroClassInfoEntity *resultEntity){
-       if(resultEntity){
-         _microClassInfoEntity=resultEntity;
-         [[NSNotificationCenter defaultCenter]
-             postNotificationName:@"MicroClassInfoDataArrived"
-                           object:self];
-       }
-       else{
-        [self getBackUpMicroClassInfo];
-       }
-     }
-                                                         failure:<#(void (^)(NSError *error))failBlock#>];
+  [self.requestManager
+      getLatestMicroClassInfoFromServerOnSuccess:^
+      (BMTMicroClassInfoEntity *resultEntity) {
+        if (resultEntity) {
+          _microClassInfoEntity = resultEntity;
+          [[NSNotificationCenter defaultCenter]
+              postNotificationName:@"MicroClassInfoDataArrived"
+                            object:self];
+          [self.storageManager.microClassInfoTable
+              addMicroClassInfo:resultEntity];
+        } else {
+          [self getBackUpMicroClassInfo];
+        }
+      }
+                                         failure:^(NSError *error) {
+                                           // TODO deal with
+                                           // error
+                                           NSLog(@"GET Refreshed Micro Class Info "
+                                                     "FAILED!!!");
+                                           // then  get backup data;
+                                           [self getBackUpMicroClassInfo];
+                                         }];
 }
 
 #pragma - private
--(void)getBackUpMicroClassInfo{
+- (void)getBackUpMicroClassInfo {
 
+  BMTMicroClassInfoEntity *entity = self.microClassInfoEntity;
+  if (entity) {
+    [[NSNotificationCenter defaultCenter]
+        postNotificationName:@"MicroClassInfoDataArrived"
+                      object:self];
+  } else {
+    entity = [self.storageManager.microClassInfoTable getLatestMicroClassInfo];
+    _microClassInfoEntity = entity;
+    if (entity)
+      [[NSNotificationCenter defaultCenter]
+          postNotificationName:@"MicroClassInfoDataArrived"
+                        object:self];
+    // if no data, do nothing
+  }
 };
 @end

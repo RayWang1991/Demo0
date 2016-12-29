@@ -72,13 +72,19 @@
   return [self.db inAutoRollbackSavePoint:^NSError *(FMDatabase *db) {
     // create table
 
-    self.bannerTable = [[BMTBannerTable alloc] initWithDatabase:db];
-      self.knowledgeInfoTableArray=[[NSMutableArray alloc]init];
-      for(int i=1;i<=4;i++){
-          BMTKnowledgeInfoTable *knowledgeInfotable=[[BMTKnowledgeInfoTable alloc]initWithDatabase:db categoryId:i];
-          [self.knowledgeInfoTableArray addObject:knowledgeInfotable];
-      }
+    _bannerTable = [[BMTBannerTable alloc] initWithDatabase:db];
+    _microClassInfoTable =
+        [[BMTMicroClassInfoTable alloc] initWithDatabase:db];
+
+    _knowledgeInfoTableArray = [[NSMutableArray alloc] init];
+    for (int i = 1; i <= 4; i++) {
+      BMTKnowledgeInfoTable *knowledgeInfoTable = [[BMTKnowledgeInfoTable alloc]
+          initWithDatabase:db
+                categoryId:i];
+      [self.knowledgeInfoTableArray addObject:knowledgeInfoTable];
+    }
     NSArray *tables = @[self.bannerTable,
+        self.microClassInfoTable,
         self.knowledgeInfoTableArray[0],
         self.knowledgeInfoTableArray[1],
         self.knowledgeInfoTableArray[2],

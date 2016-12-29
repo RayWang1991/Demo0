@@ -39,6 +39,7 @@
       [content stringValueForDBFieldName:MICROCLASSINFO_COLUMN_AVATARADDRESS];
   return self;
 }
+
 - (NSDictionary *)encodeForDBRecord {
   NSMutableDictionary *dict = [NSMutableDictionary dictionary];
   [dict setValue:self.avatarAddress
@@ -58,13 +59,18 @@
 
 @implementation BMTMicroClassInfoTable
 
+- (instancetype)initWithDatabase:(FMDatabase *)db {
+  return [self initWithTableName:BMT_TABLENAME_MICROCLASSINFO
+                      inDatabase:db
+                     withKeyName:MICROCLASSINFO_COLUMN_INFOID];
+}
 #pragma mark - override
 
 - (NSError *)createTableIfNeeded {
   NSString *sql = @"CREATE TABLE IF NOT EXISTS "
       BMT_TABLENAME_MICROCLASSINFO @"("
       MICROCLASSINFO_COLUMN_INFOID
-      @"INTEGER PRIMARY KEY NOT NULL,"
+      @" INTEGER PRIMARY KEY NOT NULL,"
       MICROCLASSINFO_COLUMN_AVATARADDRESS
       @" TEXT, "
       MICROCLASSINFO_COLUMN_TITLE

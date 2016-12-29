@@ -32,7 +32,7 @@
 
   _bannersVC = [[BMTBannersViewController alloc] init];
 
-  _microClassVC =[[MicroClassViewController alloc]init];
+  _microClassVC =[[BMTMicroClassViewController alloc]init];
 
   _tableView = [[BMTKnowledgeTableView alloc] initWithFrame:self.view.bounds
                                                    style:UITableViewStylePlain];
@@ -169,7 +169,7 @@
 
 - (CGFloat)   tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  return 100;
+  return 110;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
