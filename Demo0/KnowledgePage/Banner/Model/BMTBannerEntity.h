@@ -1,5 +1,5 @@
 //
-//  BMTEntityBanner.h
+//  BMTBannerEntity.h
 //  HTTPRequestTest
 //
 //  Created by ray wang on 16/12/14.
@@ -25,7 +25,7 @@ typedef NS_ENUM (NSInteger, PosterType) {
   WEB_KNOWLEDGE,
   WAP_KNOWLEDGE
 };
-@interface BMTEntityBanner : JSONModel
+@interface BMTBannerEntity : JSONModel
 
 @property(strong, nonatomic) NSString<Optional> *name;// Prim Key
 @property(strong, nonatomic) NSString *href;

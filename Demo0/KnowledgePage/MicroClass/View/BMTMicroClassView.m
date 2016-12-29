@@ -84,7 +84,7 @@
                                             size:14];
   _participantsLabel.textColor = [UIColor colorWithWhite:0
                                                    alpha:0.54];
-  _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 45, 70, 14)];
+  _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 45, 120, 14)];
   _timeLabel.font = [UIFont fontWithName:@"Helvetica"
                                     size:14];
   _timeLabel.textColor = [UIColor colorWithWhite:0
@@ -113,12 +113,53 @@
 }
 
 - (NSString *)convertTime:(NSNumber *)time {
+  NSMutableString *retString = [NSMutableString string];
+  NSDate *now = [NSDate date];
+  NSDate *date = [NSDate dateWithTimeIntervalSince1970:time.integerValue];
+  NSCalendar *gregorian =
+      [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
 
+  NSDateComponents *nowComp = [gregorian components:
+          (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitMonth
+              | NSCalendarUnitDay | NSCalendarUnitYear)
+                                           fromDate:now];
 
-  NSDate *now= [NSDate date];
-  NSDate *date=[NSDate dateWithTimeIntervalSince1970:time.integerValue];
+  NSDateComponents *dateComp = [gregorian components:
+          (NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitMonth
+              | NSCalendarUnitDay | NSCalendarUnitYear)
+                                            fromDate:date];
 
-  NSDateComponents *nowComp=[now
-  return @"昨天 19:00";
+  if (dateComp.year == nowComp.year && dateComp.month == nowComp.month) {
+    if (dateComp.day == nowComp.day) {
+      [retString appendString:@"今天"];
+    } else if (dateComp.day == nowComp.day + 1) {
+      [retString appendString:@"明天"];
+    } else if (dateComp.day == nowComp.day + 2) {
+      [retString appendString:@"后天"];
+    } else {
+      [retString appendFormat:@"%d月%d日",
+                              dateComp.month,
+                              dateComp.day];
+    }
+  } else {
+    [retString appendFormat:@"%d月%d日",
+                            dateComp.month,
+                            dateComp.day];
+  }
+
+  NSString *(^ getFullTime)(NSInteger)=^(NSInteger aTime) {
+    return
+        aTime < 10 ?
+            [NSString stringWithFormat:@"0%d",
+                                       aTime] :
+            [NSString stringWithFormat:@"%d",
+                                       aTime];
+  };
+
+  [retString appendFormat:@" %@:%@",
+                          getFullTime(dateComp.hour),
+                          getFullTime(dateComp.minute)];
+
+  return retString;
 }
 @end

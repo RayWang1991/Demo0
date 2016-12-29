@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BMTEntityBanner.h"
+#import "BMTBannerEntity.h"
 #import "BMTBannerScrollView.h"
 #import "SQLManager.h"
 #import "FMDBManager.h"
@@ -18,7 +18,7 @@
 @interface BMTBannersViewController : UIViewController<UIScrollViewDelegate>
 
 @property(assign, nonatomic) NSInteger bannerNums;
-@property(strong, nonatomic) NSArray<BMTEntityBanner *> *banners;
+@property(strong, nonatomic) NSArray<BMTBannerEntity *> *banners;
 @property (strong, nonatomic) BMTBannerScrollView *scrollView;
 @property (strong, nonatomic) UIPageControl *pageControl;
 @property(weak, nonatomic, readonly) SessionRequestManager *sessionRequestManager;

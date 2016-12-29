@@ -9,16 +9,19 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BMTEntityKnowledgeInfo.h"
+#import "BMTKnowledgeInfoEntity.h"
 #import "BMTKnowledgeInfoCellBottomView.h"
+#import "BMTKnowledgeInfoCellRefreshDelegate.h"
+#import "SDWebImage/SDWebImageManager.h"
 
-@interface BMTKnowledgeHomePageCategoryTableCellView : UITableViewCell
+@interface BMTKnowledgeHomePageCategoryTableCellView :
+    UITableViewCell<BMTKnowledgeInfoCellRefreshDelegate>
 @property(strong, nonatomic) UIView *backView;
-@property (strong, nonatomic) UIImageView * knowledgeImageView;
+@property(strong, nonatomic) UIImageView *knowledgeImageView;
 @property(strong, nonatomic) UILabel *titleLabel;
 @property(strong, nonatomic) UILabel *contentLabel;
 @property(strong, nonatomic) BMTKnowledgeInfoCellBottomView *bottomView;
-//@property (strong, nonatomic) BMTEntityKnowledgeInfo *model;
+//@property (strong, nonatomic) BMTKnowledgeInfoEntity *model;
 
 + (NSString *)bmt_reuseId;
 

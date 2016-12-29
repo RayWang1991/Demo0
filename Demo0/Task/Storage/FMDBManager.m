@@ -9,7 +9,7 @@
 
 #import "FMDBManager.h"
 #import "NSError+BMTExtension.h"
-#import "FMDatabase+Extension.h"]
+#import "FMDatabase+Extension.h"
 
 /*
 @interface FMDBManager ()

@@ -12,8 +12,14 @@
 #import "JSONModel/JSONAPI.h"
 #import "SDWebImage/SDImageCache.h"
 #import "SDWebImage/SDWebImageDownloader.h"
+typedef NS_ENUM(NSInteger, CATEGORY_ID) {
+  CAT_1 = 1,
+  CAT_2,
+  CAT_3,
+  CAT_4,
+};
 
-@interface BMTEntityKnowledgeInfo : JSONModel
+@interface BMTKnowledgeInfoEntity : JSONModel
 /*@property(nonatomic, assign, readwrite) CGRect backViewFrame;
 @property(nonatomic, assign, readwrite) CGRect imageFrame;
 @property(nonatomic, assign, readwrite) CGRect titleFrame;

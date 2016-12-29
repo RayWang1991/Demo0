@@ -30,6 +30,7 @@
 #pragma - override
 - (instancetype)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
+  self.backgroundColor=[UIColor whiteColor];
   CGFloat y = self.bounds.size.height - 2;
   CGFloat x = (self.bounds.size.width - 70) / 2;
   UIView

@@ -116,7 +116,7 @@
 
 // TODO add search in database gateway here
 // TODO add get in server gateway here
-- (NSArray<BMTEntityBanner *> *)banners {
+- (NSArray<BMTBannerEntity *> *)banners {
   if (!_banners || _banners.count < DEFAULTNUMS) {
     /*
     _banners = [[NSMutableArray alloc] init];
@@ -148,7 +148,7 @@
                                @strongify(self)
                                _banners =
                                    [NSArray arrayWithArray:resultArray];
-                               for (BMTEntityBanner
+                               for (BMTBannerEntity
                                    *aBanner in _banners) {
                                  if (aBanner.name == nil) {
                                    aBanner.name =

@@ -8,9 +8,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "BMTKnowledgeInfoNumState.h"
-#import "BMTEntityKnowledgeInfo.h"
-#import "BMTEntityKnowledgeInfo.h"
+#import "BMTKnowledgeInfoEntity.h"
 #import "FMDBManager.h"
 #import "SessionRequestManager.h"
 #import "BMTGetKnowledgeInfoDelegate.h"
@@ -18,14 +16,16 @@
 @interface BMTKnowledgeInfoDataSourceManager : NSObject<BMTGetKnowledgeInfoDelegate>
 //@property(strong, nonatomic) BMTKnowledgeInfoNumState
 // *knowledgeInfoNumState;
+
 @property(strong, nonatomic) NSMutableArray <NSNumber *>
     *knowledgeInfoOffsetStateArray;
-@property(strong, nonatomic) NSMutableArray <NSMutableArray<BMTEntityKnowledgeInfo *> *>
+@property(strong, nonatomic) NSMutableArray <NSMutableArray<BMTKnowledgeInfoEntity *> *>
     *knowledgeInfoEntityArray;
-@property(strong, nonatomic) NSMutableArray <BMTEntityKnowledgeInfo *> *
+@property(strong, nonatomic) NSMutableArray <BMTKnowledgeInfoEntity *> *
     currentEntityArray;
-@property(weak, nonatomic) FMDBManager *storageManager;
 @property(weak, nonatomic) SessionRequestManager *requestManager;
+@property(weak, nonatomic) FMDBManager *storageManager;
+
 + (instancetype)sharedManager;
 - (instancetype)init;
 

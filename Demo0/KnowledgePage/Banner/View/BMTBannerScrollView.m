@@ -44,7 +44,7 @@
 
 }
 
-- (void)LoadImagesFromBanners:(NSArray<BMTEntityBanner *> *)banners {
+- (void)LoadImagesFromBanners:(NSArray<BMTBannerEntity *> *)banners {
   NSCAssert(banners.count>=self.bannerNumber,@"banner shortage!");
   NSUInteger n = self.bannerNumber;
   for (NSUInteger i = 0; i < n; i++) {

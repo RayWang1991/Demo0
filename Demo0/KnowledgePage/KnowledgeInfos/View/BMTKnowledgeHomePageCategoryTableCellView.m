@@ -7,6 +7,7 @@
  * Created by ray wang on 16/12/22.
  */
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "BMTKnowledgeHomePageCategoryTableCellView.h"
 
 @implementation BMTKnowledgeHomePageCategoryTableCellView {
@@ -116,7 +117,7 @@
 - (UILabel *)titleLabel {
   if (!_titleLabel) {
     _titleLabel = [[UILabel alloc] init];
-    _titleLabel.font = [UIFont fontWithName:@"PingFangSC"
+    _titleLabel.font = [UIFont fontWithName:@"Helvetica"
                                        size:17];
     _titleLabel.textColor =
         [[UIColor blackColor] colorWithAlphaComponent:0.87];
@@ -147,5 +148,56 @@
     //set image here
   }
 }
+- (void)setCellViewByEntity:(BMTKnowledgeInfoEntity *)entity
+                atIndexPath:
+                    (NSIndexPath *)indexPath {
+  NSString *titleText = [NSString stringWithFormat:@"Row %d %@",
+                                                   indexPath.row,
+                                                   entity.title];
+  NSString *detailText = [NSString stringWithFormat:@"%@",
+                                                    entity.summary];
+  NSNumber *clickedNum = entity.click;
+  NSNumber *likeNum = entity.like;
+  // turn the chinese URL into % format
+  NSString *originalURLStr = entity.thumbSrc;
+  NSLog(@"the original URL string is %@", originalURLStr);
+  NSString *formatedURLStr = [originalURLStr
+      stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet
+          characterSetWithCharactersInString:@"^ "]
+          .invertedSet];
+  NSLog(@"the formated URL string is %@", formatedURLStr);
+  NSURL *knowledgeImageURL = [NSURL URLWithString:formatedURLStr];
+  //NSString * Text=[NSString stringWithFormat:@"Row %@",self
+  // .dataArray[indexPath.row].title];
+  self.titleLabel.text = titleText;
+  self.contentLabel.text = detailText;
+  self.bottomView.clickedNumLabel.text = [NSString stringWithFormat:@"%@",
+                                                                    clickedNum];
+  self.bottomView.likeNumLabel.text = [NSString stringWithFormat:@"%@",
+                                                                 likeNum];
+  [self.knowledgeImageView sd_setImageWithURL:knowledgeImageURL
+                             placeholderImage:[UIImage imageNamed:@"1.jpg"]
+                                      options:SDWebImageRetryFailed
+                                     progress:nil
+                                    completed:
+                                        ^(UIImage *image, NSError *error, SDImageCacheType
+                                        cacheType, NSURL *completeImageURL) {
+                                          //save the image here
+                                          //banners[i].bannerImage=imageView.image;
+
+                                          NSLog(@"refesh knowledgeInfo images, done!");
+                                          switch (cacheType) {
+                                            case SDImageCacheTypeNone:NSLog(@"knowledgeInfo Image 直接下载");
+                                              break;
+                                            case SDImageCacheTypeDisk:NSLog(@"knowledgeInfo Image 磁盘缓存");
+                                              break;
+                                            case SDImageCacheTypeMemory:NSLog(@"knowledgeInfo Image 内存缓存");
+                                              break;
+                                            default:break;
+                                          }
+                                        }
+  ];
+}
+
 
 @end

@@ -23,7 +23,7 @@
 #define BANNER_COLUMN_STATUS @"status"
 #define BANNER_COLUMN_TYPE @"type"
 
-#define BMT_TABLENAME_BANNER@"banner"
+#define BMT_TABLENAME_BANNER @"banner"
 
 /*
 #define BANNER_COLUMN_EMAIL @"email"
@@ -49,7 +49,7 @@
 #define BANNER_COLUMN_IMTOKEN @"imToken"
 */
 
-@implementation  BMTEntityBanner
+@implementation  BMTBannerEntity
 
 - (instancetype)initWithDBRecord:(NSDictionary *)content {
   self = [super init];
@@ -115,7 +115,7 @@
   return self;
 }
 
-- (BOOL)updateBanner:(BMTEntityBanner *)banner {
+- (BOOL)updateBanner:(BMTBannerEntity *)banner {
     return NO;
 }
 
@@ -131,12 +131,12 @@
                       inDatabase:db
                      withKeyName:BANNER_COLUMN_IMGSRC];
 }
-- (BOOL)addBanner:(BMTEntityBanner *)banner {
+- (BOOL)addBanner:(BMTBannerEntity *)banner {
   return [self addItemOrReplace:banner];
 }
 - (BOOL)addBanners:(NSArray *)bannerArray {
   BOOL success=YES;
-  for(BMTEntityBanner *banner in bannerArray){
+  for(BMTBannerEntity *banner in bannerArray){
     success=success&&[self addBanner:banner];
   }
   return success;
@@ -145,7 +145,7 @@
   return [self deleteAllItems];
 }
 
-- (NSArray<BMTEntityBanner *> *)getBannersOrderedByName:(NSUInteger)num {
+- (NSArray<BMTBannerEntity *> *)getBannersOrderedByName:(NSUInteger)num {
   NSInteger count=[self selectItemCount];
   if(num>count){
     return nil;
@@ -187,6 +187,6 @@
 }
 
 - (Class)queryClassWithResultDictionary:(NSDictionary *)dict {
-  return [BMTEntityBanner class];
+  return [BMTBannerEntity class];
 }
 @end

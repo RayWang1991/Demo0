@@ -97,7 +97,8 @@
   // gray line
   UIView *grayLine = [[UIView alloc] initWithFrame:CGRectMake(15,
                                                               barHeight - 1,
-                                                              barWidth * 4 - 15,
+                                                              barWidth * 4 -
+                                                                  2 * 15,
                                                               1)];
   grayLine.backgroundColor = [UIColor colorWithWhite:0
                                                alpha:0.26];

@@ -11,20 +11,20 @@
 #import "DBKeyValueTable.h"
 #import "MergeableObject.h"
 #import "DBKeyValueIO.h"
-#import "BMTEntityBanner.h"
+#import "BMTBannerEntity.h"
 #import "BMTResourceBanner.h"
 
 @interface BMTBannerTable : DBTableWithUniquePrimaryKey
 
 - (instancetype)initWithDatabase:(FMDatabase *)db;
--(BOOL) addBanner:(BMTEntityBanner *)banner;
+-(BOOL) addBanner:(BMTBannerEntity *)banner;
 -(BOOL) addBanners:(NSArray *)bannerArray;
 -(BOOL) deleteAllBanners;
 
 //-(BOOL) updateBannerWithId:;
 //-(BOOL) deleteBannerWithId:();
 
-- (NSArray<BMTEntityBanner *> *)getBannersOrderedByName:(NSUInteger)num;
-//- (BMTEntityBanner *)getBanner
+- (NSArray<BMTBannerEntity *> *)getBannersOrderedByName:(NSUInteger)num;
+//- (BMTBannerEntity *)getBanner
 -(Class)queryClassWithResultDictionary:(NSDictionary *)dict;
 @end

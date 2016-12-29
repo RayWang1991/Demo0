@@ -10,12 +10,12 @@
 #import <UIKit/UIKit.h>
 #import "BMTBannerScrollView.h"
 #import "Masonry/Masonry.h"
-#import "BMTEntityBanner.h"
+#import "BMTBannerEntity.h"
 @interface BMTBannerScrollView : UIScrollView
 @property (assign,nonatomic) NSUInteger bannerNumber;
 @property (strong, nonatomic) NSMutableArray <UIImageView *>* bannerImageViews;
 
 -(instancetype)initWithBannerNumber:(NSUInteger)num;
 - (void)setStyle;
-- (void)LoadImagesFromBanners:(NSArray<BMTEntityBanner *>  *)banners;
+- (void)LoadImagesFromBanners:(NSArray<BMTBannerEntity *>  *)banners;
 @end

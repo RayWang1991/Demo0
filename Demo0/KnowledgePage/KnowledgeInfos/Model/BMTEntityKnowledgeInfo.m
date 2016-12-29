@@ -7,10 +7,10 @@
  * Created by ray wang on 16/12/22.
  */
 
-#import "BMTEntityKnowledgeInfo.h"
+#import "BMTKnowledgeInfoEntity.h"
 
 /*
-@implementation BMTEntityKnowledgeInfo {
+@implementation BMTKnowledgeInfoEntity {
 
 }
 @end

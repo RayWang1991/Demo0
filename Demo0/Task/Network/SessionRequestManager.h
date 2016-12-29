@@ -8,7 +8,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "BMTEntityBanner.h"
+#import "BMTBannerEntity.h"
 #import <UIKit/UIKit.h>
 #import "WRPersonModel.h"
 #import "BMTMicroClassInfoEntity.h"

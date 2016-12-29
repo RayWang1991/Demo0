@@ -12,9 +12,9 @@
 #import "DBKeyValueTable.h"
 #import "MergeableObject.h"
 #import "DBKeyValueIO.h"
-#import "BMTEntityKnowledgeInfo.h"
+#import "BMTKnowledgeInfoEntity.h"
 #import "DBTableWithUniqueIntegerPrimaryKey.h"
-#import "BMTKnowledgeInfoCategoryState.h"
+
 
 @interface BMTKnowledgeInfoTable : DBTableWithUniquePrimaryKey
 
@@ -23,7 +23,7 @@
 - (instancetype)initWithDatabase:(FMDatabase *)db
                       categoryId:(NSUInteger)catId;
 
-- (BOOL)addKnowledgeInfo:(BMTEntityKnowledgeInfo *)info;
+- (BOOL)addKnowledgeInfo:(BMTKnowledgeInfoEntity *)info;
 - (BOOL)addKnowledgeInfoArray:(NSArray *)infoArray;
 - (BOOL)deleteAllKnowledgeInfo;
 
@@ -33,11 +33,11 @@
 
 -(NSUInteger)itemsCount;
 
-- (NSArray<BMTEntityKnowledgeInfo *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num;
+- (NSArray<BMTKnowledgeInfoEntity *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num;
 // always return the top informations of knowledge
 // if numbers of item < num, return all
 
-- (NSArray<BMTEntityKnowledgeInfo *> *)getKnowledgeInfosOrderedByName:
+- (NSArray<BMTKnowledgeInfoEntity *> *)getKnowledgeInfosOrderedByName:
     (NSUInteger)num offset:(NSUInteger) offset;
 // with offset
 

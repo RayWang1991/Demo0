@@ -8,7 +8,7 @@
  */
 
 #import "SessionRequestManager.h"
-#import "BMTEntityKnowledgeInfo.h"
+#import "BMTKnowledgeInfoEntity.h"
 #define kBMBASEURL @"https://api.bongmi.com/v1"
 
 #define kTESTURL(d) @"https://raw.githubusercontent.com/RayWang1991/TestData/master/person" # d ".json"
@@ -77,13 +77,6 @@
                   // assuming we receive an array containing
                   // dicionaries indicating the objects
 
-                  NSCAssert([result isKindOfClass:[NSArray class]],
-                            @"the result isn't an array");
-
-                  // TODO optimize here
-                  NSCAssert([result[0] isKindOfClass:[NSDictionary class]],
-                            @"the result[0] isn't a dictionary");
-                  // NSCAssert([result count]>=numbers,@"the returned numbers does not match");
                   NSMutableArray *resArray = [[NSMutableArray alloc] init];
                   for (int i = 0; i < [result count]; i++) {
 
@@ -99,7 +92,11 @@
                       NSLog(@"Model convert fails, error: %@, json: %@",
                             jsonModelError, dict);
                     }
-                    [resArray addObject:aModel];
+
+                    if (aModel) {
+                      NSLog(@"aModel isn't nil!");
+                      [resArray addObject:aModel];
+                    }
                   }
                   sucBlock(resArray);
                 }
@@ -138,7 +135,7 @@
   [self getObjsFromServerSuccess:sucBlock
                          failure:failBlock
                             path:@"/w/knowledge"
-                            type:[BMTEntityKnowledgeInfo class]
+                            type:[BMTKnowledgeInfoEntity class]
                              arg:dict];
 }
 
@@ -148,14 +145,14 @@
 /*
   [self getObjsFromServerSuccess:sucBlock
                          failure:failBlock
-                            type:[BMTEntityBanner class]
+                            type:[BMTBannerEntity class]
                              num:num];
                              */
   NSDictionary *dict = @{@"num": @(num), @"language": @1};
   [self getObjsFromServerSuccess:sucBlock
                          failure:failBlock
                             path:@"/w/poster"
-                            type:[BMTEntityBanner class]
+                            type:[BMTBannerEntity class]
                              arg:dict];
 }
 - (void)getLatestMicroClassInfoFromServerOnSuccess:(void (^)(BMTMicroClassInfoEntity *resultEntity))sucBlock
@@ -191,7 +188,7 @@
 
                   BMTMicroClassInfoEntity *mcInfoEntity =
                       [[BMTMicroClassInfoEntity alloc] init];
-                  mcInfoEntity.infoId=dict[@"microClass"][@"id"];
+                  mcInfoEntity.infoId = dict[@"microClass"][@"id"];
                   mcInfoEntity.avatarAddress = dict[@"avatarAddress"];
                   mcInfoEntity.title =
                       dict[@"microClass"][@"subject"];

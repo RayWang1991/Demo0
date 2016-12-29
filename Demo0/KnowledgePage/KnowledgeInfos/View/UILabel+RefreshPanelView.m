@@ -19,7 +19,9 @@
   self= [[UILabel alloc] initWithFrame:frame];
   self.text=REFRESH_PANEL_HINT_TEXT;
   self.textAlignment=NSTextAlignmentCenter;
-  self.backgroundColor=[UIColor clearColor];
+  self.backgroundColor=[UIColor whiteColor];
+  self.font=[UIFont fontWithName:@"Helvetica"
+                            size:14];
   return self;
 }
 

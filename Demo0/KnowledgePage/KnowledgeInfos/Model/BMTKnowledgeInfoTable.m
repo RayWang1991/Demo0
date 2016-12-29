@@ -25,7 +25,7 @@
 
 #define BMT_TABLENAME_KNOWLEDGEINFO_CAT @"knowledgeInfo_cat"
 
-@implementation BMTEntityKnowledgeInfo
+@implementation BMTKnowledgeInfoEntity
 
 - (instancetype)initWithDBRecord:(NSDictionary *)content {
   self = [super init];
@@ -138,12 +138,12 @@
   }
   return self;
 }
-- (BOOL)addKnowledgeInfo:(BMTEntityKnowledgeInfo *)info {
+- (BOOL)addKnowledgeInfo:(BMTKnowledgeInfoEntity *)info {
   return [self addItemOrReplace:info];
 }
 - (BOOL)addKnowledgeInfoArray:(NSArray *)infoArray {
   BOOL success = YES;
-  for (BMTEntityKnowledgeInfo *info in infoArray) {
+  for (BMTKnowledgeInfoEntity *info in infoArray) {
     success = success && [self addKnowledgeInfo:info];
   }
   return success;
@@ -154,7 +154,7 @@
 - (NSUInteger)itemsCount {
   return [self selectItemCount];
 }
-- (NSArray<BMTEntityKnowledgeInfo *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num {
+- (NSArray<BMTKnowledgeInfoEntity *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num {
   // if number of items in table < num, return all
   NSArray *resArray =
       [self selectItemsWithOtherPart:[NSString stringWithFormat:@"order by "
@@ -164,7 +164,7 @@
   return resArray;
 }
 
-- (NSArray<BMTEntityKnowledgeInfo *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num
+- (NSArray<BMTKnowledgeInfoEntity *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num
                                                                offset:(NSUInteger)offset {
   NSArray *resArray =
       [self selectItemsWithOtherPart:[NSString stringWithFormat:@"order by "
@@ -218,7 +218,7 @@
 }
 
 - (Class)queryClassWithResultDictionary:(NSDictionary *)dict {
-  return [BMTEntityKnowledgeInfo class];
+  return [BMTKnowledgeInfoEntity class];
 }
 
 @end

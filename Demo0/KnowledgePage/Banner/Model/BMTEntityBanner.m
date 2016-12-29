@@ -1,15 +1,15 @@
 //
-//  BMTEntityBanner.m
+//  BMTBannerEntity.m
 //  HTTPRequestTest
 //
 //  Created by ray wang on 16/12/14.
 //  Copyright © 2016年 ray wang. All rights reserved.
 //
 
-#import "BMTEntityBanner.h"
+#import "BMTBannerEntity.h"
 
 /*
-@implementation BMTEntityBanner
+@implementation BMTBannerEntity
 
 @end
  */

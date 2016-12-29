@@ -592,35 +592,34 @@
       <sourceFolder url="file://$MODULE_DIR$/Demo0/SQLManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Base.lproj/Main.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Controller/BMTKnowledgePageViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Controller/BMTKnowledgePageViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/BMTKnowledgeTableView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeTabBarLabel.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/UIView+AddMoreButtonView.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCellRefreshDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHeaderView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHomePageCategoryTableCellView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCellBottomView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCellBottomView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHomePageCategoryTableCellView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/UIView+AddMoreButtonView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/UIView+AddMoreButtonView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTChangeCategoryDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/UILabel+RefreshPanelView.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHomePageCategoryTableCellView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeTabBarLabel.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCellBottomView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/UILabel+RefreshPanelView.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHomePageCategoryTableCellView.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoCategoryState.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoDataSourceManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeInfoCategoryTabBarsView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/View/BMTKnowledgeHeaderView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/BMTKnowledgeTableView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoTable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoNumState.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoDataSourceManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTGetKnowledgeInfoDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTEntityKnowledgeInfo.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoDataSourceManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTEntityKnowledgeInfo.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoCategoryState.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTGetKnowledgeInfoDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoTable.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoNumState.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Controller/BMTKnowledgePageViewController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Controller/BMTKnowledgePageViewController.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/BMTKnowledgeTableView.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/BMTKnowledgeTableView.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/KnowledgeInfos/Model/BMTKnowledgeInfoEntity.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTBannerEntity.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/Model/BMTEntityBanner.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/Banner/View/BMTBannerScrollView.m" isTestSource="false" />
@@ -637,8 +636,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoEntity.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassEntity.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/Model/BMTMicroClassInfoDataManager.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/Controller/BMTMicroClassViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/Controller/BMTMicroClassViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo0/KnowledgePage/MicroClass/Controller/BMTMicroClassViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/Demo0.xcdatamodeld/Demo0.xcdatamodel" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/MainPage/Model/WRPersonModel.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Demo0/MainPage/Model/WRPersonModel.m" isTestSource="false" />

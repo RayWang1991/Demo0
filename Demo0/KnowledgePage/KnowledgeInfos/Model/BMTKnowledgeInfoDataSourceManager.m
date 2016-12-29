@@ -56,7 +56,7 @@
 
   NSUInteger catIndex = ((catId - 1) % 4);
 
-  NSMutableArray <BMTEntityKnowledgeInfo *> *currentCatEntityArray = self
+  NSMutableArray <BMTKnowledgeInfoEntity *> *currentCatEntityArray = self
       .knowledgeInfoEntityArray[catIndex];
 
   BMTKnowledgeInfoTable *currentCatTable = self.storageManager
@@ -99,7 +99,10 @@
       [self.requestManager
           getKnowledgeInfosFromServerSuccess:^(NSArray *serverResultArray) {
             // if success , add the result array to entity array
-            // and return the number of result array
+            // and send notification, including the number of result array
+            // notice that the resultArray may contains nothing, so returnNum
+            // could be 0 as well
+
             [currentCatEntityArray addObjectsFromArray:serverResultArray];
             self.knowledgeInfoOffsetStateArray[catIndex] =
                 @(currentOffset + serverResultArray.count);
@@ -131,7 +134,7 @@
 
   NSUInteger catIndex = ((catId - 1) % 4);
 
-  NSMutableArray <BMTEntityKnowledgeInfo *> *currentCatEntityArray = self
+  NSMutableArray <BMTKnowledgeInfoEntity *> *currentCatEntityArray = self
       .knowledgeInfoEntityArray[catIndex];
 
   BMTKnowledgeInfoTable *currentCatTable = self.storageManager

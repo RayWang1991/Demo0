@@ -19,10 +19,11 @@
 #import "UIView+AddMoreButtonView.h"
 #import "UILabel+RefreshPanelView.h"
 #import "BMTKnowledgeInfoCategoryTabBarsView.h"
+#import "BMTKnowledgeHeaderView.h"
 
 @class BMTKnowledgeTableView;
 @interface BMTKnowledgePageViewController : UIViewController
-    <UITableViewDataSource, UITableViewDelegate>
+    <UITableViewDataSource, UITableViewDelegate, BMTChangeCategoryDelegate>
 // header
 @property(strong, nonatomic) BMTBannersViewController *bannersVC;
 @property(strong, nonatomic) BMTMicroClassViewController *microClassVC;
@@ -32,8 +33,8 @@
 @property(strong, nonatomic) UILabel *refreshPanelLabel;
 // table view's body
 @property(strong, nonatomic) BMTKnowledgeTableView *tableView;
-//@property (strong, nonatomic) NSMutableArray <BMTKnowledgeInfoDataSourceManager*>*dataArray;
 
+@property (assign, nonatomic) CATEGORY_ID currentCAT;
 @property(strong, nonatomic) BMTKnowledgeInfoDataSourceManager<BMTGetKnowledgeInfoDelegate>
     *dataSourceManager;
 // footer

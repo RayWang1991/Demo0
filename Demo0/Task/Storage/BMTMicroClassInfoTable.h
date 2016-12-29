@@ -13,7 +13,6 @@
 #import "DBKeyValueIO.h"
 #import "BMTMicroClassInfoEntity.h"
 #import "DBTableWithUniqueIntegerPrimaryKey.h"
-#import "BMTKnowledgeInfoCategoryState.h"
 
 @interface BMTMicroClassInfoTable : DBTableWithUniquePrimaryKey
 

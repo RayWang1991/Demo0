@@ -11,19 +11,10 @@
 #import "BMTKnowledgePageViewController.h"
 #import "BMTKnowledgeTableView.h"
 #import "UILabel+RefreshPanelView.h"
-#define DEFAULT_KNOWLEDGE_NUM (5u)
+#define DEFAULT_KNOWLEDGE_NUMBERS (81u)
 
-@implementation BMTKnowledgePageViewController {
-
-}
+@implementation BMTKnowledgePageViewController
 - (void)loadView {
-  /*
-  CGFloat height = UIScreen.mainScreen.bounds.size.height + REFRESH_PANEL_HEIGHT;
-  CGFloat width = UIScreen.mainScreen.bounds.size.width + REFRESH_PANEL_HEIGHT;
-
-  self.view = [[UIView alloc] initWithFrame:CGRectMake(0, -REFRESH_PANEL_HEIGHT,
-                                                       width, height)];
-                                                       */
   self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 }
 
@@ -31,30 +22,38 @@
   [super viewDidLoad];
 
   _bannersVC = [[BMTBannersViewController alloc] init];
-
-  _microClassVC =[[BMTMicroClassViewController alloc]init];
-
+  _microClassVC = [[BMTMicroClassViewController alloc] init];
   _tableView = [[BMTKnowledgeTableView alloc] initWithFrame:self.view.bounds
-                                                   style:UITableViewStylePlain];
+                                                      style:UITableViewStylePlain];
   [self.view addSubview:self.tableView];
-
+/*
   _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0,
                                                                         -REFRESH_PANEL_HEIGHT,
                                                                         375,
                                                                         320)];
+                                                                        */
+  _tableView.tableHeaderView =
+      [[BMTKnowledgeHeaderView alloc] initWithFrame:CGRectMake(0,
+                                                               -REFRESH_PANEL_HEIGHT,
+                                                               375,
+                                                               320)];
+  _tableView.tableHeaderView.backgroundColor = [UIColor colorWithWhite:0
+                                                                 alpha:0.12];
   CGFloat catBarHeight = 30;
-  CGFloat headerHeight=_tableView.tableHeaderView.bounds.size.height;
+  CGFloat headerHeight = _tableView.tableHeaderView.bounds.size.height;
   _categoryBarsView =
       [[BMTKnowledgeInfoCategoryTabBarsView alloc] initWithFrame:CGRectMake(0,
-                                                                  headerHeight-catBarHeight,
-                                                                  375,
-                                                                  catBarHeight)];
+                                                                            headerHeight
+                                                                                - catBarHeight,
+                                                                            375,
+                                                                            catBarHeight)];
+  _categoryBarsView.delegate=self;
+  [_tableView.tableHeaderView addSubview:_bannersVC.view];
+
+  [_tableView.tableHeaderView addSubview:_microClassVC.view];
 
   [_tableView.tableHeaderView addSubview:_categoryBarsView];
 
-  [_tableView.tableHeaderView addSubview:_bannersVC.view];
-  [_tableView.tableHeaderView addSubview:_microClassVC.view];
-  // should be adding sub view cause
   // refresh panel and microClass are subviews too
 
   _loadMoreButtonView = [[UIView alloc] initWithAddMoreButton];
@@ -86,10 +85,6 @@
 
   [self.dataSourceManager getMoreKnowledgeInfo:5
                                     categoryId:1];
-
-  // [self testFirstGetInfoNumber:DEFAULT_KNOWLEDGE_NUMBERS catId:CAT_1];
-  //[self testNetRequest];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,6 +151,10 @@
   [self.dataSourceManager getMoreKnowledgeInfo:DEFAULT_KNOWLEDGE_NUMBERS
                                     categoryId:1];
 }
+
+-(void) changeCategoryTo:(NSUInteger)catId{
+  
+}
 #pragma mark - tableViewSettings
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -180,65 +179,17 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
       dequeueReusableCellWithIdentifier:cellStr
                            forIndexPath:indexPath];
 
-  NSString *titleText = [NSString stringWithFormat:@"Row %d %@",
-                                                   indexPath.row,
-                                                   self.dataSourceManager
-                                                       .knowledgeInfoEntityArray[0][indexPath
-                                                       .row]
-                                                       .title];
-  NSString *detailText = [NSString stringWithFormat:@"%@",
+  // make sure that the data source has index lager than indexPath
+  // so the cell here should not show data directly, the data refresh
+  // should always done after data arrived!
+  // the code here is only responsible to provide cell views !!!!
 
-                                                    self.dataSourceManager
-                                                        .knowledgeInfoEntityArray[0][indexPath
-                                                        .row]
-                                                        .summary];
-  NSNumber *clickedNum = self.dataSourceManager
-      .knowledgeInfoEntityArray[0][indexPath.row]
-      .click;
-  NSNumber *likeNum = self.dataSourceManager
-      .knowledgeInfoEntityArray[0][indexPath.row]
-      .like;
-  // turn the chinese URL into % format
-  NSString *originalURLStr =
-      self.dataSourceManager
-          .knowledgeInfoEntityArray[0][indexPath.row].thumbSrc;
-  NSLog(@"the original URL string is %@", originalURLStr);
-  NSString *formatedURLStr = [originalURLStr
-      stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet
-          characterSetWithCharactersInString:@"^ "]
-          .invertedSet];
-  NSLog(@"the formated URL string is %@", formatedURLStr);
-  NSURL *knowledgeImageURL = [NSURL URLWithString:formatedURLStr];
-  //NSString * Text=[NSString stringWithFormat:@"Row %@",self
-  // .dataArray[indexPath.row].title];
-  cell.titleLabel.text = titleText;
-  cell.contentLabel.text = detailText;
-  cell.bottomView.clickedNumLabel.text = [NSString stringWithFormat:@"%@",
-                                                                    clickedNum];
-  cell.bottomView.likeNumLabel.text = [NSString stringWithFormat:@"%@",
-                                                                 likeNum];
-  [cell.knowledgeImageView sd_setImageWithURL:knowledgeImageURL
-                             placeholderImage:[UIImage imageNamed:@"1.jpg"]
-                                      options:SDWebImageRetryFailed
-                                     progress:nil
-                                    completed:
-                                        ^(UIImage *image, NSError *error, SDImageCacheType
-                                        cacheType, NSURL *completeImageURL) {
-                                          //save the image here
-                                          //banners[i].bannerImage=imageView.image;
-
-                                          NSLog(@"refesh knowledgeInfo images, done!");
-                                          switch (cacheType) {
-                                            case SDImageCacheTypeNone:NSLog(@"knowledgeInfo Image 直接下载");
-                                              break;
-                                            case SDImageCacheTypeDisk:NSLog(@"knowledgeInfo Image 磁盘缓存");
-                                              break;
-                                            case SDImageCacheTypeMemory:NSLog(@"knowledgeInfo Image 内存缓存");
-                                              break;
-                                            default:break;
-                                          }
-                                        }
-  ];
+  if (self.dataSourceManager.knowledgeInfoEntityArray[0].count >= indexPath
+      .row) {
+    [cell setCellViewByEntity:self.dataSourceManager
+            .knowledgeInfoEntityArray[0][(NSUInteger) indexPath.row]
+                  atIndexPath:indexPath];
+  }
 
   return cell;
 }
@@ -247,15 +198,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)setViewBasicStyle {
   self.view.backgroundColor = [UIColor orangeColor];
 }
-
-/*
--(BMTBannersViewController *)bannersVC {
-  if(!_bannersVC){
-    _bannersVC=[[BMTBannersViewController alloc]init];
-  }
-  return _bannersVC;
-}
-*/
 
 - (void)setSubViewsToSuperView {
   //[self.view addSubview:self.bannersVC.view];
