@@ -22,6 +22,7 @@ def lollypop_pods
   pod 'UIView+Loading', '1.0.0'
   pod 'AMapLocation', '1.0.1'
   pod    'EGOCache' , '2.1.3'
+  pod 'Reachability', '~> 3.0.0'
 #  pod 'Reachability', '3.2'
   pod 'BMLayoutConstraint', '~> 1.1.1'
 #  pod 'Qiniu', '~> 7.0'

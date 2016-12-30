@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7479640B9AAB948B403D249526DE6610'
-               BlueprintName = 'YTKKeyValueStore'
+               BlueprintIdentifier = 'A0E2F7815C9D689D0288ECF7815053A6'
+               BlueprintName = 'Reachability'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'YTKKeyValueStore.framework'>
+               BuildableName = 'Reachability.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

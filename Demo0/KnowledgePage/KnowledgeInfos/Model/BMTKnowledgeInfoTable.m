@@ -167,8 +167,8 @@
 - (NSArray<BMTKnowledgeInfoEntity *> *)getKnowledgeInfosOrderedByName:(NSUInteger)num
                                                                offset:(NSUInteger)offset {
   NSArray *resArray =
-      [self selectItemsWithOtherPart:[NSString stringWithFormat:@"order by "
-                                                                    "timestamp LIMIT  %d, %d",
+      [self selectItemsWithOtherPart:[NSString stringWithFormat:@" "
+                                                                    " LIMIT  %d, %d",
                                                                 offset,
                                                                 num]
                            withParam:nil];
@@ -183,9 +183,9 @@
       BMT_TABLENAME_KNOWLEDGEINFO_CAT
       stringByAppendingFormat:@"%d( "
                                   KNOWLEDGEINFO_COLUMN_INFOID
-                                  @" INTEGER PRIMARY KEY NOT NULL,"
+                                  @" INTEGER UNIQUE NOT NULL,"
                                   KNOWLEDGEINFO_COLUMN_TIMESTAMP
-                                  @" INTEGER,"
+                                  @" INTEGER ASC,"
                                   KNOWLEDGEINFO_COLUMN_CATEGOTYID
                                   @" INTEGER,"
                                   KNOWLEDGEINFO_COLUMN_LIKE

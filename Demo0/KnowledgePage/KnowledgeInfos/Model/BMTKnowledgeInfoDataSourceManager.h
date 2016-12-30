@@ -38,4 +38,5 @@
 - (void)getFirstShownKnowledgeInfo:(NSUInteger)number
                         categoryId:(NSUInteger)catId;
 
+- (void)clearKnowledgeInfoAtCategoryId:(NSUInteger)catId;
 @end

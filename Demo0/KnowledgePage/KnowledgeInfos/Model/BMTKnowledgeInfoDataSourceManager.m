@@ -94,7 +94,6 @@
       [self sendNotificationWithAskedNum:number
                                returnNum:resArray.count];
 
-
     } else {
       [self.requestManager
           getKnowledgeInfosFromServerSuccess:^(NSArray *serverResultArray) {
@@ -131,6 +130,7 @@
                        categoryId:(NSUInteger)catId {
   // refresh event
   // just get from server, if success , refresh the database
+  // if fail, then get more?
 
   NSUInteger catIndex = ((catId - 1) % 4);
 
@@ -140,28 +140,27 @@
   BMTKnowledgeInfoTable *currentCatTable = self.storageManager
       .knowledgeInfoTableArray[catIndex];
 
-  /*NSUInteger currentOffset = self.knowledgeInfoOffsetStateArray[catIndex]
-      .unsignedIntegerValue;
-  */
-
   [self.requestManager
       getKnowledgeInfosFromServerSuccess:^(NSArray *serverResultArray) {
         // if success , add the result array to entity array
         // and return the number of result array
 
         // reset the offset
-        [currentCatEntityArray removeAllObjects];
-        [currentCatEntityArray addObjectsFromArray:serverResultArray];
-        self.knowledgeInfoOffsetStateArray[catIndex] =
-            @(serverResultArray.count);
+        dispatch_async(dispatch_get_main_queue(), ^{
+          [currentCatEntityArray removeAllObjects];
+          // delete later, VC's duty
+          [currentCatEntityArray addObjectsFromArray:serverResultArray];
+          self.knowledgeInfoOffsetStateArray[catIndex] =
+              @(serverResultArray.count);
 
-        NSLog(@"GET Refreshed Infos from SERVER");
-        // notification
-        [self sendNotificationWithAskedNum:number
-                                 returnNum:serverResultArray.count];
+          NSLog(@"GET Refreshed Infos from SERVER");
+          // notification
+          [self sendNotificationWithAskedNum:number
+                                   returnNum:serverResultArray.count];
 
-        // save the result to database later
-        [currentCatTable addKnowledgeInfoArray:serverResultArray];
+          // save the result to database later
+          [currentCatTable addKnowledgeInfoArray:serverResultArray];
+        });
 
       }
                                  failure:^(NSError *error) {
@@ -169,23 +168,30 @@
 
                                    NSLog(@"GET Refreshed Infos FAILED!");
 
-                                   [self sendNotificationWithAskedNum:number
-                                                            returnNum:-1];
+                                   [self getMoreKnowledgeInfo:number
+                                                   categoryId:catId];
                                  }
                               categoryId:catId
                                   offset:0
                                   number:number];
+
 }
 
 //TODO
 - (NSInteger)getBackupKnowledgeInfo:(NSUInteger)number
                          categoryId:(NSUInteger)catId {
+  //get from entity array, or database
   return -1;
 }
 
 - (void)getFirstShownKnowledgeInfo:(NSUInteger)number
                         categoryId:(NSUInteger)catId {
 
+}
+- (void)clearKnowledgeInfoAtCategoryId:(NSUInteger)catId {
+  NSUInteger catIndex = ((catId - 1) % 4);
+  [_knowledgeInfoEntityArray[catIndex] removeAllObjects];
+  _knowledgeInfoOffsetStateArray[catIndex] = @0;
 }
 
 #pragma mark - private

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AE3B6472474E98D3F17A43CFC1820D1"
+               BlueprintIdentifier = "0DD14CF37C9713E45E7BDC26868F3AEE"
                BuildableName = "UIView_Loading.framework"
                BlueprintName = "UIView+Loading"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1AE3B6472474E98D3F17A43CFC1820D1"
+            BlueprintIdentifier = "0DD14CF37C9713E45E7BDC26868F3AEE"
             BuildableName = "UIView_Loading.framework"
             BlueprintName = "UIView+Loading"
             ReferencedContainer = "container:Pods.xcodeproj">

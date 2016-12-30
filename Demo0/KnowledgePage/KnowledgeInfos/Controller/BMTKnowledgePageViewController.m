@@ -11,9 +11,17 @@
 #import "BMTKnowledgePageViewController.h"
 #import "BMTKnowledgeTableView.h"
 #import "UILabel+RefreshPanelView.h"
-#define DEFAULT_KNOWLEDGE_NUMBERS (81u)
+#define DEFAULT_KNOWLEDGE_NUMBERS (20u)
 
 @implementation BMTKnowledgePageViewController
+- (instancetype)init {
+  self = [super init];
+  if (self) {
+    _currentCAT = CAT_1;
+    _shouldRefresh = NO;
+  }
+  return self;
+}
 - (void)loadView {
   self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 }
@@ -47,7 +55,7 @@
                                                                                 - catBarHeight,
                                                                             375,
                                                                             catBarHeight)];
-  _categoryBarsView.delegate=self;
+  _categoryBarsView.delegate = self;
   [_tableView.tableHeaderView addSubview:_bannersVC.view];
 
   [_tableView.tableHeaderView addSubview:_microClassVC.view];
@@ -123,43 +131,55 @@
 */
 #pragma mark - event
 - (void)dataArrived:(NSNotification *)notification {
-  NSInteger askedNum =
-      [notification.userInfo[@"askedNum"] integerValue];
-  NSInteger returnNum =
-      [notification.userInfo[@"returnNum"] integerValue];
-  // return Number -1 error, 0 do not get
-  if (returnNum <= 0) {
-    NSLog(@"get info error");
-    dispatch_async(dispatch_get_main_queue(), ^{
-      self.loadMoreButtonView.hidden = YES;
-    });
-  } else {
-    if (returnNum < askedNum) {
-      NSLog(@"get info shortage");
+  dispatch_async(dispatch_get_main_queue(), ^{
+    NSInteger askedNum =
+        [notification.userInfo[@"askedNum"] integerValue];
+    NSInteger returnNum =
+        [notification.userInfo[@"returnNum"] integerValue];
+    BOOL shouldHideAddMoreButton = YES;
+    // return Number -1 error, 0 do not get
+    if (returnNum <= 0) {
+      NSLog(@"get info error");
+      shouldHideAddMoreButton = YES;
     } else {
-      NSLog(@"get info success");
+      if (returnNum < askedNum) {
+        NSLog(@"get info shortage");
+      } else {
+        NSLog(@"get info success");
+      }
+      shouldHideAddMoreButton = NO;
     }
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [self.tableView reloadData];
-      self.loadMoreButtonView.hidden = NO;
-    });
-  }
-
+    [self.tableView reloadData];
+    self.loadMoreButtonView.hidden = shouldHideAddMoreButton;
+    self.loadMoreButtonView.subviews[0].UserInteractionEnabled = YES;
+    self.categoryBarsView.userInteractionEnabled = YES;
+  });
 }
 
 - (void)addMoreButtonClicked {
   [self.dataSourceManager getMoreKnowledgeInfo:DEFAULT_KNOWLEDGE_NUMBERS
-                                    categoryId:1];
+                                    categoryId:self.currentCAT];
+  self.loadMoreButtonView.subviews[0].UserInteractionEnabled = NO;
 }
 
--(void) changeCategoryTo:(NSUInteger)catId{
-  
+- (void)changeCategoryTo:(NSUInteger)catId {
+  dispatch_async(dispatch_get_main_queue(), ^{
+    CATEGORY_ID categoryId = (CATEGORY_ID) ((catId - 1) % 4 + 1);
+    if (self.currentCAT != categoryId) {
+      self.categoryBarsView.userInteractionEnabled = NO;
+      self.currentCAT = categoryId;
+      [self clearKnowledgeInfos];
+      [self.tableView reloadData];
+      [self.dataSourceManager getRefreshedKnowledgeInfo:5
+                                             categoryId:self.currentCAT];
+    }
+  });
 }
 #pragma mark - tableViewSettings
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-  return self.dataSourceManager.knowledgeInfoEntityArray[0].count;
+  return self.dataSourceManager.knowledgeInfoEntityArray[_currentCAT - 1].count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -184,10 +204,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   // should always done after data arrived!
   // the code here is only responsible to provide cell views !!!!
 
-  if (self.dataSourceManager.knowledgeInfoEntityArray[0].count >= indexPath
-      .row) {
+  if (self.dataSourceManager.knowledgeInfoEntityArray[_currentCAT - 1].count
+      >= indexPath.row + 1) {
     [cell setCellViewByEntity:self.dataSourceManager
-            .knowledgeInfoEntityArray[0][(NSUInteger) indexPath.row]
+            .knowledgeInfoEntityArray[_currentCAT - 1][(NSUInteger) indexPath
+            .row]
                   atIndexPath:indexPath];
   }
 
@@ -204,7 +225,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   //TODO add [self.view addSubview:self.mClassVC];
 }
 
-#pragma mark - refresh UI
+#pragma mark - refresh event
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
   if (self.tableView.contentOffset.y < -REFRESH_PANEL_HEIGHT - 30) {
@@ -221,7 +242,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
       && self.shouldRefresh) {
     self.shouldRefresh = NO;
     [self.dataSourceManager getRefreshedKnowledgeInfo:5
-                                           categoryId:1];
+                                           categoryId:_currentCAT];
   }
 }
 
@@ -230,4 +251,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return [BMTKnowledgeInfoDataSourceManager sharedManager];
 }
 
+- (void)clearKnowledgeInfos {
+  [self.dataSourceManager clearKnowledgeInfoAtCategoryId:self.currentCAT];
+  self.loadMoreButtonView.hidden = YES;
+  [self.tableView reloadData];
+}
 @end

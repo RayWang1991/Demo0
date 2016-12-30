@@ -16,7 +16,7 @@
 
 @property (nonatomic,weak) UIViewController<BMTChangeCategoryDelegate>
     *delegate;
-
+@property (nonatomic,strong) NSArray * labels;
 -(instancetype)initWithFrame:(CGRect)frame;
 
 -(void)setCatBarNames:(NSArray <NSString *>*)names;

@@ -49,6 +49,7 @@ PODS:
   - NJKWebViewProgress/ProgressView (0.2.3)
   - nv-ios-http-status (0.0.1)
   - pop (1.0.7)
+  - Reachability (3.0.0)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -76,6 +77,7 @@ DEPENDENCIES:
   - NJKWebViewProgress (= 0.2.3)
   - nv-ios-http-status (= 0.0.1)
   - pop (= 1.0.7)
+  - Reachability (~> 3.0.0)
   - SDWebImage (= 3.7.2)
   - Toast (= 2.4)
   - UIActionSheet+Blocks (= 0.8.1)
@@ -101,6 +103,7 @@ SPEC CHECKSUMS:
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   nv-ios-http-status: b6c2b5fc8656cc19e0d3000dadce2080b99d0e2f
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  Reachability: 31e4272bd8378e094beaf6609dc182c85c4e6574
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
   UIActionSheet+Blocks: 7fdab45fc8f15ac2dc1cd65af1470746600b5f46
@@ -109,6 +112,6 @@ SPEC CHECKSUMS:
   YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YTKNetwork: a41c1df80d4f3b9d05c19c514a2c604e7a6ac341
 
-PODFILE CHECKSUM: 3582d5138140ea0c1bcfe48c5b5509fa346aff56
+PODFILE CHECKSUM: a51d5a0d36ab635d1216db558df999dcf7510bcc
 
 COCOAPODS: 1.1.1

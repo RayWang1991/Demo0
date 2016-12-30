@@ -12,6 +12,8 @@
 #import <UIKit/UIKit.h>
 #import "WRPersonModel.h"
 #import "BMTMicroClassInfoEntity.h"
+#import "Reachability/Reachability.h"
+
 @interface SessionRequestManager : NSObject
 + (instancetype)sharedManager;
 

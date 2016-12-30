@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1DE9A6C68D33D3F00771C1664FC07CCA"
+               BlueprintIdentifier = "0AB4F5010FA3CBE43FF066909B820817"
                BuildableName = "UIActionSheet_Blocks.framework"
                BlueprintName = "UIActionSheet+Blocks"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1DE9A6C68D33D3F00771C1664FC07CCA"
+            BlueprintIdentifier = "0AB4F5010FA3CBE43FF066909B820817"
             BuildableName = "UIActionSheet_Blocks.framework"
             BlueprintName = "UIActionSheet+Blocks"
             ReferencedContainer = "container:Pods.xcodeproj">
