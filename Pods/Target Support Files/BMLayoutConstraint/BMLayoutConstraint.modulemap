@@ -1,0 +1,6 @@
+framework module BMLayoutConstraint {
+  umbrella header "BMLayoutConstraint-umbrella.h"
+
+  export *
+  module * { export * }
+}
